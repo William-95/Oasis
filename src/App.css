@@ -1,38 +1,122 @@
-.App {
-  text-align: center;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
+:root {
+  --primaryColor: #af9a7d;
+  --darkGreen: #295d09;
+  --lightGreen: #69ab3d;
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+  --mainWhite: #fff;
+
+  --mainBlack: #222;
+  --mainGrey: #ececec;
+  --darkGrey: #cfcfcf;
+  --mainTransition: all 0.3s linear;
+
+  --lightShadow: 2px 5px 3px 0px rgba(0, 0, 0, 0.5);
+  --darkShadow: 4px 10px 5px 0px rgba(0, 0, 0, 0.5);
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* Navbar */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 0.75rem 2rem;
+  background: var(--mainWhite);
+  z-index: 1;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.navHeader {
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
+}
+.navBtn {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  outline: none;
+}
+.navIcon {
+  font-size: 1.5rem;
+
+  color: var(--darkGreen);
+}
+.navLogo {
+  width: 90%;
+}
+.navLinks {
+  height: 0;
+  overflow: hidden;
+  transition: var(--mainTransition);
+  list-style-type: none;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+}
+.navLinks a {
+  display: block;
+  text-decoration: none;
+  padding: 1rem 0;
+  color: var(--mainBlack);
+  transition: var(--mainTransition);
+  text-align: center;
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 3px;
+}
+.navLinks a:hover {
+  color: var(--darkGreen);
 }
 
-.App-link {
-  color: #61dafb;
+.showNav {
+  height: 100px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+
+
+
+
+
+
+
+/* tablet */
+@media screen and (max-width: 900px) and (min-width: 600px) {
+
+
+}
+
+
+
+
+
+/*desktop*/
+@media screen and (min-width: 900px) {
+  /*navbar*/
+
+  .navBtn {
+    display: none;
   }
-  to {
-    transform: rotate(360deg);
+  .navCenter {
+    max-width: 1170px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
   }
+  .navLinks {
+    height: auto;
+    display: flex;
+
+    margin-left: 4rem;
+  }
+  .navLinks a {
+    margin: 0 1rem;
+    padding: 0.5rem 0;
+  }
+
+  .navLogo {
+    width: 100%;
+  }
+
+
+
 }
