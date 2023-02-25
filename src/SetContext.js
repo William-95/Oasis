@@ -1,6 +1,6 @@
 import React,{} from "react";
 
-export const DogContext = React.createContext();
+export const StateContext = React.createContext();
 
 export default function SetContext({ children }) {
   /*state*/
@@ -13,14 +13,14 @@ export default function SetContext({ children }) {
   
   return (
     <>
-      <DogContext.Provider
+      <StateContext.Provider
         value={{
           
         }}
       >
         {/* <Request.ClientApi /> */}
         {children}
-      </DogContext.Provider>
+      </StateContext.Provider>
     </>
   );
 }

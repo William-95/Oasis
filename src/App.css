@@ -25,7 +25,7 @@
   left: 0;
   width: 100%;
   padding: 0.75rem 2rem;
-  background: var(--mainWhite);
+  background: var(--mainGrey);
   z-index: 1;
 }
 .navHeader {
@@ -41,10 +41,10 @@
 .navIcon {
   font-size: 1.5rem;
 
-  color: var(--darkGreen);
+  color: var(--primaryColor);
 }
 .navLogo {
-  width: 90%;
+  width: 30%;
 }
 .navLinks {
   height: 0;
@@ -65,14 +65,25 @@
   letter-spacing: 3px;
 }
 .navLinks a:hover {
-  color: var(--darkGreen);
+  color: var(--primaryColor);
 }
 
 .showNav {
-  height: 100px;
+  height: 250px;
 }
 
+/* end navbar */
 
+/* form */
+.form{
+  padding:25%;
+  
+}
+.form h3{
+  text-align: center;
+  padding:5%;
+}
+/* end form */
 
 
 
@@ -114,7 +125,7 @@
   }
 
   .navLogo {
-    width: 100%;
+    width: 30%;
   }
 
 

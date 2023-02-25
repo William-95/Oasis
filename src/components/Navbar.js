@@ -1,6 +1,6 @@
 import React, { Component} from "react";
 import classNames from "classnames";
-import logo1 from "../img/logo1.png";
+import logo from "../img/logo.png";
 import { FaAlignRight } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
@@ -18,8 +18,8 @@ export default class Navbar extends Component {
       <nav className="navbar">
         <div className="navCenter">
           <div className="navHeader">
-            <Link to="/">
-              <img className="navLogo" src={logo1} alt="" />
+            <Link to="/home/:id_user">
+              <img className="navLogo" src={logo} alt="" />
             </Link>
             <button
               type="button"
@@ -31,12 +31,21 @@ export default class Navbar extends Component {
           </div>
 
           
-          <ul className={classNames('navLinks',{'showNav':this.state.isOpen})}>
+          <ul className={classNames('navLinks',{'showNav':this.state.isOpen})} onClick={this.handleToggle}>
             <li>
-              <Link to="/">Home</Link>
+              <Link to="/home/:id_user">Home</Link>
             </li>
             <li>
-              <Link to="/recipeslist/">Recipes</Link>
+              <Link to="/list/">List</Link>
+            </li>
+            <li>
+              <Link to="/insertdog/">Insert Dog</Link>
+            </li>
+            <li>
+              <Link to="/findlostdog/">Find Lost Dog</Link>
+            </li>
+            <li>
+              <Link to="/profile/:id_user">Profile</Link>
             </li>
           </ul>
         </div>
