@@ -1,11 +1,15 @@
-import React, { useEffect,useState } from 'react';
+import React, { useEffect,useContext } from 'react';
 import FormRegister from '../components/FormRegister';
 import FormLogin from '../components/FormLogin';
-import axios from 'axios';
-const api = axios.create();
+import { StateContext } from "../SetContext";
+// import axios from 'axios';
+// const api = axios.create();
 
 export default function EntryPoint() {
-  const [state,setState]=useState({});
+  const {
+    state,setState,api
+  } = useContext(StateContext);
+  // const [state,setState]=useState({});
   useEffect(() => {
    
 
