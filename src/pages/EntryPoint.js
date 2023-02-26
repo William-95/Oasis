@@ -11,22 +11,19 @@ export default function EntryPoint() {
 
   api
       .get(
-        `http://localhost:80/oasis_db/api/read.php`, {header:{
-          "Access-Control-Allow-Origin":"*",
-          "Access-Control-Allow-Headers":"*"
-        }}
+        `http://localhost:80/oasis_db/api/read.php`
       )
 
       .then((response) => {
         setState(response);
-       console.log(response.data);
+      
       })
 
       .catch((err) => console.log(err));
 
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
-console.log(state);
+console.log(state.data);
   return (
     <>
     
