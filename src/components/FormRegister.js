@@ -4,7 +4,7 @@ export default function FormRegister() {
 
 const [input,setInput]=useState({});
 const api = axios.create({
-    baseURL: 'https://localhost:3307'
+    baseURL: 'http://localhost:80'
   });
   
 const handleChange=(event)=>{
@@ -16,8 +16,8 @@ const handleChange=(event)=>{
 const handleSubmit=(event)=>{
     event.preventDefault();
     if(input.password===input.confirm_password){
-        api.post('/oasis_db/index',input).then((resp)=>{
-            console.log(resp);
+        api.post('/oasis_db/api/create.php',input).then((resp)=>{
+            console.log(resp.data);
         });
         // console.log(input);
     }else{
