@@ -1,0 +1,41 @@
+ @import "../css/App.css";
+  
+ .form{
+    margin:25% 15% 15% 15%;
+    padding:2%;
+    border: 2px solid var(--darkGreen);
+
+  }
+  .form h3{
+    text-align: center;
+    padding:5%;
+  }
+  
+  /* tablet */
+  @media screen and (max-width: 900px) and (min-width: 600px) {
+  .form{
+    width:50%;
+    margin:15%  auto;
+  }
+  
+  }
+  
+  
+  
+  
+  
+  /*desktop*/
+  @media screen and (min-width: 900px) {
+  
+   .form{
+    width: 35%;
+    margin:10%  auto;
+    font-size: 1.3em;
+   }
+  .form form{
+    width:80%;
+    margin:0 auto;
+  }
+  
+  }
+

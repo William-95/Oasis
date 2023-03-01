@@ -1,20 +1,9 @@
 import React, { useContext, useEffect } from "react";
-// import axios from "axios";
 import { StateContext } from "../SetContext";
 
-/*axios*/
-// const api = axios.create({
-//     baseURL: `http://localhost:80/`,
-  
-//   });
 
-
-/*UserAPI Function*/
 function UserApi() {
-    
-
-
-  const {
+ const {
     state,
     setState,
     api
@@ -24,7 +13,7 @@ function UserApi() {
   useEffect(() => {
     api
       .get(
-        `api/read.php`
+        `api/user/read.php`
       )
 
       .then((response) => {

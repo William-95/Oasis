@@ -1,4 +1,5 @@
 import React, { Component} from "react";
+import "../css/navbar.css";
 import classNames from "classnames";
 import logo from "../img/logo.png";
 import { FaAlignRight } from "react-icons/fa";
