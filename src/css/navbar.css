@@ -2,6 +2,7 @@
   
   
 .navbar {
+  
     position: fixed;
     top: 0;
     left: 0;
@@ -21,12 +22,13 @@
     outline: none;
   }
   .navIcon {
-    font-size: 1.5rem;
+    font-size: 1.8rem;
   
     color: var(--primaryColor);
   }
   .navLogo {
-    width: 30%;
+    width: 35%;
+    padding-top:3%;
   }
   .navLinks {
     height: 0;
@@ -51,17 +53,46 @@
   }
   
   .showNav {
-    height: 250px;
+    height: 330px;
   }
   
-
-
-
+/* logger */
+.logger{
+  width: 40%;
+  display:flex;
+  margin:0 auto;
+  text-align: center;
+}
+.logBtn{
+  width: 90%;
+  
+  margin:4.6%;
+  color: var(--mainBlack);
+  background: var(--primaryColor);
+  padding: 0.4rem 0.9rem;
+  border: 3px solid var(--primaryColor);
+  border-radius: 25%;
+  transition: var(--mainTransition);
+  
+  cursor: pointer;
+}
+.logBtn:hover {
+  background: transparent;
+  color: var(--primaryColor);
+}
 
 
 /* tablet */
 @media screen and (max-width: 900px) and (min-width: 600px) {
-
+  .navLogo {
+    width: 40%;
+  }
+  .logBtn{
+    width: 30%;
+    font-size: 0.8em;
+    margin:4% 8%;
+    
+  }
 
 }
 
@@ -79,7 +110,7 @@
         max-width: 1170px;
         margin: 0 auto;
         display: flex;
-        justify-content: space-between;
+        justify-content: space-around;
       }
       .navLinks {
         height: auto;
@@ -97,5 +128,14 @@
       }
     
 
+/* logger */
 
+.logger{
+  display:flex;
+  margin:0 auto;
+}
+.logBtn{
+  font-size: 0.8em;
+  margin:4%;
+}
 }

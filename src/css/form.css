@@ -11,6 +11,7 @@
     padding:5%;
   }
   
+
   /* tablet */
   @media screen and (max-width: 900px) and (min-width: 600px) {
   .form{

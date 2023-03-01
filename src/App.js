@@ -11,7 +11,6 @@ import SingleDog from "./pages/SingleDog";
 import InsertDog from "./pages/InsertDog";
 import FindLostDog from "./pages/FindLostDog";
 import Error from "./pages/Error";
-
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 
@@ -20,6 +19,7 @@ function App() {
     <>
       <SetContext>
         <Navbar />
+        
         <Switch>
           <Route exact path="/" component={EntryPoint} />
           <Route path="/home/:id_user" component={Home} />

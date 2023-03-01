@@ -10,9 +10,11 @@ export default function SetContext({ children }) {
   });
   /*state*/
   const [state,setState]=useState({});
+  const [enterBtn,setEnterBtn]=useState({isOpen:'loginBtn'});
   
+
   /*Loading*/
-  
+  console.log(enterBtn);
   /*end Loading*/
 
   
@@ -22,7 +24,9 @@ export default function SetContext({ children }) {
         value={{
           api,
           state,
-          setState
+          setState,
+          enterBtn,
+          setEnterBtn
         }}
       >
         <Request.UserApi />

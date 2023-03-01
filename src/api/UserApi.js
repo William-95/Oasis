@@ -4,7 +4,7 @@ import { StateContext } from "../SetContext";
 
 function UserApi() {
  const {
-    state,
+    // state,
     setState,
     api
   } = useContext(StateContext);
@@ -25,7 +25,11 @@ function UserApi() {
 
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [setState]);
-console.log(state);
+
+
+// console.log(state);
+
+
   return <></>;
 }
 

@@ -1,8 +1,11 @@
 import React, { useState, useContext } from "react";
+import { useHistory } from "react-router-dom";
 import '../css/form.css';
 import { StateContext } from "../SetContext";
 
 export default function FormRegister() {
+  const history = useHistory();
+
   const { api } = useContext(StateContext);
   const [data, setData] = useState({
     name: "",
@@ -16,19 +19,28 @@ export default function FormRegister() {
     const value = event.target.value;
     setData((data) => ({ ...data, [name]: value }));
   };
-  console.log(data);
 
   const handleSubmit = (event) => {
     event.preventDefault();
 
+    if(data.password===data.confirm_password){
     api({
       method: "post",
       url: `api/user/create.php`,
       headers: { "Content-Type": "application/json" },
       data: data
     })
-      .then((result) => console.log(result.status))
+      .then((result) => {
+        if (result.status === 201) {
+          history.push('/home/:id_user');
+        }else{
+          alert(result.message)
+        }
+      })
       .catch((err) => console.log(err));
+  }else{
+    alert('Please Confirm your password!')
+  }
   };
 
   return (

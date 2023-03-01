@@ -48,6 +48,9 @@ export default class Navbar extends Component {
             <li>
               <Link to="/profile/:id_user">Profile</Link>
             </li>
+            <li>
+              <Link to="/">Logout</Link>
+            </li>
           </ul>
         </div>
       </nav>

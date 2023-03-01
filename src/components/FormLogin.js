@@ -1,8 +1,14 @@
 import React, { useState, useContext } from "react";
+import { useHistory,useParams } from "react-router-dom";
 import { StateContext } from "../SetContext";
-import '../css/form.css';
+import "../css/form.css";
+
+
 export default function FormLogin() {
+  const history = useHistory();
+  const{id_user}=useParams();
   const { api } = useContext(StateContext);
+
   const [data, setData] = useState({
     name: "",
     password: "",
@@ -17,15 +23,26 @@ export default function FormLogin() {
   const handleSubmit = (event) => {
     event.preventDefault();
 
+    
+    // axios
     api({
       method: "post",
       url: `api/login.php`,
       headers: { "Content-Type": "application/json" },
-      data: data
+      data: data,
     })
-      .then((result) => console.log(result.data.user))
+      .then((result) => {
+        if (result.status === 200) {
+          
+          history.push('/home/:id_user');
+        }else{
+          console.log(result.data.message);
+        }
+      })
       .catch((err) => console.log(err));
+    
   };
+
   return (
     <div className="form">
       <h3>Login</h3>
