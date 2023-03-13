@@ -6,10 +6,11 @@ import "../css/form.css";
 
 export default function FormLogin() {
   const history = useHistory();
-  const{id_user}=useParams();
+  let params=useParams();
   const { api } = useContext(StateContext);
 
   const [data, setData] = useState({
+    id:'',
     name: "",
     password: "",
   });
@@ -34,7 +35,7 @@ export default function FormLogin() {
       .then((result) => {
         if (result.status === 200) {
           
-          history.push('/home/:id_user');
+          history.push('/home/'+result.data.user.id);
         }else{
           console.log(result.data.message);
         }
