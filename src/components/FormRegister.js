@@ -26,7 +26,7 @@ export default function FormRegister() {
     if(data.password===data.confirm_password){
     api({
       method: "post",
-      url: `api/user/create.php`,
+      url: `/user`,
       headers: { "Content-Type": "application/json" },
       data: data
     })

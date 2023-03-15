@@ -1,12 +1,12 @@
 import React, { useState, useContext } from "react";
-import { useHistory,useParams } from "react-router-dom";
+import { useHistory } from "react-router-dom";
 import { StateContext } from "../SetContext";
 import "../css/form.css";
 
 
 export default function FormLogin() {
   const history = useHistory();
-  let params=useParams();
+  // let params=useParams();
   const { api } = useContext(StateContext);
 
   const [data, setData] = useState({
@@ -28,7 +28,7 @@ export default function FormLogin() {
     // axios
     api({
       method: "post",
-      url: `api/login.php`,
+      url: `/user`,
       headers: { "Content-Type": "application/json" },
       data: data,
     })

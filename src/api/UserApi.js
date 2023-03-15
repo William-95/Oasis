@@ -13,7 +13,7 @@ function UserApi() {
   useEffect(() => {
     api
       .get(
-        `api/user/read.php`
+        `/user`
       )
 
       .then((response) => {

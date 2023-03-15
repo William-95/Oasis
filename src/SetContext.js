@@ -6,7 +6,7 @@ export const StateContext = React.createContext();
 
 export default function SetContext({ children }) {
   const api = axios.create({
-    baseURL: `http://localhost:80/oasis_db/`,
+    baseURL: `http://127.0.0.1:8000/api`
   });
   /*state*/
   const [state,setState]=useState({});
