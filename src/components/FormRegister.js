@@ -8,7 +8,7 @@ import { StateContext } from "../SetContext";
 export default function FormRegister() {
   const history = useHistory();
 
-  const { api } = useContext(StateContext);
+  const { api,setUser } = useContext(StateContext);
   const [data, setData] = useState({
     name: "",
     email: "",
@@ -35,9 +35,12 @@ export default function FormRegister() {
     })
       .then((result) => {
         if (result.status === 200) {
-          history.push('/home/result.data.id');
+          const data=result.data;
+          setUser(data);
+          let userId=data.id;
+          history.push("/home/"+userId);
         }else{
-          alert(result.message)
+          alert(result.data.message)
         }
       })
       .catch((err) => console.log(err));

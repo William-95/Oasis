@@ -22,8 +22,8 @@ function App() {
         
         <Switch>
           <Route exact path="/" component={EntryPoint} />
-          <Route path="/home/:id_user" component={Home} />
-          <Route path="/profile/:id_user" component={Profile} />
+          <Route path="/home/:id/" component={Home} />
+          <Route path="/profile/:id/" component={Profile} />
           <Route path="/list/" component={List} />
           <Route path="/singlefriend/:id_dog/" component={SingleDog} />
           <Route path="/insertdog/" component={InsertDog} />

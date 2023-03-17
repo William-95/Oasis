@@ -5,7 +5,7 @@ export default function Profile() {
   const { api,user } = useContext(StateContext);
 
   const [data, setData] = useState({
-    id:'{id_user}',
+    id:'',
     name: "",
     email: "",
     password: "",
