@@ -1,13 +1,16 @@
 import React, { useState, useContext } from "react";
-import { useHistory } from "react-router-dom";
+import { useHistory,useParams } from "react-router-dom";
 import { StateContext } from "../SetContext";
 import "../css/form.css";
 
 
 export default function FormLogin() {
   const history = useHistory();
-  // let params=useParams();
-  const { api } = useContext(StateContext);
+  let {id_user}=useParams();
+ 
+  const { api,setUser } = useContext(StateContext);
+
+  let idFilter=id_user
 
   const [data, setData] = useState({
     id:'',
@@ -34,8 +37,10 @@ export default function FormLogin() {
     })
       .then((result) => {
         if (result.status === 200) {
+          const user=result.data;
+          setUser(user);
           
-          history.push('/home/'+result.data.user.id);
+          history.push(`/home/${idFilter}`);
         }else{
           console.log(result.data.message);
         }

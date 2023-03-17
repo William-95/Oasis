@@ -1,12 +1,11 @@
 import React,{useState,useContext} from "react";
 import { StateContext } from "../SetContext";
-import { useParams } from "react-router-dom";
 
 export default function Profile() {
-  const { api } = useContext(StateContext);
-const {id_user}=useParams();
+  const { api,user } = useContext(StateContext);
+
   const [data, setData] = useState({
-    id:{id_user},
+    id:'{id_user}',
     name: "",
     email: "",
     password: "",
@@ -23,19 +22,21 @@ console.log(data);
 
     api({
       method: "post",
-      url: `api/user/update.php`,
+      url: `/user/{id}`,
       headers: { "Content-Type": "application/json" },
       data: data
     })
       .then((result) => console.log(result.status))
       .catch((err) => console.log(err));
   }
+
+  console.log(user);
   return (
     <div>
       <br/> <br/> <br/> <br/> <br/>
       <h2>Profile</h2>
 
-      <h3>user_name</h3>
+      <h3>Welcome {user.name}.</h3>
        
       <p>questa sezione è dedicata alla modifica de tui dati utente o alla cancellazione dell'account.</p>
       
@@ -48,7 +49,7 @@ console.log(data);
           <tbody>
             <tr>
               <th>
-                <label>User Name:</label>
+                <label>New User Name:</label>
               </th>
               <td>
                 <input
@@ -62,7 +63,7 @@ console.log(data);
 
             <tr>
               <th>
-                <label>Email:</label>
+                <label>New Email:</label>
               </th>
               <td>
                 <input
@@ -76,7 +77,7 @@ console.log(data);
 
             <tr>
               <th>
-                <label>Password:</label>
+                <label>New Password:</label>
               </th>
               <td>
                 <input

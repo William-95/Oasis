@@ -1,7 +1,9 @@
-import React, { useState, useContext } from "react";
+import React, { useState,useContext } from "react";
 import { useHistory } from "react-router-dom";
 import '../css/form.css';
 import { StateContext } from "../SetContext";
+
+
 
 export default function FormRegister() {
   const history = useHistory();
@@ -24,15 +26,16 @@ export default function FormRegister() {
     event.preventDefault();
 
     if(data.password===data.confirm_password){
+      
     api({
       method: "post",
-      url: `/user`,
+      url: `/users`,
       headers: { "Content-Type": "application/json" },
       data: data
     })
       .then((result) => {
-        if (result.status === 201) {
-          history.push('/home/:id_user');
+        if (result.status === 200) {
+          history.push('/home/result.data.id');
         }else{
           alert(result.message)
         }
@@ -42,8 +45,9 @@ export default function FormRegister() {
     alert('Please Confirm your password!')
   }
   };
-
+  
   return (
+    
     <div className="form">
       <h3>Register</h3>
       <form onSubmit={handleSubmit}>
