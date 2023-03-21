@@ -39,6 +39,8 @@ export default function FormLogin() {
           setUser(data);
           let userId=data[0].id;
           history.push("/home/"+userId);
+          
+
         }else{
           console.log(result.data.message);
         }

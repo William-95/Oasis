@@ -3,10 +3,10 @@ import "../css/navbar.css";
 import classNames from "classnames";
 import logo from "../img/logo.png";
 import { FaAlignRight } from "react-icons/fa";
-import { Link } from "react-router-dom";
-
-
+import { Link} from "react-router-dom";
+ 
 export default class Navbar extends Component {
+ 
   state={
     isOpen:false
   }
@@ -19,7 +19,7 @@ export default class Navbar extends Component {
       <nav className="navbar">
         <div className="navCenter">
           <div className="navHeader">
-            <Link to="/home/:id_user">
+            <Link to="/home/:id">
               <img className="navLogo" src={logo} alt="" />
             </Link>
             <button
@@ -34,7 +34,7 @@ export default class Navbar extends Component {
           
           <ul className={classNames('navLinks',{'showNav':this.state.isOpen})} onClick={this.handleToggle}>
             <li>
-              <Link to="/home/:id_user">Home</Link>
+              <Link to="/home/:id">Home</Link>
             </li>
             <li>
               <Link to="/list/">List</Link>
@@ -46,7 +46,7 @@ export default class Navbar extends Component {
               <Link to="/findlostdog/">Find Lost Dog</Link>
             </li>
             <li>
-              <Link to="/profile/:id_user">Profile</Link>
+              <Link to="/profile/:id">Profile</Link>
             </li>
             <li>
               <Link to="/">Logout</Link>

@@ -22,7 +22,7 @@ console.log(data);
 
     api({
       method: "post",
-      url: `/user/{id}`,
+      url: `/user/${user.id}`,
       headers: { "Content-Type": "application/json" },
       data: data
     })
@@ -36,9 +36,9 @@ console.log(data);
       <br/> <br/> <br/> <br/> <br/>
       <h2>Profile</h2>
 
-      <h3>Welcome {user.name}.</h3>
+      <h3>Welcome {user[0].name}.</h3>
        
-      <p>questa sezione è dedicata alla modifica de tui dati utente o alla cancellazione dell'account.</p>
+      <p>Questa sezione è dedicata alla modifica de tui dati utente o alla cancellazione dell'account.</p>
       
 
       

@@ -19,7 +19,7 @@ function App() {
     <>
       <SetContext>
         <Navbar />
-        
+
         <Switch>
           <Route exact path="/" component={EntryPoint} />
           <Route path="/home/:id/" component={Home} />
