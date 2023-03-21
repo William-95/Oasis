@@ -1,0 +1,40 @@
+@import "../css/App.css";
+.headerBg {
+  color: var(--primaryColor);
+  margin-top: 5%;
+  min-height: calc(45vh - 66px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.headerBg h2 {
+  margin: 15%;
+  align-content: center;
+}
+
+/* tablet */
+@media screen and (max-width: 900px) and (min-width: 600px) {
+  .headerBg {
+    min-height: calc(50vh-66px);
+    font-size: 1.3rem;
+  }
+  .headerBg h2{
+    margin-left:5%;
+    width:60%;
+  
+  }
+}
+
+/*desktop*/
+@media screen and (min-width: 900px) {
+    .headerBg {
+        min-height: calc(100vh-66px);
+        font-size: 1.5rem;
+      }
+    .headerbg h2{
+        width:60%;
+        margin-left: 5%;
+    }
+    
+    }

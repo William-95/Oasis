@@ -10,6 +10,7 @@ export default function FormRegister() {
 
   const { api,setUser } = useContext(StateContext);
   const [data, setData] = useState({
+    id:"",
     name: "",
     email: "",
     password: "",

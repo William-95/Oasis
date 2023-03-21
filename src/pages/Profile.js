@@ -1,8 +1,10 @@
 import React,{useState,useContext} from "react";
 import { StateContext } from "../SetContext";
+import { useHistory } from "react-router-dom";
 
 export default function Profile() {
   const { api,user } = useContext(StateContext);
+  const history = useHistory();
 
   const [data, setData] = useState({
     id:'',
@@ -16,21 +18,49 @@ export default function Profile() {
     const value = event.target.value;
     setData((data) => ({ ...data, [name]: value }));
   };
-console.log(data);
+
+  // update user
   const handleSubmit = (event) => {
     event.preventDefault();
 
+    if(data.password===data.confirm_password){
     api({
-      method: "post",
-      url: `/user/${user.id}`,
+      method: "put",
+      url: `/users/${user[0].id}`,
       headers: { "Content-Type": "application/json" },
       data: data
     })
-      .then((result) => console.log(result.status))
-      .catch((err) => console.log(err));
+      .then((result) =>{
+        if(result.status===200){
+        alert('User update correctelly.');
+      }else{
+        alert(result.data.message)
+      } 
+     })
+      .catch((err) =>console.log(err));
+  }else{
+    alert('Please confirm your password.')
   }
-
-  console.log(user);
+  }
+  
+  // deleteUser
+  const handleDelete=()=>{
+    api({
+      method: "put",
+      url: `/users/${user[0].id}`,
+      headers: { "Content-Type": "application/json" },
+      data: data
+    })
+    .then((result) =>{
+      if(result.status===200){
+     console.log('User delete correctelly.');
+      history.push("/");
+    }else{
+      alert(result.data.message)
+    } 
+   })
+    .catch((err) =>console.log(err));
+  }
   return (
     <div>
       <br/> <br/> <br/> <br/> <br/>
@@ -43,7 +73,7 @@ console.log(data);
 
       
       <div className="form">
-        <h3>Update</h3>
+        <h3>Update Profile</h3>
       <form  onSubmit={handleSubmit}>
       <table cellSpacing={10}>
           <tbody>
@@ -113,7 +143,7 @@ console.log(data);
       </form>
       </div>
 
-      <div align='center'>
+      <div align='center' onClick={handleDelete}>
       <button  type="button" className="logBtn">
         Delete User
       </button>

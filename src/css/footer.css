@@ -1,0 +1,33 @@
+@import "../css/App.css";
+footer {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    background: #383731;
+    min-height: 30px;
+    padding: 10px 25px;
+    margin-top: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  
+  footer p {
+    color: #fff;
+    text-align: center;
+  
+    font-size: 0.7em;
+  }
+
+/* tablet */
+@media screen and (max-width: 900px) and (min-width: 600px) {
+ 
+}
+
+/*desktop*/
+@media screen and (min-width: 900px) {
+   
+    
+    }

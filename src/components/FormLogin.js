@@ -1,4 +1,4 @@
-import React, { useState, useContext } from "react";
+import React, {useState, useContext } from "react";
 import { useHistory } from "react-router-dom";
 
 import { StateContext } from "../SetContext";
@@ -6,27 +6,25 @@ import "../css/form.css";
 
 export default function FormLogin() {
   const history = useHistory();
- 
-  const { api,setUser } = useContext(StateContext);
 
+  const { api, setUser } = useContext(StateContext);
 
   const [data, setData] = useState({
-    id:'',
+    id: "",
     name: "",
     password: "",
   });
 
-  const handleChange = (event) => {
+  const HandleChange = (event) => {
     const name = event.target.name;
     const value = event.target.value;
     setData((data) => ({ ...data, [name]: value }));
   };
 
-  const handleSubmit = (event) => {
+  const HandleSubmit = (event) => {
     event.preventDefault();
-
-    
     // axios
+    
     api({
       method: "post",
       url: `/user`,
@@ -35,13 +33,11 @@ export default function FormLogin() {
     })
       .then((result) => {
         if (result.status === 200) {
-          const data=result.data;
+          const data = result.data;
           setUser(data);
-          let userId=data[0].id;
-          history.push("/home/"+userId);
-          
-
-        }else{
+          let userId = data[0].id;
+          history.push("/home/" + userId);
+        } else {
           console.log(result.data.message);
         }
       })
@@ -51,8 +47,7 @@ export default function FormLogin() {
 
   return (
     <div className="form">
-      <h3>Login</h3>
-      <form onSubmit={handleSubmit}>
+      <form onSubmit={HandleSubmit}>
         <table cellSpacing={10}>
           <tbody>
             <tr>
@@ -63,7 +58,7 @@ export default function FormLogin() {
                 <input
                   type="text"
                   name="name"
-                  onChange={handleChange}
+                  onChange={HandleChange}
                   value={data.name}
                 />
               </td>
@@ -77,7 +72,7 @@ export default function FormLogin() {
                 <input
                   type="text"
                   name="password"
-                  onChange={handleChange}
+                  onChange={HandleChange}
                   value={data.password}
                 />
               </td>

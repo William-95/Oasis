@@ -1,30 +1,20 @@
 import React, { useContext, useEffect } from "react";
 import { StateContext } from "../SetContext";
-// import axios from "axios";
-
 
 // const api = axios.create({
 //   baseURL: `http://127.0.0.1:8000/api`
 // });
 
-
 function UserApi() {
- const {
-    // state,
-    setState,
-    api
-  } = useContext(StateContext);
+  const {  setState, api } = useContext(StateContext);
 
   /*requestApi*/
   useEffect(() => {
     api
-      .get(
-        `/users`
-      )
+      .get(`/users`)
 
       .then((response) => {
         setState(response.data);
-        
       })
 
       .catch((err) => console.log(err));
@@ -32,28 +22,33 @@ function UserApi() {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [setState]);
 
-
-// console.log(state);
-
+  // console.log(state);
 
   return <></>;
 }
 
-// function UserCreate($data){
-//   api({
-//         method: "post",
-//         url: `/user`,
-//         headers: { "Content-Type": "application/json" },
-//         data: $data
-//       })
+// function UserLogin(){
+//   const {api,user,setUser} = useContext(StateContext);
+//   const history = useHistory();
+
+//   /*requestApi*/
+//   useEffect(() => {
+
+//   api.post(`/user`)
+
 //     .then((result) => {
-//       if (result.status === 201) {
-//         alert('utente creato')
+//       if (result.status === 200) {
+
+//         let userId=user.id;
+//         history.push("/home/"+userId);
+
 //       }else{
-//         alert(result.message)
+//         console.log(result.data.message);
 //       }
-//     })
+//     },[user],1000)
 //     .catch((err) => console.log(err));
+//     // eslint-disable-next-line
+//   },[setUser,user])
 // }
 
 const Request = { UserApi };
