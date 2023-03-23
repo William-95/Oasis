@@ -19,7 +19,45 @@
   --darkShadow: 4px 10px 5px 0px rgba(0, 0, 0, 0.5);
 }
 
+/* Primary btn */
+.primaryBtn{
+  width: 90%;
+  
+  margin:4.6%;
+  color: var(--mainBlack);
+  background: var(--primaryColor);
+  padding: 0.4rem 0.9rem;
+  border: 3px solid var(--primaryColor);
+  border-radius: 25%;
+  transition: var(--mainTransition);
+  
+  cursor: pointer;
+}
+.primaryBtn:hover {
+  background: transparent;
+  color: var(--primaryColor);
+}
+/* end Primary btn */
 
+/* secondaryBtn */
+.secondaryBtn{
+  width: 35%;
+  
+  margin:2%;
+  color: var(--mainBlack);
+  background: var(--darkGreen);
+  padding: 0.3rem 0.3rem;
+  border: 3px solid var(--darkGreen);
+  border-radius: 25%;
+  transition: var(--mainTransition);
+  
+  cursor: pointer;
+}
+.secondaryBtn:hover {
+  background: transparent;
+  color: var(--darkGreen);
+}
+/* end secondary Btn */
 
 /* tablet */
 @media screen and (max-width: 900px) and (min-width: 600px) {
@@ -30,7 +68,19 @@
 
 /*desktop*/
 @media screen and (min-width: 900px) {
+/* primary btn */
+  .primaryBtn{
+    font-size: 0.8em;
+    margin:4%;
+  }
+  /* end primary btn */
 
 
+  /* secondary btn */
+  .secondaryBtn{
+    font-size: 0.6em;
+    margin:4%;
+  }
+  /* end secondary btn */
 }
 

@@ -11,7 +11,12 @@ import { StateContext } from "../SetContext";
 export default function Navbar () {
   const { user } = useContext(StateContext);
  const [state,setState]=useState({isOpen:false })
-  
+  // const logUser=[...user,{
+  //   id:user.id,
+  //   name:user.name,
+  //   email:user.email
+  // }];
+  // console.log(logUser);
  const handleToggle = () => {
     setState({isOpen:!state.isOpen});
   };
@@ -36,7 +41,7 @@ export default function Navbar () {
           
           <ul className={classNames('navLinks',{'showNav':state.isOpen})} onClick={handleToggle}>
             <li>
-              <Link to={"/home/:id/"||`/home/${user[0].id}/`}>Home</Link>
+              <Link to={`/home/${user.id}/`}>Home</Link>
             </li>
             <li>
               <Link to="/list/">List</Link>
@@ -48,7 +53,7 @@ export default function Navbar () {
               <Link to="/findlostdog/">Find Lost Dog</Link>
             </li>
             <li>
-              <Link to={"/profile/:id/"||`/profile/${user[0].id}/`}>Profile</Link>
+              <Link to={`/profile/${user.id}/`}>Profile</Link>
             </li>
             <li>
               <Link to="/">Logout</Link>

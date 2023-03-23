@@ -80,7 +80,7 @@ export default function FormLogin() {
 
             <tr>
               <td colSpan={2} align="right">
-                <button>Login</button>
+                <button className="secondaryBtn">Login</button>
               </td>
             </tr>
           </tbody>

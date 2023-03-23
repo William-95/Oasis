@@ -3,13 +3,14 @@
  .form{
     margin:25% 15% 15% 15%;
     padding:2%;
-    border: 2px solid var(--primaryColor);
+    border: 2px solid var(--darkGreen);
 
   }
   .form h3{
     text-align: center;
     padding:5%;
   }
+  
   
 
   /* tablet */

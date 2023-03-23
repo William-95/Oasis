@@ -1,0 +1,64 @@
+@import "../css/App.css";
+  .featureIntro{
+    margin:8%;
+    margin-bottom: 15%;
+    text-align: center;
+  }
+  .featureIntro h3{
+    font-size:1.5em;
+    
+    margin:5%;
+    
+  }
+ .feature{
+    display:flex;
+    margin:10%;
+    margin-bottom: 15%;
+    flex-direction:row;
+    align-items: center;
+ }
+ .reverse{
+    flex-direction: row-reverse;
+ }
+  .feature img{
+   width: 100%;
+    margin:8%;
+  }
+
+  /* tablet */
+  @media screen and (max-width: 900px) and (min-width: 600px) {
+  .featureIntro{
+    font-size: 1.5em;
+
+  }
+.feature{
+    margin-bottom: 10%;
+}
+  .feature p{
+    font-size: 1.35em;
+  }
+  
+  }
+  
+  
+  
+  
+  
+  /*desktop*/
+  @media screen and (min-width: 900px) {
+  .featureIntro{
+    font-size: 2em;
+    margin-bottom: 0%;
+  }
+  .feature{
+    margin-top:2%;
+    margin-bottom: 0%;
+  }
+  .feature p{
+    font-size: 2em;
+  }
+  .feature img{
+    width: 50%;
+  }
+  }
+

@@ -46,7 +46,7 @@ export default function Profile() {
   // deleteUser
   const handleDelete=()=>{
     api({
-      method: "put",
+      method: "delete",
       url: `/users/${user[0].id}`,
       headers: { "Content-Type": "application/json" },
       data: data

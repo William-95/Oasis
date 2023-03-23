@@ -115,7 +115,7 @@ export default function FormRegister() {
 
             <tr>
               <td colSpan={2} align="right">
-                <button>Register</button>
+                <button className="secondaryBtn">Register</button>
               </td>
             </tr>
           </tbody>

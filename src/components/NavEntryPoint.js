@@ -26,14 +26,14 @@ const handleLogout=()=>{
             <div className="logger">
             <button
               type="button"
-              className="logBtn"
+              className="primaryBtn"
               onClick={handleLogin}
             >
               Login
             </button>
             <button
               type="button"
-              className="logBtn"
+              className="primaryBtn"
               onClick={handleLogout}
             >
               Register

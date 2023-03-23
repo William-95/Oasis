@@ -63,23 +63,7 @@
   margin:0 auto;
   text-align: center;
 }
-.logBtn{
-  width: 90%;
-  
-  margin:4.6%;
-  color: var(--mainBlack);
-  background: var(--primaryColor);
-  padding: 0.4rem 0.9rem;
-  border: 3px solid var(--primaryColor);
-  border-radius: 25%;
-  transition: var(--mainTransition);
-  
-  cursor: pointer;
-}
-.logBtn:hover {
-  background: transparent;
-  color: var(--primaryColor);
-}
+
 
 
 /* tablet */
@@ -87,7 +71,7 @@
   .navLogo {
     width: 40%;
   }
-  .logBtn{
+  .primaryBtn{
     width: 30%;
     font-size: 0.8em;
     margin:4% 8%;
@@ -134,8 +118,5 @@
   display:flex;
   margin:0 auto;
 }
-.logBtn{
-  font-size: 0.8em;
-  margin:4%;
-}
+
 }
