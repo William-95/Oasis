@@ -1,15 +1,101 @@
 @import "../css/App.css";
+.section {
+  height: 200vh;
+  width: 100%;
+  text-align: center;
+  padding:4%;
+}
+.section h3 {
+  font-size: 1.8em;
+  margin-bottom: 7%;
+}
+.container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px,0.5fr));
+  gap: 30px;
+  padding:7% 18%;
+}
 
+.cardCourse {
+    position: relative; 
+    width: 100%;
+margin-bottom: 6%; 
+ border: 2px solid var(--primaryColor);
+  border-radius: 10%;
+  overflow: hidden;
 
+}
 
+.cardCourse img {
+  position: absolute;
+  left: 0;
+  width: 100%;
+}
 
+.cardCourse:hover img {
+  opacity: 0.5;
+}
+.cardCourse h4 {
+  position: absolute;
+  left: 0;
+  top: 65px;
+  font-size: 1.7em;
+  width: 100%;
+  text-align: center;
+  color: var(--darkGreen);
+  z-index: 1;
+  transition: 0.5s ease-in;
+}
+
+ .cardCourse:hover h4 {
+  top: 10px;
+  font-size: 1.3em;
+}
+
+.cardCourse p {
+    position: relative;
+    top: -15px;
+  height: 80px;
+  z-index: 2;
+  margin: 8%;
+  text-align: center;
+  font-size:0.7em;
+  color: var(--mainBlack);
+  opacity: 0;
+  transition: 0.5s ease-in;
+}
+
+.cardCourse:hover p {
+  opacity: 1;
+}
+
+.cardCourse button {
+  position: relative;
+  top: 110px;
+  
+  width: 25%;
+  text-decoration: none;
+  transition: 0.5s ease-in;
+  opacity: 0;
+}
+.cardCourse:hover button {
+  opacity: 1;
+} 
+.cardCourse a {
+  text-decoration: none;
+} 
 /* tablet */
 @media screen and (max-width: 900px) and (min-width: 600px) {
- 
+  .section {
+    padding: 2%;
+  }
+  .container{
+    grid-template-columns: repeat(auto-fit, minmax(227.8px,1fr));
+padding:10%
+  }
+  
 }
 
 /*desktop*/
 @media screen and (min-width: 900px) {
-   
-    
-    }
+}
