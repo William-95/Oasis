@@ -2,6 +2,8 @@ import React, { useContext } from "react";
 import { StateContext } from "../SetContext";
 import "../css/header.css";
 import headerBg from "../img/01.jpg";
+import Course from "../components/Course";
+
 export default function Home() {
   const { user } = useContext(StateContext);
 
@@ -17,6 +19,8 @@ export default function Home() {
           Welcome in your home page, {user.name || user[0].name}
         </h2>
       </header>
+
+      <Course/>
     </div>
   );
 }

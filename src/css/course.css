@@ -1,0 +1,15 @@
+@import "../css/App.css";
+
+
+
+
+/* tablet */
+@media screen and (max-width: 900px) and (min-width: 600px) {
+ 
+}
+
+/*desktop*/
+@media screen and (min-width: 900px) {
+   
+    
+    }
