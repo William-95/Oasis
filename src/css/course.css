@@ -86,16 +86,25 @@ margin-bottom: 6%;
 } 
 /* tablet */
 @media screen and (max-width: 900px) and (min-width: 600px) {
-  .section {
-    padding: 2%;
-  }
+    .section {
+        padding: 8%;
+        height: 100vh;
+      }
   .container{
     grid-template-columns: repeat(auto-fit, minmax(227.8px,1fr));
-padding:10%
   }
   
 }
 
 /*desktop*/
 @media screen and (min-width: 900px) {
+    .section {
+        padding: 8%;
+        height: 150vh;
+      }
+  .container{
+    padding:0% 8%;
+    grid-template-columns: repeat(auto-fit, minmax(227.8px,1fr));
+  }
+  
 }
