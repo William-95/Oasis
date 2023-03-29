@@ -1,19 +1,21 @@
-import React, {useState, useContext } from "react";
-import { useHistory } from "react-router-dom";
+import React, { useContext } from "react";
+// import { useHistory } from "react-router-dom";
+import User from "../api/User";
 
 import { StateContext } from "../SetContext";
 import "../css/form.css";
 
 export default function FormLogin() {
-  const history = useHistory();
+  // const history = useHistory();
 
-  const { api, setUser } = useContext(StateContext);
+  const { data, setData,setUser } = useContext(StateContext);
 
-  const [data, setData] = useState({
-    id: "",
-    name: "",
-    password: "",
-  });
+  // const [data, setData] = useState({
+  //   id: "",
+  //   name: "",
+  //   password: "",
+  // });
+ 
 
   const HandleChange = (event) => {
     const name = event.target.name;
@@ -23,30 +25,31 @@ export default function FormLogin() {
 
   const HandleSubmit = (event) => {
     event.preventDefault();
+    setUser(data)
     // axios
-    
-    api({
-      method: "post",
-      url: `/user`,
-      headers: { "Content-Type": "application/json" },
-      data: data,
-    })
-      .then((result) => {
-        if (result.status === 200) {
-          const data = result.data;
-          setUser(data);
-          let userId = data[0].id;
-          history.push("/home/" + userId);
-        } else {
-          console.log(result.data.message);
-        }
-      })
-      .catch((err) => console.log(err));
-    
+
+    // api({
+    //   method: "post",
+    //   url: `/user`,
+    //   headers: { "Content-Type": "application/json" },
+    //   data: data,
+    // })
+    //   .then((result) => {
+    //     if (result.status === 200) {
+    //       const data = result.data;
+    //       setUser(data);
+    //       let userId = data[0].id;
+    //       history.push("/home/" + userId);
+    //     } else {
+    //       console.log(result.data.message);
+    //     }
+    //   })
+    //   .catch((err) => console.log(err));
   };
 
   return (
     <div className="form">
+       <User />
       <form onSubmit={HandleSubmit}>
         <table cellSpacing={10}>
           <tbody>

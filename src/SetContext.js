@@ -13,6 +13,11 @@ export default function SetContext({ children }) {
   /*state*/
   const [state,setState]=useState({});
   const [user,setUser]=useState({});
+  const [data,setData]=useState({
+    id: "",
+    name: "",
+    password: ""
+  });
 
   const [enterBtn,setEnterBtn]=useState({isOpen:'loginBtn'});
   
@@ -32,7 +37,9 @@ export default function SetContext({ children }) {
           user,
           setUser,
           enterBtn,
-          setEnterBtn
+          setEnterBtn,
+          data,
+          setData
         }}
       >
        
