@@ -44,16 +44,16 @@ export default function Navbar () {
               <Link to={`/home/${user.id}/`}>Home</Link>
             </li>
             <li>
-              <Link to="/list/">List</Link>
+              <Link to="/list/">Lista</Link>
             </li>
             <li>
-              <Link to="/insertdog/">Insert Dog</Link>
+              <Link to="/insertdog/">Inserisci Cane</Link>
             </li>
             <li>
-              <Link to="/findlostdog/">Find Lost Dog</Link>
+              <Link to="/findlostdog/">Trova Cane</Link>
             </li>
             <li>
-              <Link to={`/profile/${user.id}/`}>Profile</Link>
+              <Link to={`/profile/${user.id}/`}>Profilo</Link>
             </li>
             <li>
               <Link to="/">Logout</Link>

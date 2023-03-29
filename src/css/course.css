@@ -1,6 +1,6 @@
 @import "../css/App.css";
 .section {
-  height: 200vh;
+  height: 85vh;
   width: 100%;
   text-align: center;
   padding:4%;
@@ -24,7 +24,11 @@ margin-bottom: 6%;
  border: 2px solid var(--primaryColor);
   border-radius: 10%;
   overflow: hidden;
+  box-shadow: var(--lightShadow);
+}
 
+.cardCourse:hover{
+  box-shadow:var(--darkShadow);
 }
 
 .cardCourse img {
@@ -35,6 +39,7 @@ margin-bottom: 6%;
 
 .cardCourse:hover img {
   opacity: 0.5;
+  font-size: 1em;
 }
 .cardCourse h4 {
   position: absolute;
@@ -91,8 +96,8 @@ margin-bottom: 6%;
 /* tablet */
 @media screen and (max-width: 900px) and (min-width: 600px) {
     .section {
-        padding: 8%;
-        height: 220vh;
+        padding: 5%;
+        height: 90vh;
       }
   .container{
     grid-template-columns: repeat(auto-fit, minmax(227.8px,1fr));
@@ -103,8 +108,8 @@ margin-bottom: 6%;
 /*desktop*/
 @media screen and (min-width: 900px) {
     .section {
-        padding: 8%;
-        height: 150vh;
+        padding: 3%;
+        height: 60vh;
       }
   .container{
     padding:0% 8%;

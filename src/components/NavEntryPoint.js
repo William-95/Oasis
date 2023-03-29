@@ -36,7 +36,7 @@ const handleLogout=()=>{
               className="primaryBtn"
               onClick={handleLogout}
             >
-              Register
+              Registrati
             </button>
           </div>
           </div>

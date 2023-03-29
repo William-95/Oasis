@@ -32,10 +32,13 @@
 
   }
 .feature{
-    margin-bottom: 10%;
+    margin-bottom: 2%;
 }
   .feature p{
     font-size: 1.35em;
+  }
+  .feature img{
+    width: 50%;
   }
   
   }
@@ -47,18 +50,20 @@
   /*desktop*/
   @media screen and (min-width: 900px) {
   .featureIntro{
-    font-size: 2em;
+    font-size: 1.5em;
     margin-bottom: 0%;
   }
   .feature{
-    margin-top:2%;
-    margin-bottom: 0%;
+    width: 60%;
+    /* margin-top:2%;
+    margin-bottom: 0%; */
+    margin:0 auto;
   }
   .feature p{
-    font-size: 2em;
+    font-size: 1.5em;
   }
   .feature img{
-    width: 50%;
+    width: 25%;
   }
   }
 

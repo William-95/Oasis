@@ -13,27 +13,27 @@ export default function Course() {
         link:
           "https://canecampione.com/corso-istruttore-clicker-training/?gclid=EAIaIQobChMInLeyj8vy_QIVT-3tCh1wnQ-OEAAYASAAEgLWCvD_BwE",
         summary:
-          "Clicker training is an active experience in which subjects, owners and dogs, collaborate with each other as in a couple dance",
+          "Il clicker training è un'esperienza attiva, in cui ipadroni e i cani, collaborano tra loro come in un ballo di coppia",
       },
       {
         icon:disability,
-        title:"Assistance for Motor Disabilities",
+        title:"Assistenti per disabilità",
         link:"https://www.dobredog.it/formazione/specializzazioni/istruttore-tecnico-cinofilo-in-cani-da-assistenza-per-disabili-motori/",
         summary:
-        "It is a specific training protocol that allows you to learn the knowledge and technical/practical skills essential for the qualification of the man-dog couple in a care project of this type.",
+        "Si tratta di uno specifico protocollo formativo che permette di apprendere le conoscenze e le competenze tecnico/pratiche indispensabili per la qualificazione della coppia uomo-cane in un progetto di cura di questo tipo.",
 
       },
       {
         icon:rescure,
-        title:"Rescure and Civil Protection",
+        title:"Soccorso e Protecione Civile",
         link:"https://www.discoverydogs.it/addestramento-cani-da-soccorso-e-protezione-civile/",
-        summary:"The duo is trained on the methodology of research on the surface, on rubble, on cartography and use of GPS, first aid, psychology of the missing person, descent maneuvers.",
+        summary:"Il duo è formato sulla metodologia della ricerca in superficie, sulle macerie, sulla cartografia e uso del GPS, primo soccorso, psicologia della persona scomparsa, manovre di discesa.",
       }
     ],
   };
   return (
-    <div className="section">
-      <h3>Affiliate Course</h3>
+    <div className="section" >
+      <h3>Corsi Affiliati</h3>
 
       <div className="container">
         {state.course.map((item, index) => {
