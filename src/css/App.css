@@ -22,7 +22,7 @@
 /* Primary btn */
 .primaryBtn{
   width: 90%;
-  
+  text-decoration: none;
   margin:4.6%;
   color: var(--mainBlack);
   background: var(--primaryColor);

@@ -1,5 +1,6 @@
 import React,{useState} from "react";
 import Request from "./api/UserApi";
+import DogRequest from "./api/DogApi";
 import axios from "axios";
 
 export const StateContext = React.createContext();
@@ -12,6 +13,7 @@ export default function SetContext({ children }) {
   
   /*state*/
   const [state,setState]=useState({});
+  const[dog,setDog]=useState({});
   const [user,setUser]=useState({});
   const [data,setData]=useState({
     id: "",
@@ -39,11 +41,14 @@ export default function SetContext({ children }) {
           enterBtn,
           setEnterBtn,
           data,
-          setData
+          setData,
+          dog,
+          setDog,
         }}
       >
        
         <Request.UserApi />
+        <DogRequest.DogApi/>
         {children}
       </StateContext.Provider>
     </>

@@ -33,6 +33,7 @@
     .headerBg {
         min-height: calc(100vh-66px);
         font-size: 1.5rem;
+        
       }
     .headerbg h2{
         width:60%;

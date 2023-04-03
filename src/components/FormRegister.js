@@ -53,7 +53,7 @@ export default function FormRegister() {
   return (
     
     <div className="form">
-      <h3>Register</h3>
+      <h3>Registrati</h3>
       <form onSubmit={handleSubmit}>
         <table cellSpacing={10}>
           <tbody>
@@ -101,7 +101,7 @@ export default function FormRegister() {
 
             <tr>
               <th>
-                <label>Confirm Password:</label>
+                <label>Conferma Password:</label>
               </th>
               <td>
                 <input
@@ -115,7 +115,7 @@ export default function FormRegister() {
 
             <tr>
               <td colSpan={2} align="right">
-                <button className="secondaryBtn">Register</button>
+                <button className="secondaryBtn">Registrati</button>
               </td>
             </tr>
           </tbody>
