@@ -22,7 +22,7 @@ export default function SetContext({ children }) {
   });
 
   const [enterBtn,setEnterBtn]=useState({isOpen:'loginBtn'});
-  
+  // filter
 
   /*Loading*/
   
@@ -43,7 +43,8 @@ export default function SetContext({ children }) {
           data,
           setData,
           dog,
-          setDog,
+          setDog
+          
         }}
       >
        

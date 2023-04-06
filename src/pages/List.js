@@ -1,16 +1,20 @@
 import React,{useContext} from 'react'
 import headerBg from "../img/03.jpg";
 import "../css/header.css";
-import "../css/cardDog.css";
-
 import DogCard from '../components/DogCard';
+import Filter from '../components/Filter';
 import { StateContext } from "../SetContext";
 
 export default function List() {
-  const { dog } = useContext(StateContext);
+  const { dog} = useContext(StateContext);
+
+  const newDog=[...dog];
+  
 
   return (
     <div>
+         
+
       <header
           className="headerBg"
           style={{
@@ -22,14 +26,16 @@ export default function List() {
         >
         </header>
 
+          <Filter/>
+
         <div className="searchList">
-          {dog.map((item) => {
+          {newDog.map((item) => {
             return (
               <DogCard
                 name={item.name}
                 key={item.id}
                 id={item.id}
-                image={item.image}
+                img={item.img}
               />
             );
           })}

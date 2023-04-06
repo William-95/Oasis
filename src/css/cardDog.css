@@ -46,8 +46,12 @@
 
 .primaryBtn{
   position:absolute;
-  top:-150px;
-  transition: 0.5s ease-in;
+  left: 0;
+  top:130px;
+  width: 25%;
+justify-content: center;
+margin:0 37.5%;
+transition: 0.5s ease-in;
   opacity: 0;
   z-index: 2;
 }
@@ -56,8 +60,16 @@
 }
 /* tablet */
 @media screen and (max-width: 900px) and (min-width: 600px) {
+  .searchList{
+    grid-template-columns: repeat(auto-fit, minmax(230px, 0.5fr));
+
+  }
 }
 
 /*desktop*/
 @media screen and (min-width: 900px) {
+  .searchList{
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+
+  }
 }
