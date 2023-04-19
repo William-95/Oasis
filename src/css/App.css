@@ -30,7 +30,7 @@
   border: 3px solid var(--primaryColor);
   border-radius: 25%;
   transition: var(--mainTransition);
-  
+  z-index: 100;
   cursor: pointer;
 }
 .primaryBtn:hover {

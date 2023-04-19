@@ -44,7 +44,7 @@
   opacity: 1;
 }
 
-.primaryBtn{
+.primaryBtn1{
   position:absolute;
   left: 0;
   top:130px;
@@ -55,7 +55,7 @@ transition: 0.5s ease-in;
   opacity: 0;
   z-index: 2;
 }
-.card:hover .primaryBtn {
+.card:hover .primaryBtn1 {
     opacity:1;
 }
 /* tablet */
