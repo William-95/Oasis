@@ -3,6 +3,7 @@ import { StateContext } from "../SetContext";
 
 export default function FormInsertDog() {
   const { api } = useContext(StateContext);
+  const [file, setFile] = useState(null);
   const [data, setData] = useState({
     id: "",
     name: "",
@@ -17,17 +18,20 @@ export default function FormInsertDog() {
     contacts: "",
   });
 
-  
+  const handleFileChange = (event) => {
+    setFile(event.target.files[0]);
+    setData((data) => ({ ...data, img: file }));
+  };
 
   const handleChange = (event) => {
     const name = event.target.name;
     const value = event.target.value;
     setData((data) => ({ ...data, [name]: value }));
   };
-console.log(data.img);
+
   const handleSubmit = (event) => {
     event.preventDefault();
-
+    
     api({
       method: "post",
       url: `/dogs`,
@@ -170,8 +174,8 @@ console.log(data.img);
                   type="file"
                   name="img"
                   multiple
-                  onChange={handleChange}
-                  value={data.img}
+                  onChange={handleFileChange}
+                  // value={data.img}
                 />
               </td>
             </tr>

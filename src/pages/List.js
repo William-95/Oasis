@@ -10,6 +10,7 @@ export default function List() {
 
   const newDog=[...dog];
   
+  console.log(newDog[1].img);
 
   return (
     <div>
@@ -27,6 +28,8 @@ export default function List() {
         </header>
 
           <Filter/>
+          
+          <img src={newDog[1].img} alt="Immagine" />
 
         <div className="searchList">
           {newDog.map((item) => {
