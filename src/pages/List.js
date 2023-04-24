@@ -29,7 +29,6 @@ export default function List() {
 
           <Filter/>
           
-          <img src={newDog[1].img} alt="Immagine" />
 
         <div className="searchList">
           {newDog.map((item) => {
