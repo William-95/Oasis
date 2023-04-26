@@ -11,12 +11,7 @@ import { StateContext } from "../SetContext";
 export default function Navbar () {
   const { user } = useContext(StateContext);
  const [state,setState]=useState({isOpen:false })
-  // const logUser=[...user,{
-  //   id:user.id,
-  //   name:user.name,
-  //   email:user.email
-  // }];
-  // console.log(logUser);
+ 
  const handleToggle = () => {
     setState({isOpen:!state.isOpen});
   };

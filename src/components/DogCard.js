@@ -3,7 +3,6 @@ import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
 // import "../css/App.css";
 import "../css/cardDog.css";
-
 import defaultImg from'../img/defaultImg.jpg';
 
 export default function DogCard({img,id,name}) {

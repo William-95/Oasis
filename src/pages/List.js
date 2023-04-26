@@ -1,6 +1,5 @@
 import React,{useContext} from 'react'
 import headerBg from "../img/03.jpg";
-import "../css/header.css";
 import DogCard from '../components/DogCard';
 import Filter from '../components/Filter';
 import { StateContext } from "../SetContext";
@@ -10,7 +9,6 @@ export default function List() {
 
   const newDog=[...dog];
   
-  console.log(newDog[1].img);
 
   return (
     <div>

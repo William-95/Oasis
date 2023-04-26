@@ -22,7 +22,6 @@ function UserApi() {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [setState]);
 
-  // console.log(state);
 
   return <></>;
 }

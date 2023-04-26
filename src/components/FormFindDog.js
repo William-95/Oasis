@@ -3,7 +3,7 @@ import { StateContext } from '../SetContext'
 import "../css/form.css";
 
 export default function FormFindDog() {
-    const{api}=useContext(StateContext);
+    const{api, setFindDog}=useContext(StateContext);
     const[data,setData]=useState({
         microchip:''
     });
@@ -26,8 +26,8 @@ export default function FormFindDog() {
         })
           .then((result) => {
             if (result.status === 200) {
-                const data=result.data
-              console.log(data);
+                const data=result.data;
+              setFindDog(data);
             } else {
               alert('Il cane non si trova nelle nostre strutture, ci dispiace.');
             }

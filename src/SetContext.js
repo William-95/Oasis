@@ -20,6 +20,7 @@ export default function SetContext({ children }) {
     name: "",
     password: ""
   });
+  const[findDog,setFindDog]=useState({});
 
   const [enterBtn,setEnterBtn]=useState({isOpen:'loginBtn'});
   // filter
@@ -43,8 +44,9 @@ export default function SetContext({ children }) {
           data,
           setData,
           dog,
-          setDog
-          
+          setDog,
+          findDog,
+          setFindDog,
         }}
       >
        

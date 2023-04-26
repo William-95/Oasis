@@ -1,0 +1,63 @@
+@import "../css/App.css";
+.container {
+  display: block;
+}
+.container h3 {
+  text-align: center;
+  font-size: 1.5em;
+  color: var(--darkGreen);
+  margin: 10% 0 10% 0;
+}
+.container img {
+  width: 100%;
+  border-radius: 15%;
+  border: 2px solid var(--primaryColor);
+  margin: 10% 0 10% 0;
+}
+.description {
+  border-radius: 15%;
+  border: 2px solid var(--primaryColor);
+  padding: 5%;
+  background: rgb(175, 154, 125);
+  background: radial-gradient(
+    circle,
+    rgba(175, 154, 125, 1) 0%,
+    rgba(41, 93, 9, 1) 100%
+  );
+  margin: 10% 0 10% 0;
+}
+
+.description table{
+    margin:0 auto;
+}
+/* tablet */
+@media screen and (max-width: 900px) and (min-width: 600px) {
+    .container h3 {
+        font-size: 1.9em;
+    }
+
+.description{
+    font-size: 1.3em;
+    text-align: left;
+}
+
+}
+
+/*desktop*/
+@media screen and (min-width: 900px) {
+    .container h3{
+        font-size: 2.3em;
+        margin:5% 0 5% 0;
+    }
+    .container img{
+        width: 45%;
+        display: flex;
+float: left;
+margin:5% 0 5% 0;
+    }
+    .description{
+        width: 45%;
+        float: right;
+        margin:5% 0 5% 0;
+   }
+}
