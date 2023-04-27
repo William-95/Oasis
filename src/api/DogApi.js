@@ -25,6 +25,5 @@ function DogApi() {
 }
 
 
-
-const DogRequest = { DogApi };
+const DogRequest = { DogApi};
 export default DogRequest;

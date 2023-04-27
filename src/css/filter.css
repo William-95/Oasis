@@ -1,0 +1,28 @@
+@import "../css/App.css";
+.containerFilter{
+display:flex;
+align-items: center;
+justify-content: center;
+padding:8%;
+}
+
+/* tablet */
+@media screen and (max-width: 900px) and (min-width: 600px) {
+    .optionSelect{
+        font-size: 1.5em;
+        margin:2%;
+    }
+}
+
+/*desktop*/
+@media screen and (min-width: 900px) {
+   .containerFilter{
+    padding:4%;
+   }
+   
+    .optionSelect{
+        font-size: 1.7em;
+        margin:2%;
+    }
+    
+    }

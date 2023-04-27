@@ -2,6 +2,7 @@ import React,{useState,useContext} from 'react'
 import { StateContext } from '../SetContext'
 import "../css/form.css";
 
+
 export default function FormFindDog() {
     const{api, setFindDog}=useContext(StateContext);
     const[data,setData]=useState({
@@ -17,8 +18,8 @@ export default function FormFindDog() {
       const HandleSubmit = (event) => {
         event.preventDefault();
         // axios
-    
-        api({
+
+          api({
           method: "post",
           url: `/dog`,
           headers: { "Content-Type": "application/json" },
@@ -37,7 +38,7 @@ export default function FormFindDog() {
     
   return (
     <div>
-        <div className="form">
+        <div className="form" style={{marginBottom:'7%'}}>
         <h3>Cerca nelle nostre strutture</h3>
       <form onSubmit={HandleSubmit}>
         <table cellSpacing={10}>

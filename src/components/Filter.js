@@ -1,28 +1,28 @@
 import React, { useContext,useEffect,useState } from "react";
 import { StateContext } from "../SetContext";
+import "../css/filter.css";
 
 export default function Filter() {
-  const { dog,setDog} = useContext(StateContext);
+  const { dog} = useContext(StateContext);
   const[sex,setSex]=useState({});
 const newDog=[...dog];
   useEffect(() => {
 
     const cicci=newDog.filter((item)=>{
-      return item.sex===sex;
+     return item.sex===sex;
     });
-    console.log(cicci);
-   
+console.log(cicci);   
     
     // eslint-disable-next-line
   },[sex]);
 
 
   return (
-    <div>
+    <div className="containerFilter">
       <div className="optionSelect">
         <h5>Sesso</h5>
         <select onChange={(e) => setSex(e.target.value)}>
-          <option >Tutti</option>
+          <option>Tutti</option>
           <option value="maschio">Maschio</option>
           <option value="femmina">Femmina</option>
         </select>

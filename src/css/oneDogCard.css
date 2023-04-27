@@ -1,14 +1,15 @@
 @import "../css/App.css";
-.container {
+.containerDog {
   display: block;
+  margin:10%;
 }
-.container h3 {
+.containerDog h3 {
   text-align: center;
   font-size: 1.5em;
   color: var(--darkGreen);
   margin: 10% 0 10% 0;
 }
-.container img {
+.containerDog img {
   width: 100%;
   border-radius: 15%;
   border: 2px solid var(--primaryColor);
@@ -27,37 +28,36 @@
   margin: 10% 0 10% 0;
 }
 
-.description table{
-    margin:0 auto;
+.description table {
+  margin: 0 auto;
 }
 /* tablet */
 @media screen and (max-width: 900px) and (min-width: 600px) {
-    .container h3 {
-        font-size: 1.9em;
-    }
+  .containerDog h3 {
+    font-size: 1.9em;
+  }
 
-.description{
+  .description {
     font-size: 1.3em;
     text-align: left;
-}
-
+  }
 }
 
 /*desktop*/
 @media screen and (min-width: 900px) {
-    .container h3{
-        font-size: 2.3em;
-        margin:5% 0 5% 0;
-    }
-    .container img{
-        width: 45%;
-        display: flex;
-float: left;
-margin:5% 0 5% 0;
-    }
-    .description{
-        width: 45%;
-        float: right;
-        margin:5% 0 5% 0;
-   }
+  .containerDog h3 {
+    font-size: 2.3em;
+    margin: 5% 0 5% 0;
+  }
+  .containerDog img {
+    width: 45%;
+    display: flex;
+    float: left;
+    margin: 5% 0 5% 0;
+  }
+  .description {
+    width: 45%;
+    float: right;
+    margin: 5% 0 5% 0;
+  }
 }

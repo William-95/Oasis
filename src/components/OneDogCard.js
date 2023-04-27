@@ -1,16 +1,26 @@
-import React from 'react'
-import defaultImg from'../img/defaultImg.jpg';
+import React from "react";
+import defaultImg from "../img/defaultImg.jpg";
 import "../css/oneDogCard.css";
 
-
-export default function OneDogCard({name,race,sex,size,img,microchip,structure,contacts,date_birth,date_entry}) {
+export default function OneDogCard({
+  name,
+  race,
+  sex,
+  size,
+  img,
+  microchip,
+  structure,
+  contacts,
+  date_birth,
+  date_entry,
+}) {
   return (
-    <div className='container'>
-        <h3>Ciao, io sono {name}</h3>
-        <img src={"http://127.0.0.1:8000/"+img||defaultImg} alt="" />
+    <div className="containerDog">
+      <h3>Ciao, io sono {name}</h3>
+      <img src={"http://127.0.0.1:8000/" + img || defaultImg} alt="" />
 
-<div className='description'>
-<table cellSpacing={10}>
+      <div className="description">
+        <table cellSpacing={10}>
           <tbody>
             <tr>
               <th>
@@ -29,7 +39,7 @@ export default function OneDogCard({name,race,sex,size,img,microchip,structure,c
                 <p>{sex}</p>
               </td>
             </tr>
-            
+
             <tr>
               <th>
                 <h5>Razza:</h5>
@@ -38,7 +48,7 @@ export default function OneDogCard({name,race,sex,size,img,microchip,structure,c
                 <p>{race}</p>
               </td>
             </tr>
-           
+
             <tr>
               <th>
                 <h5>Stazza:</h5>
@@ -94,7 +104,7 @@ export default function OneDogCard({name,race,sex,size,img,microchip,structure,c
             </tr>
           </tbody>
         </table>
-</div>
+      </div>
     </div>
-  )
+  );
 }
