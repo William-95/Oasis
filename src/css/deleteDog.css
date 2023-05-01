@@ -1,7 +1,8 @@
 @import "../css/App.css";
 .deleteBtn{
     width: 30%;
-    
+    margin:0 auto;
+
 }
 .deleteBtn button{
     
@@ -30,7 +31,7 @@
 @media screen and (max-width: 900px) and (min-width: 600px) {
     .deleteBtn{
         width: 20%;
-        
+
     }
 }
 

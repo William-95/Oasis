@@ -1,0 +1,70 @@
+@import "../css/App.css";
+.updateBtn {
+  width: 30%;
+  margin:0 auto;
+}
+.updateBtn button {
+  width: 100%;
+  text-decoration: none;
+  margin: 4.6%;
+  color: var(--mainBlack);
+  background: var(--primaryColor);
+  padding: 0.4rem 0.9rem;
+  border: 3px solid var(--primaryColor);
+  border-radius: 25%;
+  transition: var(--mainTransition);
+  z-index: 100;
+  cursor: pointer;
+  box-shadow: var(--lightShadow);
+}
+.updateBtn button:hover {
+  background: transparent;
+  color: var(--primaryColor);
+  box-shadow: var(--darkShadow);
+}
+
+.updateForm {
+  margin:6% 10%;
+  padding: 2%;
+  border: 2px solid var(--darkGreen);
+  display: none;
+}
+.updateForm h3 {
+  text-align: center;
+  padding: 5%;
+}
+.btn{
+    width:25%;
+    margin-right:15%;
+}
+.showForm {
+  display: block;
+}
+
+/* tablet */
+@media screen and (max-width: 900px) and (min-width: 600px) {
+  .updateBtn {
+    width: 20%;
+  }
+
+  .updateForm{
+    width:50%;
+    margin:4%  auto;
+  }
+}
+
+/*desktop*/
+@media screen and (min-width: 900px) {
+  .updateBtn {
+    width: 15%;
+  }
+  .updateForm{
+    width: 35%;
+    margin:3%  auto;
+    font-size: 1.3em;
+   }
+  .updateForm form{
+    width:80%;
+    margin:0 auto;
+  }
+}

@@ -4,13 +4,13 @@ import { StateContext } from "../SetContext";
 import { useParams } from "react-router-dom";
 import OneDogCard from "../components/OneDogCard";
 import DeleteDog from "../components/DeleteDog";
-
+import UpdateDog from "../components/UpdateDog";
 
 export default function SingleDog() {
   const { id_dog } = useParams();
   const { api } = useContext(StateContext);
   const [oneDog, setOneDog] = useState({});
-  console.log(useParams());
+  
   useEffect(() => {
     api
       .get(`/dog/${id_dog}`)
@@ -24,7 +24,6 @@ export default function SingleDog() {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
-  console.log(oneDog);
 
   return (
     <div>
@@ -50,9 +49,11 @@ export default function SingleDog() {
         date_birth={oneDog.date_birth}
         date_entry={oneDog.date_entry}
       />
-   
 
-    <DeleteDog/>
+      <div>
+        <UpdateDog />
+        <DeleteDog />
+      </div>
 
     </div>
   );
