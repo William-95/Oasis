@@ -10,7 +10,7 @@ export default function SingleDog() {
   const { id_dog } = useParams();
   const { api } = useContext(StateContext);
   const [oneDog, setOneDog] = useState({});
-  
+
   useEffect(() => {
     api
       .get(`/dog/${id_dog}`)
@@ -23,7 +23,6 @@ export default function SingleDog() {
 
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
-
 
   return (
     <div>
@@ -54,7 +53,6 @@ export default function SingleDog() {
         <UpdateDog />
         <DeleteDog />
       </div>
-
     </div>
   );
 }

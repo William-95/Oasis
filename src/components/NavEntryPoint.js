@@ -10,7 +10,7 @@ export default function NavbarEntryPoint() {
 const handleLogin=()=>{
     setEnterBtn({isOpen:'loginBtn'});
 }
-const handleLogout=()=>{
+const handleRegister=()=>{
     setEnterBtn({isOpen:'registerBtn'});
     
 }
@@ -34,7 +34,7 @@ const handleLogout=()=>{
             <button
               type="button"
               className="primaryBtn"
-              onClick={handleLogout}
+              onClick={handleRegister}
             >
               Registrati
             </button>

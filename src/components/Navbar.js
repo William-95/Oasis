@@ -10,8 +10,8 @@ import { StateContext } from "../SetContext";
 
 export default function Navbar () {
   const { user } = useContext(StateContext);
- const [state,setState]=useState({isOpen:false })
- 
+ const [state,setState]=useState({isOpen:false });
+
  const handleToggle = () => {
     setState({isOpen:!state.isOpen});
   };

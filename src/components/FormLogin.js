@@ -38,10 +38,16 @@ export default function FormLogin() {
           setUser(data);
           let userId = data[0].id;
           history.push("/home/" + userId);
+
         } else {
           console.log(result.data.message);
         }
       })
+      // .then(()=>{
+      //   history.replace(`/profile/${user[0].id}`);
+      //   history.push(`/home/${user[0].id}` );
+      //   console.log(user);
+      // })
       .catch((err) => console.log(err));
   };
 

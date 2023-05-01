@@ -3,7 +3,7 @@ import { StateContext } from "../SetContext";
 
 
 function DogApi() {
-  const {  setDog,dog, api } = useContext(StateContext);
+  const {  setDog, api } = useContext(StateContext);
 
   /*requestApi*/
   useEffect(() => {
@@ -19,7 +19,7 @@ function DogApi() {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
-  console.log(dog);
+
 
   return <></>;
 }

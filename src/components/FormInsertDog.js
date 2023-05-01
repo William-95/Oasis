@@ -1,9 +1,8 @@
-import React, {useState, useContext } from "react";
+import React, { useState, useContext } from "react";
 import { StateContext } from "../SetContext";
 
 export default function FormInsertDog() {
   const { api } = useContext(StateContext);
-  const [file, setFile] = useState(null);
   const [data, setData] = useState({
     id: "",
     name: "",
@@ -13,15 +12,15 @@ export default function FormInsertDog() {
     date_birth: "",
     microchip: "",
     date_entry: "",
-    img:"",
+    img: "",
     structure: "",
     contacts: "",
   });
 
   const handleFileChange = (event) => {
-    setFile(event.target.files[0]);
-    setData((data) => ({ ...data, img: file }));
+    setData((data) => ({ ...data, img: event.target.files[0] }));
   };
+  console.log(data);
 
   const handleChange = (event) => {
     const name = event.target.name;
@@ -31,11 +30,11 @@ export default function FormInsertDog() {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    
+
     api({
       method: "post",
       url: `/dogs`,
-      headers: {"Content-Type": "multipart/form-data",},
+      headers: { "Content-Type": "multipart/form-data" },
       data: data,
     })
       .then((result) => {
@@ -50,7 +49,7 @@ export default function FormInsertDog() {
   return (
     <div className="form">
       <h3>Inserisci un cane</h3>
-      <form onSubmit={handleSubmit} >
+      <form onSubmit={handleSubmit}>
         <table cellSpacing={10}>
           <tbody>
             <tr>
