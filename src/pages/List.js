@@ -5,11 +5,11 @@ import Filter from '../components/Filter';
 import { StateContext } from "../SetContext";
 
 export default function List() {
-  const { dog} = useContext(StateContext);
+  const { filterDog,dog} = useContext(StateContext);
 
-  const newDog=[...dog];
+  const newDog=[...filterDog];
   
-
+console.log(newDog);
   return (
     <div>
          

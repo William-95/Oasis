@@ -13,7 +13,8 @@ export default function SetContext({ children }) {
   
   /*state*/
   const [state,setState]=useState({});
-  const[dog,setDog]=useState({});
+  const[dog,setDog]=useState([{}]);
+  const[filterDog,setFilterDog]=useState([{}]);
   const [user,setUser]=useState({});
   const [data,setData]=useState({
     id: "",
@@ -47,6 +48,8 @@ export default function SetContext({ children }) {
           setDog,
           findDog,
           setFindDog,
+          filterDog,
+          setFilterDog
         }}
       >
        
