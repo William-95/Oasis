@@ -1,20 +1,18 @@
-import React, { useContext,useState } from "react";
-import { useHistory } from "react-router-dom";
-
-import { StateContext } from "../SetContext";
+import React, { useState } from "react";
+// import { useHistory } from "react-router-dom";
+import { LoginUser } from "../api/UserApi";
+// import { StateContext } from "../SetContext";
 import "../css/form.css";
 
 export default function FormLogin() {
-  const history = useHistory();
-
-  const { api,setUser } = useContext(StateContext);
-
+  // const history = useHistory();
+  // const { api,setUser } = useContext(StateContext);
+  const [send, setSend] = useState(false);
   const [data, setData] = useState({
     id: "",
     name: "",
     password: "",
   });
- 
 
   const HandleChange = (event) => {
     const name = event.target.name;
@@ -24,33 +22,11 @@ export default function FormLogin() {
 
   const HandleSubmit = (event) => {
     event.preventDefault();
-    // axios
-
-    api({
-      method: "post",
-      url: `/user`,
-      headers: { "Content-Type": "application/json" },
-      data: data,
-    })
-      .then((result) => {
-        if (result.status === 200) {
-          const data = result.data;
-          setUser(data);
-          let userId = data[0].id;
-          history.push("/home/" + userId);
-
-        } else {
-          console.log(result.data.message);
-        }
-      })
-      // .then(()=>{
-      //   history.replace(`/profile/${user[0].id}`);
-      //   history.push(`/home/${user[0].id}` );
-      //   console.log(user);
-      // })
-      .catch((err) => console.log(err));
+    setSend(true);
   };
-
+  if (send === true) {
+    LoginUser(data);
+  }
   return (
     <div className="form">
       <h3>Login</h3>

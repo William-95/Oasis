@@ -12,6 +12,9 @@ export default function Navbar () {
   const { user } = useContext(StateContext);
  const [state,setState]=useState({isOpen:false });
 
+ const newUser=[...user];
+ 
+ console.log(newUser);
  const handleToggle = () => {
     setState({isOpen:!state.isOpen});
   };
@@ -21,7 +24,7 @@ export default function Navbar () {
       <nav className="navbar">
         <div className="navCenter">
           <div className="navHeader">
-            <Link to="/home/:id">
+            <Link to={`/home/${newUser[0].id}/`}>
               <img className="navLogo" src={logo} alt="" />
             </Link>
             <button
@@ -36,7 +39,7 @@ export default function Navbar () {
           
           <ul className={classNames('navLinks',{'showNav':state.isOpen})} onClick={handleToggle}>
             <li>
-              <Link to={`/home/${user.id}/`}>Home</Link>
+              <Link to={`/home/${newUser[0].id}/`}>Home</Link>
             </li>
             <li>
               <Link to="/list/">Lista</Link>
@@ -48,7 +51,7 @@ export default function Navbar () {
               <Link to="/findlostdog/">Trova Cane</Link>
             </li>
             <li>
-              <Link to={`/profile/${user.id}/`}>Profilo</Link>
+              <Link to={`/profile/${newUser[0].id}/`}>Profilo</Link>
             </li>
             <li>
               <Link to="/">Logout</Link>

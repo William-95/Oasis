@@ -4,6 +4,7 @@ import clicker from "../img/course/clicker.jpg";
 import disability from "../img/course/disability.jpg";
 import rescure from "../img/course/rescure.jpg";
 
+
 export default function Course() {
   let state = {
     course: [

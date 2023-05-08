@@ -1,69 +1,62 @@
 @import "../css/App.css";
-  .featureIntro{
-    margin:8%;
-    margin-bottom: 15%;
-    text-align: center;
-  }
-  .featureIntro h3{
-    font-size:1.5em;
-    
-    margin:5%;
-    
-  }
- .feature{
-    display:flex;
-    margin:10%;
-    margin-bottom: 15%;
-    flex-direction:row;
-    align-items: center;
- }
- .reverse{
-    flex-direction: row-reverse;
- }
-  .feature img{
-   width: 100%;
-    margin:8%;
-  }
-
-  /* tablet */
-  @media screen and (max-width: 900px) and (min-width: 600px) {
-  .featureIntro{
-    font-size: 1.5em;
-
-  }
-.feature{
-    margin-bottom: 2%;
+.featureIntro {
+  margin: 8%;
+  margin-bottom: 15%;
+  text-align: center;
 }
-  .feature p{
+.featureIntro h3 {
+  font-size: 1.5em;
+  margin: 5%;
+}
+.feature {
+  display: flex;
+  margin: 10%;
+  margin-bottom: 15%;
+  flex-direction: row;
+  align-items: center;
+  transition: 0.5s ease-in;
+}
+
+.reverse {
+  flex-direction: row-reverse;
+}
+.feature img {
+  width: 100%;
+  margin: 8%;
+}
+
+/* tablet */
+@media screen and (max-width: 900px) and (min-width: 600px) {
+  .featureIntro {
+    font-size: 1.5em;
+  }
+  .feature {
+    margin-bottom: 2%;
+  }
+  .feature p {
     font-size: 1.35em;
   }
-  .feature img{
+  .feature img {
     width: 50%;
   }
-  
-  }
-  
-  
-  
-  
-  
-  /*desktop*/
-  @media screen and (min-width: 900px) {
-  .featureIntro{
+}
+
+/*desktop*/
+@media screen and (min-width: 900px) {
+  .featureIntro {
     font-size: 1.5em;
     margin-bottom: 0%;
   }
-  .feature{
+  .feature {
     width: 60%;
     /* margin-top:2%;
     margin-bottom: 0%; */
-    margin:0 auto;
+    margin: 0 auto;
   }
-  .feature p{
+  .feature p {
     font-size: 1.5em;
   }
-  .feature img{
+  .feature img {
     width: 25%;
   }
-  }
-
+}

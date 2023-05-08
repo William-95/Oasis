@@ -1,21 +1,25 @@
-import React, { useState,useContext } from "react";
-import { useHistory } from "react-router-dom";
-import '../css/form.css';
-import { StateContext } from "../SetContext";
-
-
+import React, { useState } from "react";
+// import { useHistory } from "react-router-dom";
+import "../css/form.css";
+// import { StateContext } from "../SetContext";
+import RegisterUser from "../api/UserApi";
 
 export default function FormRegister() {
-  const history = useHistory();
+  // const history = useHistory();
+  // const { send,setSend} = useContext(StateContext);
+  const [send, setSend] = useState(false);
 
-  const { api,setUser } = useContext(StateContext);
   const [data, setData] = useState({
-    id:"",
+    id: "",
     name: "",
     email: "",
     password: "",
     confirm_password: "",
   });
+
+  // if (send === true) {
+  //   RegisterUser(data);
+  // }
 
   const handleChange = (event) => {
     const name = event.target.name;
@@ -26,35 +30,36 @@ export default function FormRegister() {
   const handleSubmit = (event) => {
     event.preventDefault();
 
-    if(data.password===data.confirm_password){
+    if (data.password === data.confirm_password) {
+      setSend(true);
       
-    api({
-      method: "post",
-      url: `/users`,
-      headers: { "Content-Type": "application/json" },
-      data: data
-    })
-      .then((result) => {
-        if (result.status === 200) {
-          const data=result.data;
-          setUser(data);
-          let userId=data.id;
-          history.push("/home/"+userId);
-        }else{
-          alert(result.data.message)
-        }
-      })
-      .catch((err) => console.log(err));
-  }else{
-    alert('Please Confirm your password!')
-  }
+      // api({
+      //   method: "post",
+      //   url: `/users`,
+      //   headers: { "Content-Type": "application/json" },
+      //   data: data
+      // })
+      //   .then((result) => {
+      //     if (result.status === 200) {
+      //       const data=result.data;
+      //       setUser(data);
+      //       let userId=data.id;
+      //       history.push("/home/"+userId);
+      //     }else{
+      //       alert(result.data.message)
+      //     }
+      //   })
+      //   .catch((err) => console.log(err));
+    } else {
+      alert("Please Confirm your password!");
+    }
   };
-  
+
   return (
-    
     <div className="form">
       <h3>Registrati</h3>
       <form onSubmit={handleSubmit}>
+        {send ? <RegisterUser dati={data}/> : null}
         <table cellSpacing={10}>
           <tbody>
             <tr>

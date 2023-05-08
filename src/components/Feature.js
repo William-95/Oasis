@@ -1,4 +1,4 @@
-import React from 'react'
+import React from "react";
 import "../css/feature.css";
 
 import bathing from "../img/icon/bathing.png";
@@ -10,59 +10,57 @@ import toy from "../img/icon/toy.png";
 export default function Feature() {
   return (
     <div>
-        <div className='featureIntro'>
+      <div className="featureIntro">
         <h3>Servizi</h3>
-        <p>Nelle nostre strutture, ai nostri amici a quattro zampe viene fornito quanto segue:
-        </p>
-        </div>
-
-        <div className='feature'>
-        <img src={medical} alt=''/>
         <p>
-        Innanzitutto, appena arrivati in struttura, 
-        ai cani viene eseguito un check-up completo 
-        al fine di controllare il loro stato di salute, 
-        e dove necessario intervenire tempestivamente.
+          Nelle nostre strutture, ai nostri amici a quattro zampe viene fornito
+          quanto segue:
         </p>
-        </div>
+      </div>
 
-        <div className='feature reverse'>
-        <img src={bowl} alt=''/>
+      <div className="feature">
+        <img src={medical} alt="" />
         <p>
-        L'alimentazione dei nostri amici appena 
-        arrivati avviene gradualmente, poichè spesso 
-        e volentieri giungono in condizioni di forte 
-        disidratazione e malnutrizione. 
+          Innanzitutto, appena arrivati in struttura, ai cani viene eseguito un
+          check-up completo al fine di controllare il loro stato di salute, e
+          dove necessario intervenire tempestivamente.
         </p>
-        </div>
+      </div>
 
-        <div className='feature'>
-        <img src={bathing} alt=''/>
+      <div className="feature reverse">
+        <img src={bowl} alt="" />
         <p>
-        Al fine di garantire un eccellente livello di 
-        pulizia dei cani, viene eseguito un bagno 
-        igienizzante, in tal maniera viene evitata la 
-        diffusione di parassiti.
+          L'alimentazione dei nostri amici appena arrivati avviene gradualmente,
+          poichè spesso e volentieri giungono in condizioni di forte
+          disidratazione e malnutrizione.
         </p>
-        </div>
+      </div>
 
-        <div className='feature reverse'>
-        <img src={love} alt=''/>
+      <div className="feature">
+        <img src={bathing} alt="" />
         <p>
-        Dopo aver curato il corpo dei nostri amici, 
-        è ora di curare l'animo con una sara e pura 
-        dose di affetto.
+          Al fine di garantire un eccellente livello di pulizia dei cani, viene
+          eseguito un bagno igienizzante, in tal maniera viene evitata la
+          diffusione di parassiti.
         </p>
-        </div>
+      </div>
 
-        <div className='feature'>
-        <img src={toy} alt=''/>
+      <div className="feature reverse">
+        <img src={love} alt="" />
         <p>
-        Ultimo ma non meno importante, un pò di divertimento 
-        per i nostri cuccioli e per i nostri volontari, con 
-        tante attività svolte nelle zone verdi.
+          Dopo aver curato il corpo dei nostri amici, è ora di curare l'animo
+          con una sara e pura dose di affetto.
         </p>
-        </div>
+      </div>
+
+      <div className="feature">
+        <img src={toy} alt="" />
+        <p>
+          Ultimo ma non meno importante, un pò di divertimento per i nostri
+          cuccioli e per i nostri volontari, con tante attività svolte nelle
+          zone verdi.
+        </p>
+      </div>
     </div>
-  )
+  );
 }

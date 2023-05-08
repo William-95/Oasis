@@ -1,54 +1,79 @@
 import React, { useContext, useEffect } from "react";
 import { StateContext } from "../SetContext";
+import { useHistory } from "react-router-dom";
+import axios from "axios";
 
-// const api = axios.create({
-//   baseURL: `http://127.0.0.1:8000/api`
-// });
-
-function UserApi() {
-  const {  setState, api } = useContext(StateContext);
+export function LoginUser(dati) {
+  const { api, setUser } = useContext(StateContext);
+  const history = useHistory();
 
   /*requestApi*/
-  useEffect(() => {
-    api
-      .get(`/users`)
 
-      .then((response) => {
-        setState(response.data);
-      })
-
-      .catch((err) => console.log(err));
-
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [setState]);
-
+  api({
+    method: "post",
+    url: `/user`,
+    headers: { "Content-Type": "application/json" },
+    data: dati,
+  })
+    .then((result) => {
+      if (result.status === 200) {
+        const data = result.data;
+        setUser(data);
+        let userId = data[0].id;
+        history.push("/home/" + userId);
+      } else {
+        console.log(result.data.message);
+      }
+    })
+    .catch((err) => console.log(err));
 
   return <></>;
 }
 
-// function UserLogin(){
-//   const {api,user,setUser} = useContext(StateContext);
-//   const history = useHistory();
+// ---------------// ---------------// ---------------// ---------------// ---------------
 
-//   /*requestApi*/
-//   useEffect(() => {
+export default function RegisterUser({ dati }) {
+  const { api, setUser } = useContext(StateContext);
+  const history = useHistory();
+  
+  /*requestApi*/
+  useEffect(() => {
+    const controller = new AbortController();
+   
+    api({
+      method: "post",
+      url: `/users`,
+      headers: { "Content-Type": "application/json" },
+      data: dati,
+      signal: controller.signal
+      })
+      .then((result) => {
+        if (result.status === 200) {
+          const data = result.data;
+          setUser([
+            {
+              id: data.id,
+              name: data.name,
+              password: data.password,
+            },
+          ]);
+          let userId = data.id;
+          controller.abort();
+          history.push("/home/" + userId);
+          
+        } else {
+          alert(result.data.message);
+        }
+      })
+     
+       
+     
+      .catch((err) => console.log(err));
+      
+      
+    // eslint-disable-next-line
+  }, []);
 
-//   api.post(`/user`)
-
-//     .then((result) => {
-//       if (result.status === 200) {
-
-//         let userId=user.id;
-//         history.push("/home/"+userId);
-
-//       }else{
-//         console.log(result.data.message);
-//       }
-//     },[user],1000)
-//     .catch((err) => console.log(err));
-//     // eslint-disable-next-line
-//   },[setUser,user])
-// }
-
-const Request = { UserApi };
-export default Request;
+  return <></>;
+}
+// ---------------// ---------------// ---------------// ---------------// ---------------// ---------------

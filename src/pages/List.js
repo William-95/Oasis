@@ -1,14 +1,21 @@
-import React,{useContext} from 'react'
+import React,{useContext,useEffect} from 'react'
 import headerBg from "../img/03.jpg";
 import DogCard from '../components/DogCard';
 import Filter from '../components/Filter';
 import { StateContext } from "../SetContext";
 
 export default function List() {
-  const { filterDog,dog} = useContext(StateContext);
-
-  const newDog=[...filterDog];
+  const {filterDog,dog,setFilterDog} = useContext(StateContext);
   
+  useEffect(() => {
+    const timer = setTimeout(() => {
+     setFilterDog(dog);
+    }, 1000);
+    return () => clearTimeout(timer);
+     // eslint-disable-next-line
+  }, []);
+  const newDog=[...filterDog];
+
 console.log(newDog);
   return (
     <div>
