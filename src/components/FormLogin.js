@@ -1,6 +1,6 @@
 import React, { useState } from "react";
+import  LoginApi  from "../api/LoginApi";
 // import { useHistory } from "react-router-dom";
-import { LoginUser } from "../api/UserApi";
 // import { StateContext } from "../SetContext";
 import "../css/form.css";
 
@@ -24,11 +24,13 @@ export default function FormLogin() {
     event.preventDefault();
     setSend(true);
   };
-  if (send === true) {
-    LoginUser(data);
-  }
+  // if (send === true) {
+  //   LoginApi(data);
+  // }
   return (
     <div className="form">
+      {send ? <LoginApi dati={data} /> : null}
+
       <h3>Login</h3>
       <form onSubmit={HandleSubmit}>
         <table cellSpacing={10}>
@@ -63,7 +65,7 @@ export default function FormLogin() {
 
             <tr>
               <td colSpan={2} align="right">
-                <button className="secondaryBtn">Login</button>
+                <button  className="secondaryBtn">Login</button>
               </td>
             </tr>
           </tbody>

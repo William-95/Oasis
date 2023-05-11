@@ -1,13 +1,13 @@
-import React, { useState } from "react";
+import React, { useCallback, useState,useContext } from "react";
 // import { useHistory } from "react-router-dom";
 import "../css/form.css";
-// import { StateContext } from "../SetContext";
-import RegisterUser from "../api/UserApi";
+import { StateContext } from "../SetContext";
+import RegisterApi from "../api/RegisterApi";
 
 export default function FormRegister() {
   // const history = useHistory();
-  // const { send,setSend} = useContext(StateContext);
-  const [send, setSend] = useState(false);
+  const { send,setSend} = useContext(StateContext);
+  // const [send, setSend] = useState(false);
 
   const [data, setData] = useState({
     id: "",
@@ -17,49 +17,34 @@ export default function FormRegister() {
     confirm_password: "",
   });
 
-  // if (send === true) {
-  //   RegisterUser(data);
-  // }
-
   const handleChange = (event) => {
     const name = event.target.name;
     const value = event.target.value;
     setData((data) => ({ ...data, [name]: value }));
   };
 
-  const handleSubmit = (event) => {
-    event.preventDefault();
+  const handleSubmit = useCallback(
+    (event) => {
+      event.preventDefault();
 
-    if (data.password === data.confirm_password) {
-      setSend(true);
-      
-      // api({
-      //   method: "post",
-      //   url: `/users`,
-      //   headers: { "Content-Type": "application/json" },
-      //   data: data
-      // })
-      //   .then((result) => {
-      //     if (result.status === 200) {
-      //       const data=result.data;
-      //       setUser(data);
-      //       let userId=data.id;
-      //       history.push("/home/"+userId);
-      //     }else{
-      //       alert(result.data.message)
-      //     }
-      //   })
-      //   .catch((err) => console.log(err));
-    } else {
-      alert("Please Confirm your password!");
-    }
-  };
+      if (data.password === data.confirm_password) {
+        setSend(!send);
+       
+        setTimeout(() => {
+          setSend(!send);
+        }, 200);
+
+      } else {
+        alert("Please Confirm your password!");
+      }
+      // eslint-disable-next-line
+    },[]);
 
   return (
     <div className="form">
       <h3>Registrati</h3>
       <form onSubmit={handleSubmit}>
-        {send ? <RegisterUser dati={data}/> : null}
+        {send ? <RegisterApi dati={data} /> : null}
         <table cellSpacing={10}>
           <tbody>
             <tr>
@@ -120,7 +105,9 @@ export default function FormRegister() {
 
             <tr>
               <td colSpan={2} align="right">
-                <button className="secondaryBtn">Registrati</button>
+                <button type="submit" className="secondaryBtn" disabled={send}>
+                  Registrati
+                </button>
               </td>
             </tr>
           </tbody>

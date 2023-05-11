@@ -16,6 +16,8 @@ export default function SetContext({ children }) {
   const [user, setUser] = useState([{}]);
   const [findDog, setFindDog] = useState({});
   const [enterBtn, setEnterBtn] = useState({ isOpen: "loginBtn" });
+  const [send, setSend] = useState(false);
+
   // filter
 
   /*Loading*/
@@ -37,6 +39,7 @@ export default function SetContext({ children }) {
           setFindDog,
           filterDog,
           setFilterDog,
+          send,setSend
         }}
       >
         {/* <Request.UserApi /> */}
