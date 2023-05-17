@@ -9,12 +9,10 @@ import Feature from "../components/Feature";
 
 
 export default function EntryPoint() {
-  const { enterBtn } = useContext(StateContext);
+  const { entryNavBtn } = useContext(StateContext);
 
-  if (enterBtn.isOpen === "loginBtn") {
-    return (
-      <>
-        <NavbarEntryPoint />
+  return <>
+    <NavbarEntryPoint/>
         <header
           className="headerBg"
           style={{
@@ -24,29 +22,8 @@ export default function EntryPoint() {
             backgroundPosition: "center",
           }}
         >
-          <FormLogin />
+         {entryNavBtn?<FormLogin />:<FormRegister/>} 
         </header>
         <Feature/>
-      </>
-    );
-  } else if (enterBtn.isOpen === "registerBtn") {
-    return (
-      <>
-        <NavbarEntryPoint />
-        <header className="headerBg" style={{
-            backgroundImage: `url(${headerBg})`,
-            backgroundSize: "cover",
-            backgroundRepeat: "no-repeat",
-            backgroundPosition: "center",
-          }}>
-          <FormRegister />
-        </header>
-        <Feature/>
-      </>
-    );
-  }
-
-  return <>
-  
   </>;
 }

@@ -1,10 +1,10 @@
-import React, { useState,useContext } from "react";
-import  LoginApi  from "../api/LoginApi";
+import React, { useState, useContext } from "react";
+import LoginApi from "../api/LoginApi";
 import { StateContext } from "../SetContext";
-import "../css/form.css";
+import "../css/enterForm.css";
 
 export default function FormLogin() {
-  const { send,setSend} = useContext(StateContext);
+  const { send, setSend } = useContext(StateContext);
   const [data, setData] = useState({
     id: "",
     name: "",
@@ -20,55 +20,40 @@ export default function FormLogin() {
   const HandleSubmit = (event) => {
     event.preventDefault();
     setSend(!send);
-       
-        setTimeout(() => {
-          setSend(!send);
-        }, 200);
+
+    setTimeout(() => {
+      setSend(!send);
+    }, 200);
   };
- 
+
   return (
-    <div className="form">
+    <div className="form-box">
       {send ? <LoginApi dati={data} /> : null}
 
       <h3>Login</h3>
       <form onSubmit={HandleSubmit}>
-        <table cellSpacing={10}>
-          <tbody>
-            <tr>
-              <th>
-                <label>User Name:</label>
-              </th>
-              <td>
-                <input
-                  type="text"
-                  name="name"
-                  onChange={HandleChange}
-                  value={data.name}
-                />
-              </td>
-            </tr>
+        <div className="user-box">
+          <input
+            type="text"
+            name="name"
+            value={data.name}
+            onChange={HandleChange}
+            required=""
+          />
+          <label>Username</label>
+        </div>
 
-            <tr>
-              <th>
-                <label>Password:</label>
-              </th>
-              <td>
-                <input
-                  type="text"
-                  name="password"
-                  onChange={HandleChange}
-                  value={data.password}
-                />
-              </td>
-            </tr>
-
-            <tr>
-              <td colSpan={2} align="right">
-                <button  className="secondaryBtn">Login</button>
-              </td>
-            </tr>
-          </tbody>
-        </table>
+        <div className="user-box">
+          <input
+            type="password"
+            name="password"
+            value={data.password}
+            onChange={HandleChange}
+            required=""
+          />
+          <label>Password</label>
+        </div>
+        <button  type='submit' className="secondaryBtn form-btn">Login</button>
       </form>
     </div>
   );

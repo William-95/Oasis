@@ -1,0 +1,67 @@
+@import "../css/App.css";
+
+.form-box {
+  /* position: relative;
+  top:10%;
+  left:5%; */
+  margin:25% 15% 15% 15%;
+  width: 60%;
+  padding: 6%;
+  /* transform: translate(-50%, -50%); */
+  background: rgba(0, 0, 0, 0.5);
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.6);
+  border-radius: 10px;
+}
+
+.form-box h3 {
+  margin: 5% auto;
+  color: #fff;
+  text-align: center;
+}
+
+.user-box {
+  position: relative;
+}
+
+.user-box input {
+  width: 100%;
+  padding: 10px 0;
+  font-size: 1.1em;
+  color: #fff;
+  margin-bottom: 30px;
+  border: none;
+  border-bottom: 1px solid #fff;
+  outline: none;
+  background: transparent;
+  cursor: pointer;
+}
+.user-box label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 10px 0;
+  font-size: 1.1em;
+  color: #fff;
+  pointer-events: none;
+  transition: 0.5s;
+}
+
+.user-box input:hover ~ label,
+.user-box input:focus ~ label,
+.user-box input:user-valid ~ label{
+  top: -20px;
+  left: 0;
+  color: #03e9f4;
+  font-size: 12px;
+}
+
+.form-btn {
+  float: right;
+}
+/* tablet */
+@media screen and (max-width: 900px) and (min-width: 600px) {
+}
+
+/*desktop*/
+@media screen and (min-width: 900px) {
+}

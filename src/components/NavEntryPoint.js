@@ -6,13 +6,13 @@ import { StateContext } from "../SetContext";
 
 
 export default function NavbarEntryPoint() {
-    const { setEnterBtn} = useContext(StateContext);
+    const { setEntryNavBtn} = useContext(StateContext);
 const handleLogin=()=>{
-    setEnterBtn({isOpen:'loginBtn'});
+    setEntryNavBtn(true);
+
 }
 const handleRegister=()=>{
-    setEnterBtn({isOpen:'registerBtn'});
-    
+    setEntryNavBtn(false);   
 }
     
   

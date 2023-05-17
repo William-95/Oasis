@@ -15,7 +15,7 @@ export default function SetContext({ children }) {
   const [filterDog, setFilterDog] = useState([{}]);
   const [user, setUser] = useState([{}]);
   const [findDog, setFindDog] = useState({});
-  const [enterBtn, setEnterBtn] = useState({ isOpen: "loginBtn" });
+  const [entryNavBtn, setEntryNavBtn] = useState(true);
   const [send, setSend] = useState(false);
   const [deleted, setDeleted] = useState(false);
 
@@ -32,8 +32,8 @@ export default function SetContext({ children }) {
           api,
           user,
           setUser,
-          enterBtn,
-          setEnterBtn,
+          entryNavBtn,
+          setEntryNavBtn,
           dog,
           setDog,
           oneDog,
@@ -45,10 +45,9 @@ export default function SetContext({ children }) {
           send,
           setSend,
           deleted,
-          setDeleted
+          setDeleted,
         }}
       >
-        {/* <Request.UserApi /> */}
         <AllDogApi />
         {children}
       </StateContext.Provider>

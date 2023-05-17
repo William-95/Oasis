@@ -2,7 +2,6 @@ import React from "react";
 import "./css/App.css";
 import { Route, Switch } from "react-router-dom";
 import SetContext from "./SetContext";
-
 import EntryPoint from "./pages/EntryPoint";
 import Home from "./pages/Home";
 import Profile from "./pages/Profile";
