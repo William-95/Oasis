@@ -3,9 +3,10 @@ import { StateContext } from "../SetContext";
 import { useParams } from "react-router-dom";
 import classNames from "classnames";
 import "../css/updateDog.css";
+import UpdateDogApi from "../api/UpdateDogApi";
 
 export default function UpdateDog() {
-  const { api } = useContext(StateContext);
+  const { send,setSend } = useContext(StateContext);
   const { id_dog } = useParams();
   const [btn, setBtn] = useState({ isOpen: false });
   const [data, setData] = useState({
@@ -35,21 +36,12 @@ export default function UpdateDog() {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-
-    api({
-      method: "post",
-      url: `/dogs/${id_dog}`,
-      headers: { "Content-Type": "multipart/form-data" },
-      data: data,
-    })
-      .then((result) => {
-        if (result.status === 200) {
-          console.log("Canne Modificato Correttamente.");
-        } else {
-          alert(result.data.message);
-        }
-      })
-      .catch((err) => console.log(err));
+    setSend(!send);
+       
+    setTimeout(() => {
+      setSend(!send);
+    }, 200);
+   
   };
   const handleToggle = () => {
     setBtn({ isOpen: !btn.isOpen });
@@ -64,6 +56,8 @@ export default function UpdateDog() {
       <div className={classNames("updateForm", { showForm: btn.isOpen })}>
         <h3>Modifica cane</h3>
         <form onSubmit={handleSubmit}>
+        {send ? <UpdateDogApi  id_dog={id_dog} dati={data}/> : null}
+
           <table cellSpacing={10}>
             <tbody>
               <tr>

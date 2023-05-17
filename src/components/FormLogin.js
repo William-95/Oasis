@@ -1,13 +1,10 @@
-import React, { useState } from "react";
+import React, { useState,useContext } from "react";
 import  LoginApi  from "../api/LoginApi";
-// import { useHistory } from "react-router-dom";
-// import { StateContext } from "../SetContext";
+import { StateContext } from "../SetContext";
 import "../css/form.css";
 
 export default function FormLogin() {
-  // const history = useHistory();
-  // const { api,setUser } = useContext(StateContext);
-  const [send, setSend] = useState(false);
+  const { send,setSend} = useContext(StateContext);
   const [data, setData] = useState({
     id: "",
     name: "",
@@ -22,11 +19,13 @@ export default function FormLogin() {
 
   const HandleSubmit = (event) => {
     event.preventDefault();
-    setSend(true);
+    setSend(!send);
+       
+        setTimeout(() => {
+          setSend(!send);
+        }, 200);
   };
-  // if (send === true) {
-  //   LoginApi(data);
-  // }
+ 
   return (
     <div className="form">
       {send ? <LoginApi dati={data} /> : null}

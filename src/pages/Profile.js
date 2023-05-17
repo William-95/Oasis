@@ -1,10 +1,11 @@
 import React,{useState,useContext} from "react";
 import { StateContext } from "../SetContext";
-import { useHistory } from "react-router-dom";
+import UpdateApi from "../api/UpdateApi";
+import DeleteApi from "../api/DeleteApi";
 
 export default function Profile() {
-  const { api,user } = useContext(StateContext);
-  const history = useHistory();
+  const {user,send,setSend,deleted,setDeleted } = useContext(StateContext);
+  
 
   const [data, setData] = useState({
     id:'',
@@ -24,42 +25,39 @@ export default function Profile() {
     event.preventDefault();
 
     if(data.password===data.confirm_password){
-    api({
-      method: "put",
-      url: `/users/${user[0].id}`,
-      headers: { "Content-Type": "application/json" },
-      data: data
-    })
-      .then((result) =>{
-        if(result.status===200){
-        alert('User update correctelly.');
-      }else{
-        alert(result.data.message)
-      } 
-     })
-      .catch((err) =>console.log(err));
+      setSend(!send);
+       
+        setTimeout(() => {
+          setSend(!send);
+        }, 200);
+    // api({
+    //   method: "put",
+    //   url: `/users/${user[0].id}`,
+    //   headers: { "Content-Type": "application/json" },
+    //   data: data
+    // })
+    //   .then((result) =>{
+    //     if(result.status===200){
+    //     alert('User update correctelly.');
+    //   }else{
+    //     alert(result.data.message)
+    //   } 
+    //  })
+    //   .catch((err) =>console.log(err));
   }else{
     alert('Please confirm your password.')
   }
   }
   
   // deleteUser
-  const handleDelete=()=>{
-    api({
-      method: "delete",
-      url: `/users/${user[0].id}`,
-      headers: { "Content-Type": "application/json" },
-      data: data
-    })
-    .then((result) =>{
-      if(result.status===200){
-     console.log('User delete correctelly.');
-      history.push("/");
-    }else{
-      alert(result.data.message)
-    } 
-   })
-    .catch((err) =>console.log(err));
+  const handleDelete=(event)=>{
+    event.preventDefault();
+    setDeleted(!deleted);
+       
+        setTimeout(() => {
+          setDeleted(!deleted);
+        }, 200);
+
   }
   return (
     <div>
@@ -75,6 +73,7 @@ export default function Profile() {
       <div className="form">
         <h3>Update Profile</h3>
       <form  onSubmit={handleSubmit}>
+      {send ? <UpdateApi dati={data}/> : null}
       <table cellSpacing={10}>
           <tbody>
             <tr>
@@ -145,8 +144,9 @@ export default function Profile() {
 
       <div align='center' onClick={handleDelete}>
       <button  type="button" className="logBtn">
-        Delete User
+       Cancella Utente
       </button>
+      {deleted ? <DeleteApi/> : null}
       </div>
     </div>
   );

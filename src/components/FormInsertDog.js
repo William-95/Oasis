@@ -1,8 +1,9 @@
 import React, { useState, useContext } from "react";
 import { StateContext } from "../SetContext";
+import CreateDogApi from "../api/CreateDogApi";
 
 export default function FormInsertDog() {
-  const { api } = useContext(StateContext);
+  const { send,setSend } = useContext(StateContext);
   const [data, setData] = useState({
     id: "",
     name: "",
@@ -30,26 +31,18 @@ export default function FormInsertDog() {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-
-    api({
-      method: "post",
-      url: `/dogs`,
-      headers: { "Content-Type": "multipart/form-data" },
-      data: data,
-    })
-      .then((result) => {
-        if (result.status === 200) {
-          console.log("Canne Inserito Correttamente.");
-        } else {
-          alert(result.data.message);
-        }
-      })
-      .catch((err) => console.log(err));
+    setSend(!send);
+       
+    setTimeout(() => {
+      setSend(!send);
+    }, 200);
+    
   };
   return (
     <div className="form">
       <h3>Inserisci un cane</h3>
       <form onSubmit={handleSubmit}>
+      {send ? <CreateDogApi dati={data} /> : null}
         <table cellSpacing={10}>
           <tbody>
             <tr>

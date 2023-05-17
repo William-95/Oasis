@@ -1,6 +1,5 @@
 import React, { useState } from "react";
-// import Request from "./api/UserApi";
-import DogRequest from "./api/DogApi";
+import AllDogApi from "./api/AllDogApi";
 import axios from "axios";
 
 export const StateContext = React.createContext();
@@ -12,11 +11,13 @@ export default function SetContext({ children }) {
 
   /*state*/
   const [dog, setDog] = useState([{}]);
+  const [oneDog, setOneDog] = useState([{}]);
   const [filterDog, setFilterDog] = useState([{}]);
   const [user, setUser] = useState([{}]);
   const [findDog, setFindDog] = useState({});
   const [enterBtn, setEnterBtn] = useState({ isOpen: "loginBtn" });
   const [send, setSend] = useState(false);
+  const [deleted, setDeleted] = useState(false);
 
   // filter
 
@@ -35,15 +36,20 @@ export default function SetContext({ children }) {
           setEnterBtn,
           dog,
           setDog,
+          oneDog,
+          setOneDog,
           findDog,
           setFindDog,
           filterDog,
           setFilterDog,
-          send,setSend
+          send,
+          setSend,
+          deleted,
+          setDeleted
         }}
       >
         {/* <Request.UserApi /> */}
-        <DogRequest.DogApi />
+        <AllDogApi />
         {children}
       </StateContext.Provider>
     </>

@@ -2,18 +2,19 @@ import React, { useContext, useEffect, useRef } from "react";
 import { StateContext } from "../SetContext";
 import { useHistory } from "react-router-dom";
 
-export default function RegisterApi({ dati }) {
-  const { api, setUser, setSend, send } = useContext(StateContext);
+export default function UpdateApi({ dati }) {
+  const { api, user, setUser, send, setSend } = useContext(StateContext);
   const history = useHistory();
   const ref = useRef();
-  /*requestApi*/
 
+  /*requestApi*/
   useEffect(() => {
     if (ref.current !== send) {
       ref.current = send;
+
       api({
-        method: "post",
-        url: `/users`,
+        method: "put",
+        url: `/users/${user[0].id}`,
         headers: { "Content-Type": "application/json" },
         data: dati,
       })
@@ -21,27 +22,17 @@ export default function RegisterApi({ dati }) {
           if (result.status === 200) {
             setSend(false);
             const data = result.data;
-            setUser([
-              {
-                id: data.id,
-                name: data.name,
-                password: data.password,
-              },
-            ]);
-
-            let userId = data.id;
-            history.push("/home/" + userId);
+            setUser(data);
+            alert("User update correctelly.");
+            console.log(user);
+            history.push("/home/" + user[0].id);
           } else {
             alert(result.data.message);
           }
         })
-
-        .catch((error) => {
-          console.log(error);
-        });
+        .catch((err) => console.log(err));
     }
     // eslint-disable-next-line
   }, []);
-
   return <></>;
 }

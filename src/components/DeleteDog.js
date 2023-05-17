@@ -1,40 +1,29 @@
 import React,{useContext} from 'react';
 import { StateContext } from '../SetContext';
-import { useParams,useHistory } from 'react-router-dom';
+import { useParams} from 'react-router-dom';
 import "../css/deleteDog.css";
-
+import DeleteDogApi from '../api/DeleteDogApi';
 
 export default function DeleteDog() {
-const{api,user}=useContext(StateContext);
+const{deleted,setDeleted}=useContext(StateContext);
 const{id_dog}=useParams();
-const history=useHistory();
+
 
 
     const HandleSubmit = (event) => {
         event.preventDefault();
-        // axios
-        api({
-            method: "delete",
-            url: `/dogs/${id_dog}`,
-            headers: { "Content-Type": "application/json" },
-            
-          })
-            .then((result) => {
-              if (result.status === 200) {
-                alert('Cane rimosso dal nostro database.');
-                history.push("/home/"+user.id);
-
-              } else {
-                alert('Il cane non si trova nelle nostre strutture, ci dispiace.');
-              }
-            })
-            .catch((err) => console.log(err));
+        setDeleted(!deleted);
+       
+        setTimeout(() => {
+          setDeleted(!deleted);
+        }, 200);
+        
     }
 
 
   return (
     <div className='deleteBtn'>
-       
+             {deleted ? <DeleteDogApi id_dog={id_dog} /> : null}
             <button onClick={HandleSubmit}>Rimuovi cane</button>
         
     </div>

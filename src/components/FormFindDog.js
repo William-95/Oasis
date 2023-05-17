@@ -1,10 +1,10 @@
 import React,{useState,useContext} from 'react'
 import { StateContext } from '../SetContext'
 import "../css/form.css";
-
+import FindDogApi from '../api/FindDogApi';
 
 export default function FormFindDog() {
-    const{api, setFindDog}=useContext(StateContext);
+    const{send,setSend}=useContext(StateContext);
     const[data,setData]=useState({
         microchip:''
     });
@@ -17,28 +17,18 @@ export default function FormFindDog() {
     
       const HandleSubmit = (event) => {
         event.preventDefault();
-        // axios
-
-          api({
-          method: "post",
-          url: `/dog`,
-          headers: { "Content-Type": "application/json" },
-          data: data,
-        })
-          .then((result) => {
-            if (result.status === 200) {
-                const data=result.data;
-              setFindDog(data);
-            } else {
-              alert('Il cane non si trova nelle nostre strutture, ci dispiace.');
-            }
-          })
-          .catch((err) => console.log(err));
+        setSend(!send);
+       
+        setTimeout(() => {
+          setSend(!send);
+        }, 200);
       };
     
   return (
     <div>
         <div className="form" style={{marginBottom:'7%'}}>
+        {send ? <FindDogApi dati={data} /> : null}
+
         <h3>Cerca nelle nostre strutture</h3>
       <form onSubmit={HandleSubmit}>
         <table cellSpacing={10}>

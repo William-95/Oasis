@@ -1,13 +1,10 @@
-import React, { useCallback, useState,useContext } from "react";
-// import { useHistory } from "react-router-dom";
+import React, {useState, useContext } from "react";
 import "../css/form.css";
 import { StateContext } from "../SetContext";
 import RegisterApi from "../api/RegisterApi";
 
 export default function FormRegister() {
-  // const history = useHistory();
-  const { send,setSend} = useContext(StateContext);
-  // const [send, setSend] = useState(false);
+  const { send, setSend } = useContext(StateContext);
 
   const [data, setData] = useState({
     id: "",
@@ -23,22 +20,19 @@ export default function FormRegister() {
     setData((data) => ({ ...data, [name]: value }));
   };
 
-  const handleSubmit = useCallback(
-    (event) => {
-      event.preventDefault();
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    if (data.password === data.confirm_password) {
+      setSend(!send);
 
-      if (data.password === data.confirm_password) {
+      setTimeout(() => {
         setSend(!send);
-       
-        setTimeout(() => {
-          setSend(!send);
-        }, 200);
-
-      } else {
-        alert("Please Confirm your password!");
-      }
-      // eslint-disable-next-line
-    },[]);
+      }, 200);
+    } else {
+      alert("Please Confirm your password!");
+    }
+    // eslint-disable-next-line
+  };
 
   return (
     <div className="form">
