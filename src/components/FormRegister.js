@@ -1,5 +1,5 @@
-import React, {useState, useContext } from "react";
-import "../css/form.css";
+import React, { useState, useContext } from "react";
+import "../css/enterForm.css";
 import { StateContext } from "../SetContext";
 import RegisterApi from "../api/RegisterApi";
 
@@ -35,77 +35,58 @@ export default function FormRegister() {
   };
 
   return (
-    <div className="form">
+    <div className="form-box">
       <h3>Registrati</h3>
       <form onSubmit={handleSubmit}>
         {send ? <RegisterApi dati={data} /> : null}
-        <table cellSpacing={10}>
-          <tbody>
-            <tr>
-              <th>
-                <label>User Name:</label>
-              </th>
-              <td>
-                <input
-                  type="text"
-                  name="name"
-                  onChange={handleChange}
-                  value={data.name}
-                />
-              </td>
-            </tr>
 
-            <tr>
-              <th>
-                <label>Email:</label>
-              </th>
-              <td>
-                <input
-                  type="text"
-                  name="email"
-                  onChange={handleChange}
-                  value={data.email}
-                />
-              </td>
-            </tr>
+        <div className="user-box">
+          <input
+            type="text"
+            name="name"
+            onChange={handleChange}
+            value={data.name}
+            required=""
+          />
+          <label>Nome Utente</label>
+        </div>
 
-            <tr>
-              <th>
-                <label>Password:</label>
-              </th>
-              <td>
-                <input
-                  type="text"
-                  name="password"
-                  onChange={handleChange}
-                  value={data.password}
-                />
-              </td>
-            </tr>
+        <div className="user-box">
+          <input
+            type="email"
+            name="email"
+            onChange={handleChange}
+            value={data.email}
+            required=""
+          />
+          <label>Email</label>
+        </div>
 
-            <tr>
-              <th>
-                <label>Conferma Password:</label>
-              </th>
-              <td>
-                <input
-                  type="text"
-                  name="confirm_password"
-                  onChange={handleChange}
-                  value={data.confirm_password}
-                />
-              </td>
-            </tr>
+        <div className="user-box">
+          <input
+            type="password"
+            name="password"
+            onChange={handleChange}
+            value={data.password}
+            required=""
+          />
+          <label>Password</label>
+        </div>
 
-            <tr>
-              <td colSpan={2} align="right">
-                <button type="submit" className="secondaryBtn" disabled={send}>
-                  Registrati
-                </button>
-              </td>
-            </tr>
-          </tbody>
-        </table>
+        <div className="user-box">
+          <input
+            type="text"
+            name="confirm_password"
+            onChange={handleChange}
+            value={data.confirm_password}
+            required=""
+          />
+          <label>Conferma Password</label>
+        </div>
+
+        <button type="submit" className="secondaryBtn form-btn" disabled={send}>
+          Registrati
+        </button>
       </form>
     </div>
   );

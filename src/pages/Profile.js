@@ -1,14 +1,15 @@
-import React,{useState,useContext} from "react";
+import React, { useState, useContext } from "react";
 import { StateContext } from "../SetContext";
 import UpdateApi from "../api/UpdateApi";
 import DeleteApi from "../api/DeleteApi";
+import "../css/enterForm.css";
+import "../css/deleteDog.css";
 
 export default function Profile() {
-  const {user,send,setSend,deleted,setDeleted } = useContext(StateContext);
-  
+  const { user, send, setSend, deleted, setDeleted } = useContext(StateContext);
 
   const [data, setData] = useState({
-    id:'',
+    id: "",
     name: "",
     email: "",
     password: "",
@@ -24,129 +25,92 @@ export default function Profile() {
   const handleSubmit = (event) => {
     event.preventDefault();
 
-    if(data.password===data.confirm_password){
+    if (data.password === data.confirm_password) {
       setSend(!send);
-       
-        setTimeout(() => {
-          setSend(!send);
-        }, 200);
-    // api({
-    //   method: "put",
-    //   url: `/users/${user[0].id}`,
-    //   headers: { "Content-Type": "application/json" },
-    //   data: data
-    // })
-    //   .then((result) =>{
-    //     if(result.status===200){
-    //     alert('User update correctelly.');
-    //   }else{
-    //     alert(result.data.message)
-    //   } 
-    //  })
-    //   .catch((err) =>console.log(err));
-  }else{
-    alert('Please confirm your password.')
-  }
-  }
-  
+
+      setTimeout(() => {
+        setSend(!send);
+      }, 200);
+    } else {
+      alert("Password non confermata!");
+    }
+  };
+
   // deleteUser
-  const handleDelete=(event)=>{
+  const handleDelete = (event) => {
     event.preventDefault();
     setDeleted(!deleted);
-       
-        setTimeout(() => {
-          setDeleted(!deleted);
-        }, 200);
 
-  }
+    setTimeout(() => {
+      setDeleted(!deleted);
+    }, 200);
+  };
   return (
     <div>
-      <br/> <br/> <br/> <br/> <br/>
-      <h2>Profile</h2>
-
-      <h3>Welcome {user[0].name}.</h3>
-       
-      <p>Questa sezione è dedicata alla modifica de tui dati utente o alla cancellazione dell'account.</p>
-      
-
-      
-      <div className="form">
+      <br /> <br /> <br /> <br /> <br />
+      <h2>Profilo</h2>
+      <h3>Benvenuto/a {user[0].name}.</h3>
+      <p>
+        Questa sezione è dedicata alla modifica dei tuoi dati utente o alla
+        cancellazione dell'account.
+      </p>
+      <div className="form-box">
         <h3>Update Profile</h3>
-      <form  onSubmit={handleSubmit}>
-      {send ? <UpdateApi dati={data}/> : null}
-      <table cellSpacing={10}>
-          <tbody>
-            <tr>
-              <th>
-                <label>New User Name:</label>
-              </th>
-              <td>
-                <input
-                  type="text"
-                  name="name"
-                  onChange={handleChange}
-                  value={data.name}
-                />
-              </td>
-            </tr>
+        <form onSubmit={handleSubmit}>
+          {send ? <UpdateApi dati={data} /> : null}
+          <div className="user-box">
+            <input
+              type="text"
+              name="name"
+              onChange={handleChange}
+              value={data.name}
+              required=""
+            />
+            <label>Nome Utente</label>
+          </div>
+          <div className="user-box">
+            <input
+              type="text"
+              name="email"
+              onChange={handleChange}
+              value={data.email}
+              required=""
+            />
+            <label>Nuova Email</label>
+          </div>
 
-            <tr>
-              <th>
-                <label>New Email:</label>
-              </th>
-              <td>
-                <input
-                  type="text"
-                  name="email"
-                  onChange={handleChange}
-                  value={data.email}
-                />
-              </td>
-            </tr>
+          <div className="user-box">
+            <input
+              type="text"
+              name="password"
+              onChange={handleChange}
+              value={data.password}
+              required=""
+            />
+            <label>Nuova Password</label>
+          </div>
 
-            <tr>
-              <th>
-                <label>New Password:</label>
-              </th>
-              <td>
-                <input
-                  type="text"
-                  name="password"
-                  onChange={handleChange}
-                  value={data.password}
-                />
-              </td>
-            </tr>
+          <div className="user-box">
+            <input
+              type="text"
+              name="confirm_password"
+              onChange={handleChange}
+              value={data.confirm_password}
+              required=""
+            />
+            <label>Conferma Password</label>
+          </div>
 
-            <tr>
-              <th>
-                <label>Confirm Password:</label>
-              </th>
-              <td>
-                <input
-                  type="text"
-                  name="confirm_password"
-                  onChange={handleChange}
-                  value={data.confirm_password}
-                />
-              </td>
-            </tr>
-
-            <tr>
-              <td colSpan={2} align="right">
-                <button>Update</button>
-              </td>
-            </tr>
-          </tbody>
-        </table>
-      </form>
+          <button type="submit" className="secondaryBtn form-btn">
+            Update
+          </button>
+        </form>
       </div>
-
-      <div align='center' onClick={handleDelete}>
-      <button  type="button" className="logBtn">
-       Cancella Utente
-      </button>
-      {deleted ? <DeleteApi/> : null}
+      <div align="center" className="deleteBtn" onClick={handleDelete}>
+        <button type="button" >
+          Cancella Utente
+        </button>
+        {deleted ? <DeleteApi /> : null}
       </div>
     </div>
   );

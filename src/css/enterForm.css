@@ -60,8 +60,15 @@
 }
 /* tablet */
 @media screen and (max-width: 900px) and (min-width: 600px) {
+.form-box{
+    width: 50%;
+}
 }
 
 /*desktop*/
 @media screen and (min-width: 900px) {
+    .form-box{
+        width: 50%;
+        margin:10%;
+    }
 }
