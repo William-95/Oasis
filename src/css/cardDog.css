@@ -5,17 +5,16 @@
   gap: 30px;
   /* padding: 7% 18%; */
   padding :7% 25% 7% 25%;
-  border: 2px solid black;
 }
 .card {
   position: relative;
   width: 100%;
+  max-height: 25vh;
   margin-bottom: 6%;
   border: 2px solid var(--primaryColor);
   border-radius: 10%;
   overflow: hidden;
   box-shadow: var(--lightShadow);
-  
 }
 
 .card:hover {
@@ -23,11 +22,14 @@
 }
 
 .card img {
-   
   width: 100%;
+  object-fit: cover;
+  transition: all 1s;
 }
 .card:hover img {
   opacity: 0.5;
+  transform: scale(1.5);
+transition: all 1s;
 }
 
 .card h4 {
@@ -90,5 +92,8 @@ transition: 0.5s ease-in;
     grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
     padding :7% 10% 7% 10%;
 
+  }
+  .card{
+    max-height: 35vh;
   }
 }

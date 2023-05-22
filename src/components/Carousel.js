@@ -9,7 +9,6 @@ export default function Carousel() {
   const { dog } = useContext(StateContext);
   const[deg,setDeg]=useState(0)
   const newDog = dog.slice(0, 9);
-  console.log(newDog);
 
   
 
@@ -20,7 +19,6 @@ export default function Carousel() {
   const handleRight=()=>{
     setDeg(deg=>deg-45);
   }
-  console.log(deg);
   return (
     <div className="carouselContainer">
         <div className="left"onClick={handleLeft}><FaAngleLeft/></div>
@@ -35,11 +33,12 @@ export default function Carousel() {
                 />
                 <h4 className="carouselTilte">{item.name}</h4>
 
-                <Link to={`/singledog/${item.id}`} className="primaryBtn1">
+                <Link to={`/singledog/${item.id}`} className="primaryBtn2">
                   Altro
                 </Link>
               </article>
             );
+            
           })}
         </div>
       </div>

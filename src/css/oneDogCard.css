@@ -1,7 +1,7 @@
 @import "../css/App.css";
 .containerDog {
   display: block;
-  margin:10%;
+  margin:7%;
 }
 .containerDog h3 {
   text-align: center;
@@ -9,12 +9,16 @@
   color: var(--darkGreen);
   margin: 10% 0 10% 0;
 }
+
 .containerDog img {
-  width: 100%;
+ object-fit: cover;
+  max-height: 50vh;
   border-radius: 15%;
   border: 2px solid var(--primaryColor);
-  margin: 10% 0 10% 0;
+  box-shadow: var(--lightShadow);
+  margin: 10% 15% 10% 15%;
 }
+
 .description {
   border-radius: 15%;
   border: 2px solid var(--primaryColor);
@@ -25,6 +29,7 @@
     rgba(175, 154, 125, 1) 0%,
     rgba(41, 93, 9, 1) 100%
   );
+  box-shadow: var(--lightShadow);
   margin: 10% 0 10% 0;
 }
 
@@ -36,8 +41,12 @@
   .containerDog h3 {
     font-size: 1.9em;
   }
-
+  .containerDog img {
+     margin: 8% 26% 8% 26%;
+   }
   .description {
+    width: 90%;
+    margin :0 auto;
     font-size: 1.3em;
     text-align: left;
   }
@@ -46,17 +55,22 @@
 /*desktop*/
 @media screen and (min-width: 900px) {
   .containerDog h3 {
-    font-size: 2.3em;
-    margin: 5% 0 5% 0;
+    font-size: 3em;
+    margin: 0 0 5% 0;
   }
   .containerDog img {
     width: 45%;
+    max-height: 79vh;
+
     display: flex;
     float: left;
     margin: 5% 0 5% 0;
+
   }
   .description {
     width: 45%;
+    font-size: 1.6em;
+    padding:2%;
     float: right;
     margin: 5% 0 5% 0;
   }
