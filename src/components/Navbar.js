@@ -39,7 +39,7 @@ export default function Navbar () {
           
           <ul className={classNames('navLinks',{'showNav':state.isOpen})} onClick={handleToggle}>
             <li>
-              <Link to={`/home/${newUser[0].id}/`}>Home</Link>
+              <Link to={`/home/${newUser[0].id}/`} >Home</Link>
             </li>
             <li>
               <Link to="/list/">Lista</Link>

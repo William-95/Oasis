@@ -5,6 +5,7 @@ import headerBg from "../img/01.jpg";
 import Course from "../components/Courses";
 import Clinic from "../components/Clinic";
 import Suggestion from "../components/Suggestion";
+import Carousel from "../components/Carousel";
 
 export default function Home() {
   const { user } = useContext(StateContext);
@@ -21,6 +22,7 @@ export default function Home() {
           Welcome in your Home page, {user.name || user[0].name}
         </h2>
       </header>
+<Carousel/>
       <Clinic/>
       <Course />
       <Suggestion/>

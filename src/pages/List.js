@@ -16,7 +16,7 @@ export default function List() {
   }, []);
   const newDog=[...filterDog];
 
-console.log(newDog);
+
   return (
     <div>
          
