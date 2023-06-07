@@ -10,6 +10,7 @@ export default function SetContext({ children }) {
   });
 
   /*state*/
+  const [isLog,setIsLog]=useState(false)
   const [dog, setDog] = useState([{}]);
   const [oneDog, setOneDog] = useState([{}]);
   const [filterDog, setFilterDog] = useState([{}]);
@@ -30,6 +31,8 @@ export default function SetContext({ children }) {
       <StateContext.Provider
         value={{
           api,
+          isLog,
+          setIsLog,
           user,
           setUser,
           entryNavBtn,

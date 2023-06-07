@@ -10,14 +10,14 @@ import SingleDog from "./pages/SingleDog";
 import InsertDog from "./pages/InsertDog";
 import FindLostDog from "./pages/FindLostDog";
 import Error from "./pages/Error";
-import Navbar from "./components/Navbar";
+import NavSwitch from "./components/NavSwitch";
 import Footer from "./components/Footer";
 
 function App() {
   return (
     <>
       <SetContext>
-        <Navbar />
+        <NavSwitch />
 
         <Switch>
           <Route exact path="/" component={EntryPoint} />

@@ -3,7 +3,7 @@ import { StateContext } from "../SetContext";
 import { useHistory } from "react-router-dom";
 
 export default function RegisterApi({ dati }) {
-  const { api, setUser, setSend, send } = useContext(StateContext);
+  const { api, setUser, setSend, send,setIsLog } = useContext(StateContext);
   const history = useHistory();
   const ref = useRef();
   /*requestApi*/
@@ -20,6 +20,7 @@ export default function RegisterApi({ dati }) {
         .then((result) => {
           if (result.status === 200) {
             setSend(false);
+            setIsLog(true);
             const data = result.data;
             setUser([
               {

@@ -57,6 +57,12 @@
   background: transparent;
   color: var(--darkGreen);
 }
+
+
+.borderSpacing{
+  border-bottom: 3px solid gray;
+  border-radius: 15%;
+}
 /* end secondary Btn */
 
 /* tablet */

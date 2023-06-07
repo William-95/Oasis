@@ -11,11 +11,7 @@ export default function Feature() {
   return (
     <div>
       <div className="featureIntro">
-        <h3>Servizi</h3>
-        <p>
-          Nelle nostre strutture, ai nostri amici a quattro zampe viene fornito
-          quanto segue:
-        </p>
+        <h3 className="borderSpacing pb-8">Servizi</h3>
       </div>
 
       <div className="feature">

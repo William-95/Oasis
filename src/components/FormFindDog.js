@@ -26,7 +26,7 @@ export default function FormFindDog() {
 
   return (
     <div>
-      <div className="form-box" style={{ marginBottom: "7%" }}>
+      <div className="form-box" style={{marginBottom: "7%" }}>
         {send ? <FindDogApi dati={data} /> : null}
 
         <h3>Cerca nelle nostre strutture</h3>

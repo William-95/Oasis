@@ -34,7 +34,7 @@ export default function Course() {
   };
   return (
     <div className="section" >
-      <h3>Corsi Affiliati</h3>
+      <h3 className='borderSpacing pb-8'>Corsi Affiliati</h3>
 
       <div className="container">
         {state.course.map((item, index) => {

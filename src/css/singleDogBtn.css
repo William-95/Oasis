@@ -1,4 +1,30 @@
 @import "../css/App.css";
+.deleteBtn {
+  width: 30%;
+  margin: 0 auto;
+}
+.deleteBtn button {
+  width: 100%;
+  text-decoration: none;
+  margin: 4.6%;
+  color: var(--mainBlack);
+  background: red;
+  padding: 0.4rem 0.9rem;
+  border: 3px solid red;
+  border-radius: 25%;
+  transition: var(--mainTransition);
+  z-index: 100;
+  cursor: pointer;
+  box-shadow: var(--lightShadow);
+}
+.deleteBtn button:hover {
+  background: transparent;
+  color: red;
+  box-shadow: var(--darkShadow);
+  transition: all 1s;
+  transform: scale(1.1);
+}
+/*  */
 .updateBtn {
   width: 30%;
   margin: 0 auto;
@@ -21,51 +47,21 @@
   background: transparent;
   color: var(--primaryColor);
   box-shadow: var(--darkShadow);
-  
+  transition: all 1s;
+  transform: scale(1.1);
 }
-
-.updateForm {
-  margin: 6% 10%;
-  padding: 2%;
-  border: 2px solid var(--darkGreen);
-  display: none;
-}
-.updateForm h3 {
-  text-align: center;
-  padding: 5%;
-}
-.btn {
-  width: 25%;
-  margin-right: 15%;
-}
-.showForm {
-  display: block;
-}
-
 /* tablet */
 @media screen and (max-width: 900px) and (min-width: 600px) {
+  .deleteBtn,
   .updateBtn {
     width: 20%;
-  }
-
-  .updateForm {
-    width: 50%;
-    margin: 4% auto;
   }
 }
 
 /*desktop*/
 @media screen and (min-width: 900px) {
+  .deleteBtn,
   .updateBtn {
     width: 15%;
-  }
-  .updateForm {
-    width: 35%;
-    margin: 3% auto;
-    font-size: 1.3em;
-  }
-  .updateForm form {
-    width: 80%;
-    margin: 0 auto;
   }
 }

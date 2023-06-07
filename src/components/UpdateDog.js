@@ -2,11 +2,11 @@ import React, { useContext, useState } from "react";
 import { StateContext } from "../SetContext";
 import { useParams } from "react-router-dom";
 import classNames from "classnames";
-import "../css/updateDog.css";
+import "../css/enterForm.css";
 import UpdateDogApi from "../api/UpdateDogApi";
 
 export default function UpdateDog() {
-  const { send,setSend } = useContext(StateContext);
+  const { send, setSend } = useContext(StateContext);
   const { id_dog } = useParams();
   const [btn, setBtn] = useState({ isOpen: false });
   const [data, setData] = useState({
@@ -23,7 +23,6 @@ export default function UpdateDog() {
     contacts: "",
   });
 
-  
   const handleFileChange = (event) => {
     setData((data) => ({ ...data, img: event.target.files[0] }));
   };
@@ -37,11 +36,10 @@ export default function UpdateDog() {
   const handleSubmit = (event) => {
     event.preventDefault();
     setSend(!send);
-       
+
     setTimeout(() => {
       setSend(!send);
     }, 200);
-   
   };
   const handleToggle = () => {
     setBtn({ isOpen: !btn.isOpen });
@@ -53,160 +51,116 @@ export default function UpdateDog() {
         <button onClick={handleToggle}>Modifica cane</button>
       </div>
 
-      <div className={classNames("updateForm", { showForm: btn.isOpen })}>
+      <div
+        className={classNames("form-box no-showForm", { showForm: btn.isOpen })}
+      >
         <h3>Modifica cane</h3>
         <form onSubmit={handleSubmit}>
-        {send ? <UpdateDogApi  id_dog={id_dog} dati={data}/> : null}
+          {send ? <UpdateDogApi id_dog={id_dog} dati={data} /> : null}
 
-          <table cellSpacing={10}>
-            <tbody>
-              <tr>
-                <th>
-                  <label>Nome:</label>
-                </th>
-                <td>
-                  <input
-                    type="text"
-                    name="name"
-                    onChange={handleChange}
-                    value={data.name}
-                  />
-                </td>
-              </tr>
+          <div className="user-box">
+            <input
+              type="text"
+              name="name"
+              onChange={handleChange}
+              value={data.name}
+            />
+            <label>Nome</label>
+          </div>
 
-              <tr>
-                <th>
-                  <label>Sesso:</label>
-                </th>
-                <td>
-                  <input
-                    type="text"
-                    name="sex"
-                    onChange={handleChange}
-                    value={data.sex}
-                  />
-                </td>
-              </tr>
+          <div className="user-box">
+            <input
+              type="text"
+              name="sex"
+              onChange={handleChange}
+              value={data.sex}
+            />
+            <label>Sesso</label>
+          </div>
 
-              <tr>
-                <th>
-                  <label>Razza:</label>
-                </th>
-                <td>
-                  <input
-                    type="text"
-                    name="race"
-                    onChange={handleChange}
-                    value={data.race}
-                  />
-                </td>
-              </tr>
+          <div className="user-box">
+            <input
+              type="text"
+              name="race"
+              onChange={handleChange}
+              value={data.race}
+            />
+            <label>Razza</label>
+          </div>
 
-              <tr>
-                <th>
-                  <label>Stazza:</label>
-                </th>
-                <td>
-                  <input
-                    type="text"
-                    name="size"
-                    onChange={handleChange}
-                    value={data.size}
-                  />
-                </td>
-              </tr>
+          <div className="user-box">
+            <input
+              type="text"
+              name="size"
+              onChange={handleChange}
+              value={data.size}
+            />
+            <label>Stazza</label>
+          </div>
 
-              <tr>
-                <th>
-                  <label>Data di nascita:</label>
-                </th>
-                <td>
-                  <input
-                    type="date"
-                    name="date_birth"
-                    onChange={handleChange}
-                    value={data.date_birth}
-                  />
-                </td>
-              </tr>
+          <div className="user-box date-box">
+            <input
+              type="date"
+              name="date_birth"
+              onChange={handleChange}
+              value={data.date_birth}
+            />
+            <label>Data di nascita</label>
+          </div>
 
-              <tr>
-                <th>
-                  <label>Microchip:</label>
-                </th>
-                <td>
-                  <input
-                    type="text"
-                    name="microchip"
-                    onChange={handleChange}
-                    value={data.microchip}
-                  />
-                </td>
-              </tr>
+          <div className="user-box">
+            <input
+              type="text"
+              name="microchip"
+              onChange={handleChange}
+              value={data.microchip}
+            />
+            <label>Microchip</label>
+          </div>
 
-              <tr>
-                <th>
-                  <label>Data di entrata:</label>
-                </th>
-                <td>
-                  <input
-                    type="date"
-                    name="date_entry"
-                    onChange={handleChange}
-                    value={data.date_entry}
-                  />
-                </td>
-              </tr>
+          <div className="user-box date-box">
+            <input
+              type="date"
+              name="date_entry"
+              onChange={handleChange}
+              value={data.date_entry}
+            />
+            <label>Data di entrata</label>
+          </div>
 
-              <tr>
-                <th>
-                  <label>Struttura:</label>
-                </th>
-                <td>
-                  <input
-                    type="text"
-                    name="structure"
-                    onChange={handleChange}
-                    value={data.structure}
-                  />
-                </td>
-              </tr>
+          <div className="user-box">
+            <input
+              type="text"
+              name="structure"
+              onChange={handleChange}
+              value={data.structure}
+            />
+            <label>Struttura</label>
+          </div>
 
-              <tr>
-                <th>
-                  <label>Immagine:</label>
-                </th>
-                <td>
-                  <input
-                    type="file"
-                    name="img"
-                    multiple
-                    onChange={handleFileChange}
-                  />
-                </td>
-              </tr>
+          <div className="user-box">
+            <input
+              type="file"
+              name="img"
+              multiple
+              onChange={handleFileChange}
+            />
+            {/* <label>Immagine</label> */}
+          </div>
 
-              <tr>
-                <th>
-                  <label>Contatti:</label>
-                </th>
-                <td>
-                  <input
-                    type="text"
-                    name="contacts"
-                    onChange={handleChange}
-                    value={data.contacts}
-                  />
-                </td>
-              </tr>
+          <div className="user-box">
+            <input
+              type="text"
+              name="contacts"
+              onChange={handleChange}
+              value={data.contacts}
+            />
+            <label>Contatti</label>
+          </div>
 
-              <tr>
-                <td colSpan={2} align="right">
-                  <button className="secondaryBtn btn">Modifica</button>
-                </td>
-              </tr>
-            </tbody>
-          </table>
+          <button type="submit" className="secondaryBtn form-btn">
+            Modifica
+          </button>
         </form>
       </div>
     </div>

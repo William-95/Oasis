@@ -12,20 +12,25 @@ export default function Home() {
 
   return (
     <div>
-      <header className="headerBg" style={{
-            backgroundImage: `url(${headerBg})`,
-            backgroundSize: "cover",
-            backgroundRepeat: "no-repeat",
-            backgroundPosition: "center",
-          }}>
-        <h2>
-          Welcome in your Home page, {user.name || user[0].name}
-        </h2>
+      <header
+        className="headerBg"
+        style={{
+          backgroundImage: `url(${headerBg})`,
+          backgroundSize: "cover",
+          backgroundRepeat: "no-repeat",
+          backgroundPosition: "center",
+        }}
+      >
+        <h2>Benvenuto/a nella tua Home page, {user.name || user[0].name}</h2>
       </header>
-<Carousel/>
-      <Clinic/>
+      <Carousel />
+      <div className="bg-gradient-to-r from-lime-700 to-yellow-500 text-emerald-800">
+      <Clinic />
+      </div>
       <Course />
-      <Suggestion/>
+      <div className="bg-gradient-to-r from-lime-700 to-yellow-500 p-0.5">
+      <Suggestion />
+      </div>
     </div>
   );
 }

@@ -1,28 +1,50 @@
 @import "../css/App.css";
-.containerFilter{
-display:flex;
-align-items: center;
-justify-content: center;
-padding:8%;
+.containerFilter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8%;
+}
+.optionSelect {
+  margin: 2% 3%;
+  width: 100%;
+}
+.optionSelect h5 {
+  font-size: 1.4em;
+}
+.optionSelect select {
+  width: 100%;
+  padding: 7px 5px;
+  color: #fff;
+  margin-bottom: 30px;
+  border-radius: 10px;
+  border: 1px solid var(--mainBlack);
+  box-shadow: var(--lightShadow);
+  outline: none;
+  background: var(--darkGreen);
+  cursor: pointer;
 }
 
 /* tablet */
 @media screen and (max-width: 900px) and (min-width: 600px) {
-    .optionSelect{
-        font-size: 1.5em;
-        margin:2%;
-    }
+  .optionSelect {
+    font-size: 1.1em;
+    margin: 2%;
+  }
 }
 
 /*desktop*/
 @media screen and (min-width: 900px) {
-   .containerFilter{
-    padding:4%;
-   }
+  .containerFilter {
+    padding: 4%;
+    padding-bottom: 4%;
+    width: 80%;
+    margin: 0 auto 6%;
    
-    .optionSelect{
-        font-size: 1.7em;
-        margin:2%;
-    }
-    
-    }
+  }
+
+  .optionSelect {
+    font-size: 1.3em;
+    margin: 2%;
+  }
+}

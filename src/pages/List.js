@@ -34,7 +34,7 @@ export default function List() {
 
           <Filter/>
           
-
+<div className=' bg-gradient-to-r from-lime-700 to-yellow-500 m-8 rounded-lg'>
         <div className="searchList">
           {newDog.map((item) => {
             return (
@@ -47,7 +47,7 @@ export default function List() {
             );
           })}
         </div>
-
+        </div>
 
     </div>
   )

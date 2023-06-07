@@ -9,8 +9,8 @@ import temperature from "../img/suggestions/temperature-control.png";
 export default function Suggestion() {
   return (
     <div>
-      <div className="featureIntro" style={{color:'#af9a7d'}}>
-        <h3>Suggerimenti per le vacanze</h3>
+      <div className="featureIntro">
+        <h3 className='borderSpacing pb-8'>Suggerimenti per le vacanze</h3>
       </div>
       <div className="feature">
         <img src={temperature} alt="" />

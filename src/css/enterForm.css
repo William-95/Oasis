@@ -1,22 +1,25 @@
 @import "../css/App.css";
 
 .form-box {
-  /* position: relative;
-  top:10%;
-  left:5%; */
-  margin:25% 15% 15% 15%;
+  margin:10% auto;
   width: 60%;
+  min-height: 30vh;
   padding: 6%;
-  /* transform: translate(-50%, -50%); */
   background: rgba(0, 0, 0, 0.5);
   box-shadow: 0 15px 25px rgba(0, 0, 0, 0.6);
   border-radius: 10px;
 }
-
+.no-showForm{
+  display:none;
+}
+.showForm{
+  display:block;
+}
 .form-box h3 {
-  margin: 5% auto;
+  margin:0 auto 7%;
   color: #fff;
   text-align: center;
+  font-size: 1.5em;
 }
 
 .user-box {
@@ -55,13 +58,23 @@
   font-size: 12px;
 }
 
+.date-box input{
+color:transparent;
+}
+
+.date-box:hover input{
+  color:#fff
+}
 .form-btn {
   float: right;
+  
 }
 /* tablet */
 @media screen and (max-width: 900px) and (min-width: 600px) {
 .form-box{
     width: 50%;
+    margin:10% auto;
+    min-height: 25vh;
 }
 }
 
@@ -69,6 +82,13 @@
 @media screen and (min-width: 900px) {
     .form-box{
         width: 50%;
-        margin:10%;
+        margin:10% auto;
+        
+    }
+    .form-box h3{
+      font-size: 1.5em;
+    }
+    .form-btn{
+      font-size: 1.1em;
     }
 }

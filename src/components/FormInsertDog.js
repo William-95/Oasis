@@ -39,6 +39,7 @@ export default function FormInsertDog() {
     }, 200);
   };
   return (
+  
     <div className="form-box">
       <h3>Inserisci un cane</h3>
       <form onSubmit={handleSubmit}>
@@ -83,7 +84,7 @@ export default function FormInsertDog() {
           <label>Stazza</label>
         </div>
 
-        <div className="user-box">
+        <div className="user-box date-box">
           <input
             type="date"
             name="date_birth"
@@ -103,7 +104,7 @@ export default function FormInsertDog() {
           <label>Microchip</label>
         </div>
 
-        <div className="user-box">
+        <div className="user-box date-box">
           <input
             type="date"
             name="date_entry"
@@ -125,7 +126,7 @@ export default function FormInsertDog() {
 
         <div className="user-box">
           <input type="file" name="img" multiple onChange={handleFileChange} />
-          <label>Immagine</label>
+          {/* <label>Immagine</label> */}
         </div>
 
         <div className="user-box">
@@ -143,5 +144,7 @@ export default function FormInsertDog() {
         </button>
       </form>
     </div>
+
+
   );
 }

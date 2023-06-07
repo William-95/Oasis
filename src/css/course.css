@@ -4,10 +4,11 @@
   width: 100%;
   text-align: center;
   padding: 4%;
+  align-content:center;
 }
 .section h3 {
   color: var(--primaryColor);
-  font-size: 1.8em;
+  font-size: 1.9em;
   margin-bottom: 7%;
 }
 .container {
@@ -27,7 +28,7 @@
   box-shadow: var(--lightShadow);
 }
 
-.cardCourse:hover {
+.cardCourse:hover{
   box-shadow: var(--darkShadow);
 }
 

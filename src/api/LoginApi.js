@@ -3,7 +3,7 @@ import { StateContext } from "../SetContext";
 import { useHistory } from "react-router-dom";
 
 export default function LoginApi({ dati }) {
-  const { api, setUser, send, setSend} = useContext(StateContext);
+  const { api, setUser, send, setSend,setIsLog} = useContext(StateContext);
   const history = useHistory();
   const ref = useRef();
 
@@ -21,6 +21,7 @@ export default function LoginApi({ dati }) {
         .then((result) => {
           if (result.status === 200) {
             setSend(false);
+            setIsLog(true);
             const data = result.data;
             setUser(data);
             let userId = data[0].id;

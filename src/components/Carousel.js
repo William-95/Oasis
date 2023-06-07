@@ -20,6 +20,8 @@ export default function Carousel() {
     setDeg(deg=>deg-45);
   }
   return (
+    <>
+    
     <div className="carouselContainer">
         <div className="left"onClick={handleLeft}><FaAngleLeft/></div>
       <div className="wrapper">
@@ -47,5 +49,6 @@ export default function Carousel() {
 
       <div className="right"onClick={handleRight}><FaAngleRight/></div>
     </div>
+    </>
   );
 }

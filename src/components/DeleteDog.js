@@ -1,7 +1,7 @@
 import React,{useContext} from 'react';
 import { StateContext } from '../SetContext';
 import { useParams} from 'react-router-dom';
-import "../css/deleteDog.css";
+import "../css/singleDogBtn.css";
 import DeleteDogApi from '../api/DeleteDogApi';
 
 export default function DeleteDog() {

@@ -9,12 +9,11 @@ import { StateContext } from "../SetContext";
 
 
 export default function Navbar () {
-  const { user } = useContext(StateContext);
+  const { user,setIsLog } = useContext(StateContext);
  const [state,setState]=useState({isOpen:false });
 
  const newUser=[...user];
  
- console.log(newUser);
  const handleToggle = () => {
     setState({isOpen:!state.isOpen});
   };
@@ -54,7 +53,7 @@ export default function Navbar () {
               <Link to={`/profile/${newUser[0].id}/`}>Profilo</Link>
             </li>
             <li>
-              <Link to="/">Logout</Link>
+              <Link to="/" onClick={()=>{setIsLog(false)}}>Logout</Link>
             </li>
           </ul>
         </div>

@@ -75,7 +75,7 @@ export default function FormRegister() {
 
         <div className="user-box">
           <input
-            type="text"
+            type="password"
             name="confirm_password"
             onChange={handleChange}
             value={data.confirm_password}
