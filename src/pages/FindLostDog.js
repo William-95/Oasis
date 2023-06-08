@@ -7,7 +7,6 @@ import { StateContext } from "../SetContext";
 
 export default function FindLostDog() {
   const { findDog } = useContext(StateContext);
-  console.log(findDog);
 
   if (findDog[0] === undefined) {
     return (

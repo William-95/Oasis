@@ -1,40 +1,58 @@
-import React,{useContext,useEffect} from 'react'
+import React, { useContext, useEffect } from "react";
 import headerBg from "../img/03.jpg";
-import DogCard from '../components/DogCard';
-import Filter from '../components/Filter';
+import DogCard from "../components/DogCard";
+import Filter from "../components/Filter";
 import { StateContext } from "../SetContext";
+import Loading from "../components/Loading";
 
 export default function List() {
-  const {filterDog,dog,setFilterDog} = useContext(StateContext);
+  const { filterDog, dog, setFilterDog,loading,setLoading } = useContext(StateContext);
+
+  /*Loading*/
+  useEffect(() => {
+    setLoading(true);
+
+    const timer = setTimeout(() => {
+      setLoading(false);
+    }, 1000);
+
+    return () => clearTimeout(timer);
+
+    // eslint-disable-next-line
+  }, []);
+  /*End Loading*/
+  
+  
   
   useEffect(() => {
     const timer = setTimeout(() => {
-     setFilterDog(dog);
+      setFilterDog(dog);
     }, 1000);
     return () => clearTimeout(timer);
-     // eslint-disable-next-line
+    // eslint-disable-next-line
   }, []);
-  const newDog=[...filterDog];
 
+
+
+  const newDog = [...filterDog];
 
   return (
     <div>
-         
-
       <header
-          className="headerBg"
-          style={{
-            backgroundImage: `url(${headerBg})`,
-            backgroundSize: "cover",
-            backgroundRepeat: "no-repeat",
-            backgroundPosition: "center",
-          }}
-        >
-        </header>
+        className="headerBg"
+        style={{
+          backgroundImage: `url(${headerBg})`,
+          backgroundSize: "cover",
+          backgroundRepeat: "no-repeat",
+          backgroundPosition: "center",
+        }}
+      ></header>
 
-          <Filter/>
-          
-<div className=' bg-gradient-to-r from-lime-700 to-yellow-500 m-8 rounded-lg'>
+      <Filter />
+
+      <div className=" bg-gradient-to-r from-lime-700 to-yellow-500 m-8 rounded-lg">
+       
+       {loading?<Loading/>:
         <div className="searchList">
           {newDog.map((item) => {
             return (
@@ -47,8 +65,9 @@ export default function List() {
             );
           })}
         </div>
-        </div>
+}
 
+      </div>
     </div>
-  )
+  );
 }

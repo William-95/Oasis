@@ -10,7 +10,8 @@ export default function SetContext({ children }) {
   });
 
   /*state*/
-  const [isLog,setIsLog]=useState(false)
+  const [loading, setLoading] = useState(false);
+  const [isLog,setIsLog]=useState(false);
   const [dog, setDog] = useState([{}]);
   const [oneDog, setOneDog] = useState([{}]);
   const [filterDog, setFilterDog] = useState([{}]);
@@ -20,17 +21,17 @@ export default function SetContext({ children }) {
   const [send, setSend] = useState(false);
   const [deleted, setDeleted] = useState(false);
 
-  // filter
+  
 
-  /*Loading*/
 
-  /*end Loading*/
 
   return (
     <>
       <StateContext.Provider
         value={{
           api,
+          loading, 
+          setLoading,
           isLog,
           setIsLog,
           user,

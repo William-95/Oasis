@@ -1,6 +1,8 @@
-import React from "react";
+import React,{useContext,useEffect} from "react";
 import defaultImg from "../img/defaultImg.jpg";
 import "../css/oneDogCard.css";
+import { StateContext } from "../SetContext";
+import Loading from "../components/Loading";
 
 export default function OneDogCard({
   name,
@@ -14,6 +16,27 @@ export default function OneDogCard({
   date_birth,
   date_entry,
 }) {
+
+  const {loading,setLoading } = useContext(StateContext);
+
+  /*Loading*/
+  useEffect(() => {
+    setLoading(true);
+
+    const timer = setTimeout(() => {
+      setLoading(false);
+    }, 1000);
+
+    return () => clearTimeout(timer);
+
+    // eslint-disable-next-line
+  }, []);
+  /*End Loading*/
+
+  
+  if (loading === true) {
+    return <Loading />;
+  }
   return (
     <div className="containerDog">
      
