@@ -34,7 +34,7 @@ export default function Clinic() {
       };
       return (
         <div className="section">
-          <h3 className='borderSpacing pb-8'>Cliniche Affiliate</h3>
+          <h3 className='borderSpacing pb-8' style={{color:'#295d09'}}>Cliniche Affiliate</h3>
     
           <div className="container">
             {state.clinic.map((item, index) => {

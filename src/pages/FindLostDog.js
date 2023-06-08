@@ -22,12 +22,12 @@ export default function FindLostDog() {
           }}
         ></header>
 
-        <h4 className=" borderSpacing text-4xl text-emerald-800 text-center m-20 p-20 ">
+        <h4 className=" borderSpacing text-3xl text-emerald-800 text-center m-14 pb-12 ">
           Hai smarrito il tuo cucciolo? Cercalo nelle nostre strutture!
         </h4>
 
         <FormFindDog />
-        <h3 className="text-center text-red-600 text-xl">
+        <h3 className="text-center text-red-600 text-xl mb-6">
           Cane non trovato,inserire microchip valido.
         </h3>
       </div>
@@ -44,25 +44,27 @@ export default function FindLostDog() {
             backgroundPosition: "center",
           }}
         ></header>
-        
-        <h4 className=" borderSpacing text-4xl text-emerald-800 text-center m-20 p-20 ">
+
+        <h4 className=" borderSpacing text-3xl text-emerald-800 text-center m-14 pb-12">
           Hai smarrito il tuo cucciolo? Cercalo nelle nostre strutture!
         </h4>
 
         <FormFindDog />
 
-        <OneDogCard
-          name={findDog[0].name}
-          race={findDog[0].race}
-          sex={findDog[0].sex}
-          size={findDog[0].size}
-          img={findDog[0].img}
-          microchip={findDog[0].microchip}
-          structure={findDog[0].structure}
-          contacts={findDog[0].contacts}
-          date_birth={findDog[0].date_birth}
-          date_entry={findDog[0].date_entry}
-        />
+        <div className="bg-gradient-to-r from-lime-700 to-yellow-500 pt-0.5 pb-0.5">
+          <OneDogCard
+            name={findDog[0].name}
+            race={findDog[0].race}
+            sex={findDog[0].sex}
+            size={findDog[0].size}
+            img={findDog[0].img}
+            microchip={findDog[0].microchip}
+            structure={findDog[0].structure}
+            contacts={findDog[0].contacts}
+            date_birth={findDog[0].date_birth}
+            date_entry={findDog[0].date_entry}
+          />
+        </div>
       </div>
     );
   }

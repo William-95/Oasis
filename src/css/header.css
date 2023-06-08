@@ -1,7 +1,7 @@
 @import "../css/App.css";
 .headerBg {
   color: var(--darkGreen);
-  margin-top: 5%;
+  margin-top: 15%;
   min-height: calc(45vh - 66px);
   display: flex;
   align-items: center;
@@ -12,14 +12,15 @@
   margin: 15%;
   align-content: center;
   color:var(--primaryColor);
-  font-size: 1.5em;
+  font-size: 1.8em;
 }
 
 /* tablet */
 @media screen and (max-width: 900px) and (min-width: 600px) {
   .headerBg {
     min-height: calc(50vh-66px);
-    font-size: 1.3rem;
+    font-size: 1.5rem;
+    margin-top: 9%;
   }
   .headerBg h2{
     margin-left:5%;
@@ -33,7 +34,7 @@
     .headerBg {
         min-height: calc(100vh-66px);
         font-size: 1.5rem;
-        
+        margin-top: 4%;
       }
     .headerbg h2{
         width:60%;

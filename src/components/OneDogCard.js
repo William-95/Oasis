@@ -18,6 +18,7 @@ export default function OneDogCard({
     <div className="containerDog">
      
      <h3>Ciao, io sono {name}</h3>
+     <div className="containerGroup">
        <img src={"http://127.0.0.1:8000/" + img || defaultImg} alt="" />
        
       <div className="description">
@@ -105,7 +106,9 @@ export default function OneDogCard({
             </tr>
           </tbody>
         </table>
+        </div>
       </div>
     </div>
+   
   );
 }

@@ -16,12 +16,12 @@ export default function InsertDog() {
         }}
       ></header>
 
-      <h4 className=" borderSpacing text-4xl text-emerald-800 text-center m-20 p-20 ">
+      <h4 className=" borderSpacing text-3xl text-emerald-800 text-center m-14 pb-12 ">
         Hai trovato un amico a quattro zampe? Aiutalo a trovare una nuova casa
         inserendolo nel nostro database!
       </h4>
 
-      <div className="bg-gradient-to-r from-lime-700 to-yellow-500 p-0.5">
+      <div className="bg-gradient-to-r from-lime-700 to-yellow-500 pt-0.5 pb-0.5">
         <FormInsertDog />
       </div>
     </div>

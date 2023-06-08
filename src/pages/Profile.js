@@ -22,7 +22,7 @@ export default function Profile() {
         <h2>Questa è la tua area riservata, {user.name || user[0].name}</h2>
       </header>
 
-      <h4 className=" borderSpacing text-4xl text-emerald-800 text-center m-20 p-20 ">
+      <h4 className=" borderSpacing text-3xl text-emerald-800 text-center m-14 pb-12 ">
         Questa sezione è dedicata alla modifica dei tuoi dati utente o alla
         cancellazione dell'account.
       </h4>

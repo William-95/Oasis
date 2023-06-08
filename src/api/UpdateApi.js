@@ -2,11 +2,11 @@ import React, { useContext, useEffect, useRef } from "react";
 import { StateContext } from "../SetContext";
 import { useHistory } from "react-router-dom";
 
-export default function UpdateApi({ dati }) {
+export default function UpdateApi({ id_user,dati }) {
   const { api, user, setUser, send, setSend } = useContext(StateContext);
   const history = useHistory();
   const ref = useRef();
-
+  const newUser=[...user]
   /*requestApi*/
   useEffect(() => {
     if (ref.current !== send) {
@@ -14,7 +14,7 @@ export default function UpdateApi({ dati }) {
 
       api({
         method: "put",
-        url: `/users/${user[0].id}`,
+        url: `/users/${id_user}`,
         headers: { "Content-Type": "application/json" },
         data: dati,
       })
@@ -22,10 +22,10 @@ export default function UpdateApi({ dati }) {
           if (result.status === 200) {
             setSend(false);
             const data = result.data;
-            setUser(data);
+            setUser([data]);
             alert("Utente modificato correttamente.");
-            console.log(user);
-            history.push(`/home/${user[0].id}`);
+            console.log(data);
+            history.push(`/home/${newUser[0].id}`);
           } else {
             alert(result.data.message);
           }
