@@ -2,6 +2,7 @@ import React, { useState, useContext } from "react";
 import { StateContext } from "../SetContext";
 import CreateDogApi from "../api/CreateDogApi";
 import "../css/enterForm.css";
+import AllDogApi from "../api/AllDogApi";
 
 export default function FormInsertDog() {
   const { send, setSend } = useContext(StateContext);
@@ -22,7 +23,7 @@ export default function FormInsertDog() {
   const handleFileChange = (event) => {
     setData((data) => ({ ...data, img: event.target.files[0] }));
   };
-  console.log(data);
+
 
   const handleChange = (event) => {
     const name = event.target.name;
@@ -43,7 +44,7 @@ export default function FormInsertDog() {
     <div className="form-box">
       <h3>Inserisci un cane</h3>
       <form onSubmit={handleSubmit}>
-        {send ? <CreateDogApi dati={data} /> : null}
+        {send ? <><CreateDogApi dati={data} /><AllDogApi/></> : null}
         <div className="user-box">
           <input
             type="text"

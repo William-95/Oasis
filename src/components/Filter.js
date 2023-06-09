@@ -9,7 +9,9 @@ export default function Filter() {
   const [size, setSize] = useState("");
   const [structure, setStructure] = useState("");
 
-  var newDog = [...dog];
+  var newDog =[...dog];
+
+
 
   const filteredArray = () => {
     const filteredData = newDog.filter((item) => {

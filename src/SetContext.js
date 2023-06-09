@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import AllDogApi from "./api/AllDogApi";
 import axios from "axios";
 
@@ -20,11 +20,37 @@ export default function SetContext({ children }) {
   const [entryNavBtn, setEntryNavBtn] = useState(true);
   const [send, setSend] = useState(false);
   const [deleted, setDeleted] = useState(false);
-
   
+//   // save state
+// useEffect(()=>{
+// const data=window.localStorage.getItem('USER');
+// if(data!==null){
+//   setUser(JSON.parse(data));
+// }
+// },[]);
+
+// useEffect(()=>{
+//   window.localStorage.setItem('USER',JSON.stringify(user));
+// },[user]);
+
+// // end save state
 
 
-
+     // save state
+ useEffect(()=>{
+  const data=window.localStorage.getItem('LOGGER');
+  console.log(data);
+  if(data!==null){
+    setIsLog(data);
+  }
+  },[]);
+  
+  useEffect(()=>{
+    window.localStorage.setItem('LOGGER',isLog);
+  },[isLog]);
+  
+  // end save state
+    
   return (
     <>
       <StateContext.Provider

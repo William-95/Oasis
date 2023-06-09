@@ -22,14 +22,14 @@ export default function RegisterApi({ dati }) {
             setSend(false);
             setIsLog(true);
             const data = result.data;
-            setUser([
-              {
-                id: data.id,
-                name: data.name,
-                password: data.password,
-              },
-            ]);
-
+            // setUser([
+            //   {
+            //     id: data.id,
+            //     name: data.name,
+            //     password: data.password,
+            //   },
+            // ]);
+            setUser(data);
             let userId = data.id;
             history.push("/home/" + userId);
           } else {

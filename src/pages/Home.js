@@ -9,7 +9,7 @@ import Carousel from "../components/Carousel";
 
 export default function Home() {
   const { user } = useContext(StateContext);
-
+const newUser=[{...user}]
   return (
     <div>
       <header
@@ -18,7 +18,7 @@ export default function Home() {
           backgroundImage: `url(${headerBg})`
         }}
       >
-        <h2>Benvenuto/a nella tua Home page, {user.name || user[0].name}</h2>
+        <h2>Benvenuto/a nella tua Home page, {newUser.name || newUser[0].name}</h2>
       </header>
 
 

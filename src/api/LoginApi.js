@@ -7,6 +7,8 @@ export default function LoginApi({ dati }) {
   const history = useHistory();
   const ref = useRef();
 
+  
+
   /*requestApi*/
   useEffect(() => {
     if (ref.current !== send) {
@@ -24,7 +26,7 @@ export default function LoginApi({ dati }) {
             setIsLog(true);
             const data = result.data;
             setUser(data);
-            let userId = data[0].id;
+            let userId = data.id;
             history.push("/home/" + userId);
           } else {
             console.log(result.data.message);

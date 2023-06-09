@@ -5,6 +5,7 @@ import NavEntryPoint from './NavEntryPoint';
 
 export default function NavSwitch() {
     const{isLog}=useContext(StateContext);
+ 
   return (
     <>
     {isLog ? <Navbar/> : <NavEntryPoint/>}

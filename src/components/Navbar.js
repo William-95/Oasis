@@ -7,12 +7,12 @@ import { Link} from "react-router-dom";
 import { StateContext } from "../SetContext";
 
 
-
 export default function Navbar () {
   const { user,setIsLog } = useContext(StateContext);
  const [state,setState]=useState({isOpen:false });
+//  const{id}=useParams();
 
- const newUser=[...user];
+ const newUser=[{...user}];
  
  const handleToggle = () => {
     setState({isOpen:!state.isOpen});
