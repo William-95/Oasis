@@ -17,10 +17,7 @@ export default function SingleDog() {
       <header
         className="headerBg"
         style={{
-          backgroundImage: `url(${headerBg})`,
-          backgroundSize: "cover",
-          backgroundRepeat: "no-repeat",
-          backgroundPosition: "center",
+          backgroundImage: `url(${headerBg})`
         }}
       ></header>
 

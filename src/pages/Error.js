@@ -1,6 +1,6 @@
-import React from 'react'
+import React from "react";
 import headerBg from "../img/03.jpg";
-import error from "../img/error.png"
+import error from "../img/error.png";
 import "../css/error.css";
 
 export default function Error() {
@@ -10,12 +10,8 @@ export default function Error() {
         className="headerBg"
         style={{
           backgroundImage: `url(${headerBg})`,
-          backgroundSize: "cover",
-          backgroundRepeat: "no-repeat",
-          backgroundPosition: "center",
         }}
-      >
-      </header>
+      ></header>
 
       <div className="error">
         <img src={error} className="errorImg" alt="" />
@@ -27,5 +23,5 @@ export default function Error() {
         </ol>
       </div>
     </div>
-  )
+  );
 }

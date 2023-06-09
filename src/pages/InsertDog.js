@@ -9,10 +9,7 @@ export default function InsertDog() {
       <header
         className="headerBg"
         style={{
-          backgroundImage: `url(${headerBg})`,
-          backgroundSize: "cover",
-          backgroundRepeat: "no-repeat",
-          backgroundPosition: "center",
+          backgroundImage: `url(${headerBg})`
         }}
       ></header>
 

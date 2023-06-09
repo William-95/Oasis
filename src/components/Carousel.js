@@ -45,7 +45,7 @@ export default function Carousel() {
         <div className="carousel" style={{transform:"rotateY("+deg+"deg)"}}>
           {newDog.map((item) => {
             return (
-              <article className="carouselCard">
+              <article className="carouselCard" key={item.id}>
                 <img
                   src={"http://127.0.0.1:8000/" + item.img || defaultImg}
                   alt=""

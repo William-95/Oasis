@@ -7,7 +7,7 @@ export default function FormLogin() {
   const { send, setSend } = useContext(StateContext);
   const [data, setData] = useState({
     id: "",
-    name: "",
+    email: "",
     password: "",
   });
 
@@ -34,13 +34,13 @@ export default function FormLogin() {
       <form onSubmit={HandleSubmit}>
         <div className="user-box">
           <input
-            type="text"
-            name="name"
-            value={data.name}
+            type="email"
+            name="email"
+            value={data.email}
             onChange={HandleChange}
             required=""
           />
-          <label>Username</label>
+          <label>Email</label>
         </div>
 
         <div className="user-box">

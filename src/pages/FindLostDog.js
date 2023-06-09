@@ -14,10 +14,7 @@ export default function FindLostDog() {
         <header
           className="headerBg"
           style={{
-            backgroundImage: `url(${headerBg})`,
-            backgroundSize: "cover",
-            backgroundRepeat: "no-repeat",
-            backgroundPosition: "center",
+            backgroundImage: `url(${headerBg})`
           }}
         ></header>
 
@@ -37,10 +34,7 @@ export default function FindLostDog() {
         <header
           className="headerBg"
           style={{
-            backgroundImage: `url(${headerBg})`,
-            backgroundSize: "cover",
-            backgroundRepeat: "no-repeat",
-            backgroundPosition: "center",
+            backgroundImage: `url(${headerBg})`
           }}
         ></header>
 

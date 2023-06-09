@@ -41,10 +41,7 @@ export default function List() {
       <header
         className="headerBg"
         style={{
-          backgroundImage: `url(${headerBg})`,
-          backgroundSize: "cover",
-          backgroundRepeat: "no-repeat",
-          backgroundPosition: "center",
+          backgroundImage: `url(${headerBg})`
         }}
       ></header>
 
