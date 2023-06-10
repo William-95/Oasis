@@ -12,7 +12,7 @@
 
 ### <a name="1">About The Project</a>
 <br/>
-<img src="src\img\screenHome.jpg" width="30%">
+<img src="src\img\screen.jpg" width="30%">
 
 <p align=right><a href="#0">back to top</a></p>
 
