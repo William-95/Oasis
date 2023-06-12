@@ -26,12 +26,12 @@ export default function FormFindDog() {
 
   return (
     <div>
-      <div className="form-box" style={{marginBottom: "7%" }}>
+      <div className="formBox" style={{ marginBottom: "7%" }}>
         {send ? <FindDogApi dati={data} /> : null}
 
         <h3>Cerca nelle nostre strutture</h3>
         <form onSubmit={HandleSubmit}>
-          <div className="user-box">
+          <div className="userBox">
             <input
               type="text"
               name="microchip"
@@ -41,7 +41,7 @@ export default function FormFindDog() {
             <label>Microchip</label>
           </div>
 
-          <button type="submit" className="secondaryBtn form-btn">
+          <button type="submit" className="secondaryBtn formBtn">
             Cerca
           </button>
         </form>

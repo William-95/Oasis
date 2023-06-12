@@ -2,11 +2,11 @@ import React, { useContext, useEffect, useRef } from "react";
 import { StateContext } from "../SetContext";
 import { useHistory } from "react-router-dom";
 
-export default function UpdateApi({ id_user,dati }) {
+export default function UpdateApi({ id_user, dati }) {
   const { api, user, setUser, send, setSend } = useContext(StateContext);
   const history = useHistory();
   const ref = useRef();
-  const newUser=[...user]
+  const newUser = [...user];
   /*requestApi*/
   useEffect(() => {
     if (ref.current !== send) {

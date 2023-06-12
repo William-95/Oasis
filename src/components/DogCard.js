@@ -5,9 +5,7 @@ import "../css/cardDog.css";
 import defaultImg from "../img/defaultImg.jpg";
 
 export default function DogCard({ img, id, name }) {
-  
   return (
-    
     <article className="flip" key={id}>
       <div className="front">
         <img src={"http://127.0.0.1:8000/" + img || defaultImg} alt="" />
@@ -21,7 +19,6 @@ export default function DogCard({ img, id, name }) {
         </Link>
       </div>
     </article>
-    
   );
 }
 

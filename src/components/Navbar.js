@@ -1,71 +1,71 @@
-import React, { useState,useContext} from "react";
+import React, { useState, useContext } from "react";
 import "../css/navbar.css";
 import classNames from "classnames";
 import logo from "../img/logo.png";
 import { FaAlignRight } from "react-icons/fa";
-import { Link} from "react-router-dom";
+import { Link } from "react-router-dom";
 import { StateContext } from "../SetContext";
 
+export default function Navbar() {
+  const { user, setIsLog } = useContext(StateContext);
+  const [state, setState] = useState({ isOpen: false });
+  //  const{id}=useParams();
 
-export default function Navbar () {
-  const { user,setIsLog } = useContext(StateContext);
- const [state,setState]=useState({isOpen:false });
-//  const{id}=useParams();
+  const newUser = [{ ...user }];
 
- const newUser=[{...user}];
- 
- const handleToggle = () => {
-    setState({isOpen:!state.isOpen});
+  const handleToggle = () => {
+    setState({ isOpen: !state.isOpen });
   };
 
-  
-    return (
-      <nav className="navbar">
-        <div className="navCenter">
-          <div className="navHeader">
-            <Link to={`/home/${newUser[0].id}/`}>
-              <img className="navLogo" src={logo} alt="" />
-            </Link>
-            <button
-              type="button"
-              className="navBtn"
-              onClick={handleToggle}
-            >
-              <FaAlignRight className="navIcon" />
-            </button>
-          </div>
-
-          
-          <ul className={classNames('navLinks',{'showNav':state.isOpen})} onClick={handleToggle}>
-            <li>
-              <Link to={`/home/${newUser[0].id}/`} >Home</Link>
-            </li>
-            <li>
-              <Link to="/list/">Lista</Link>
-            </li>
-            <li>
-              <Link to="/insertdog/">Inserisci Cane</Link>
-            </li>
-            <li>
-              <Link to="/findlostdog/">Trova Cane</Link>
-            </li>
-            <li>
-              <Link to={`/profile/${newUser[0].id}/`}>Profilo</Link>
-            </li>
-            <li>
-              <Link to="/" onClick={()=>{setIsLog(false)}}>Logout</Link>
-            </li>
-          </ul>
+  return (
+    <nav className="navbar">
+      <div className="navCenter">
+        <div className="navHeader">
+          <Link to={`/home/${newUser[0].id}/`}>
+            <img className="navLogo" src={logo} alt="" />
+          </Link>
+          <button type="button" className="navBtn" onClick={handleToggle}>
+            <FaAlignRight className="navIcon" />
+          </button>
         </div>
-      </nav>
-    );
-  }
 
-
-
+        <ul
+          className={classNames("navLinks", { showNav: state.isOpen })}
+          onClick={handleToggle}
+        >
+          <li>
+            <Link to={`/home/${newUser[0].id}/`}>Home</Link>
+          </li>
+          <li>
+            <Link to="/list/">Lista</Link>
+          </li>
+          <li>
+            <Link to="/insertdog/">Inserisci Cane</Link>
+          </li>
+          <li>
+            <Link to="/findlostdog/">Trova Cane</Link>
+          </li>
+          <li>
+            <Link to={`/profile/${newUser[0].id}/`}>Profilo</Link>
+          </li>
+          <li>
+            <Link
+              to="/"
+              onClick={() => {
+                setIsLog(false);
+              }}
+            >
+              Logout
+            </Link>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  );
+}
 
 // export default class Navbar extends Component {
- 
+
 //   state={
 //     isOpen:false
 //   }
@@ -90,7 +90,6 @@ export default function Navbar () {
 //             </button>
 //           </div>
 
-          
 //           <ul className={classNames('navLinks',{'showNav':this.state.isOpen})} onClick={this.handleToggle}>
 //             <li>
 //               <Link to="/home/:id">Home</Link>

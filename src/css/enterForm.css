@@ -1,7 +1,7 @@
 @import "../css/App.css";
 
-.form-box {
-  margin:10% auto;
+.formBox {
+  margin: 10% auto;
   width: 70%;
   min-height: 30vh;
   padding: 6%;
@@ -9,36 +9,36 @@
   box-shadow: 0 15px 25px rgba(0, 0, 0, 0.6);
   border-radius: 10px;
 }
-.no-showForm{
-  display:none;
+.no-showForm {
+  display: none;
 }
-.showForm{
-  display:block;
+.showForm {
+  display: block;
 }
-.form-box h3 {
-  margin:0 auto 7%;
-  color: #fff;
+.formBox h3 {
+  margin: 0 auto 7%;
+  color: var(--mainWhite);
   text-align: center;
   font-size: 1.5em;
 }
 
-.user-box {
+.userBox {
   position: relative;
 }
 
-.user-box input {
+.userBox input {
   width: 100%;
   padding: 10px 0;
   font-size: 1.1em;
-  color: #fff;
+  color: var(--mainWhite);
   margin-bottom: 30px;
   border: none;
-  border-bottom: 1px solid #fff;
+  border-bottom: 1px solid var(--mainWhite);
   outline: none;
   background: transparent;
   cursor: pointer;
 }
-.user-box label {
+.userBox label {
   position: absolute;
   top: 0;
   left: 0;
@@ -48,48 +48,59 @@
   pointer-events: none;
   transition: 0.5s;
 }
+.userBox span {
+  position: relative;
+  top: -30px;
+  left: 0;
+  padding: 10px 0;
+  font-size: 13px;
+  color: red;
+  pointer-events: none;
+  transition: 0.5s;
+}
 
-.user-box input:hover ~ label,
-.user-box input:focus ~ label,
-.user-box input:user-valid ~ label{
+.userBox input:hover ~ label,
+.userBox input:focus ~ label,
+.userBox input:user-valid ~ label {
   top: -20px;
   left: 0;
-  color: #03e9f4;
+  color: var(--lightGreen);
+  /* #03e9f4 */
   font-size: 12px;
 }
 
-.date-box input{
-color:transparent;
+.dateBox input {
+  color: transparent;
 }
 
-.date-box:hover input{
-  color:#fff
+.dateBox:hover input {
+  color: #fff;
 }
-.form-btn {
-  /* float: right; */
+.formBtn {
   margin-left: 60%;
-  
+  margin-bottom: 0;
 }
 /* tablet */
 @media screen and (max-width: 900px) and (min-width: 600px) {
-.form-box{
-    width: 50%;
-    margin:10% auto;
+  .formBox {
+    width: 60%;
+    margin: 10% auto;
     min-height: 25vh;
-}
+  }
 }
 
 /*desktop*/
 @media screen and (min-width: 900px) {
-    .form-box{
-        width: 50%;
-        margin:10% auto;
-        
-    }
-    .form-box h3{
-      font-size: 1.5em;
-    }
-    .form-btn{
-      font-size: 1.1em;
-    }
+  .formBox {
+    width: 50%;
+  }
+  .formBox h3 {
+    font-size: 1.5em;
+  }
+
+  .formBtn {
+    width: 20%;
+    margin-left: 80%;
+    font-size: 1em;
+  }
 }

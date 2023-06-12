@@ -19,6 +19,7 @@ export default function UpdateDog() {
     microchip: "",
     date_entry: "",
     img: "",
+    region:"",
     structure: "",
     contacts: "",
   });
@@ -52,13 +53,13 @@ export default function UpdateDog() {
       </div>
 
       <div
-        className={classNames("form-box no-showForm", { showForm: btn.isOpen })}
+        className={classNames("formBox no-showForm", { showForm: btn.isOpen })}
       >
         <h3>Modifica cane</h3>
         <form onSubmit={handleSubmit}>
           {send ? <UpdateDogApi id_dog={id_dog} dati={data} /> : null}
 
-          <div className="user-box">
+          <div className="userBox">
             <input
               type="text"
               name="name"
@@ -68,7 +69,7 @@ export default function UpdateDog() {
             <label>Nome</label>
           </div>
 
-          <div className="user-box">
+          <div className="userBox">
             <input
               type="text"
               name="sex"
@@ -78,7 +79,7 @@ export default function UpdateDog() {
             <label>Sesso</label>
           </div>
 
-          <div className="user-box">
+          <div className="userBox">
             <input
               type="text"
               name="race"
@@ -88,7 +89,7 @@ export default function UpdateDog() {
             <label>Razza</label>
           </div>
 
-          <div className="user-box">
+          <div className="userBox">
             <input
               type="text"
               name="size"
@@ -98,7 +99,7 @@ export default function UpdateDog() {
             <label>Stazza</label>
           </div>
 
-          <div className="user-box date-box">
+          <div className="userBox dateBox">
             <input
               type="date"
               name="date_birth"
@@ -108,7 +109,7 @@ export default function UpdateDog() {
             <label>Data di nascita</label>
           </div>
 
-          <div className="user-box">
+          <div className="userBox">
             <input
               type="text"
               name="microchip"
@@ -118,7 +119,7 @@ export default function UpdateDog() {
             <label>Microchip</label>
           </div>
 
-          <div className="user-box date-box">
+          <div className="userBox dateBox">
             <input
               type="date"
               name="date_entry"
@@ -128,7 +129,17 @@ export default function UpdateDog() {
             <label>Data di entrata</label>
           </div>
 
-          <div className="user-box">
+          <div className="userBox">
+            <input
+              type="text"
+              name="region"
+              onChange={handleChange}
+              value={data.region}
+            />
+            <label>Regione</label>
+          </div>
+
+          <div className="userBox">
             <input
               type="text"
               name="structure"
@@ -138,7 +149,7 @@ export default function UpdateDog() {
             <label>Struttura</label>
           </div>
 
-          <div className="user-box">
+          <div className="userBox">
             <input
               type="file"
               name="img"
@@ -148,7 +159,7 @@ export default function UpdateDog() {
             {/* <label>Immagine</label> */}
           </div>
 
-          <div className="user-box">
+          <div className="userBox">
             <input
               type="text"
               name="contacts"
@@ -158,7 +169,7 @@ export default function UpdateDog() {
             <label>Contatti</label>
           </div>
 
-          <button type="submit" className="secondaryBtn form-btn">
+          <button type="submit" className="secondaryBtn formBtn">
             Modifica
           </button>
         </form>

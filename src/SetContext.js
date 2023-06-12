@@ -11,7 +11,7 @@ export default function SetContext({ children }) {
 
   /*state*/
   const [loading, setLoading] = useState(false);
-  const [isLog,setIsLog]=useState(false);
+  const [isLog, setIsLog] = useState(false);
   const [dog, setDog] = useState([{}]);
   const [oneDog, setOneDog] = useState([{}]);
   const [filterDog, setFilterDog] = useState([{}]);
@@ -20,43 +20,46 @@ export default function SetContext({ children }) {
   const [entryNavBtn, setEntryNavBtn] = useState(true);
   const [send, setSend] = useState(false);
   const [deleted, setDeleted] = useState(false);
+
   
-//   // save state
-// useEffect(()=>{
-// const data=window.localStorage.getItem('USER');
-// if(data!==null){
-//   setUser(JSON.parse(data));
-// }
-// },[]);
-
-// useEffect(()=>{
-//   window.localStorage.setItem('USER',JSON.stringify(user));
-// },[user]);
-
-// // end save state
-
-
-     // save state
- useEffect(()=>{
-  const data=window.localStorage.getItem('LOGGER');
-  console.log(data);
-  if(data!==null){
-    setIsLog(data);
-  }
-  },[]);
-  
-  useEffect(()=>{
-    window.localStorage.setItem('LOGGER',isLog);
-  },[isLog]);
-  
-  // end save state
+  // save state user
+  useEffect(() => {
+    const data =JSON.parse(window.localStorage.getItem("USER"));
+    if (data !== null) {
+      setUser(data);
+    }
     
+  }, []);
+
+  useEffect(() => {
+
+    window.localStorage.setItem("USER", JSON.stringify(user));
+  }, [user]);
+
+  // end save state user
+
+  // save state log
+  useEffect(() => {
+    const data = window.localStorage.getItem("LOGGER");
+
+    if (data !== null) {
+      setIsLog(data);
+    }
+  }, []);
+
+  useEffect(() => {
+    window.localStorage.setItem("LOGGER", isLog);
+  }, [isLog]);
+
+  // end save state log
+
+  
   return (
     <>
       <StateContext.Provider
         value={{
           api,
-          loading, 
+          loading,
           setLoading,
           isLog,
           setIsLog,

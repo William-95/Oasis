@@ -21,6 +21,7 @@ export default function SingleDog() {
         }}
       ></header>
 
+<div className="bg-gradient-to-r from-lime-700 to-yellow-500 rounded-b-[50px] mb-10 p-0.5">
       <OneDogCard
         name={oneDog.name}
         race={oneDog.race}
@@ -28,12 +29,13 @@ export default function SingleDog() {
         size={oneDog.size}
         img={oneDog.img}
         microchip={oneDog.microchip}
+        region={oneDog.region}
         structure={oneDog.structure}
         contacts={oneDog.contacts}
         date_birth={oneDog.date_birth}
         date_entry={oneDog.date_entry}
       />
-
+</div>
       <div>
         <UpdateDog />
         <DeleteDog />

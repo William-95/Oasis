@@ -34,11 +34,11 @@ export default function FormUpdateUser() {
     }
   };
   return (
-    <div className="form-box">
+    <div className="formBox">
       <h3>Modifica Profilo</h3>
       <form onSubmit={handleSubmit}>
         {send ? <UpdateApi id_user={id} dati={data} /> : null}
-        <div className="user-box">
+        <div className="userBox">
           <input
             type="text"
             name="name"
@@ -47,7 +47,7 @@ export default function FormUpdateUser() {
           />
           <label>Nome Utente</label>
         </div>
-        <div className="user-box">
+        <div className="userBox">
           <input
             type="email"
             name="email"
@@ -57,7 +57,7 @@ export default function FormUpdateUser() {
           <label>Nuova Email</label>
         </div>
 
-        <div className="user-box">
+        <div className="userBox">
           <input
             type="password"
             name="password"
@@ -67,7 +67,7 @@ export default function FormUpdateUser() {
           <label>Nuova Password</label>
         </div>
 
-        <div className="user-box">
+        <div className="userBox">
           <input
             type="password"
             name="confirm_password"
@@ -77,7 +77,7 @@ export default function FormUpdateUser() {
           <label>Conferma Password</label>
         </div>
 
-        <button type="submit" className="secondaryBtn form-btn">
+        <button type="submit" className="secondaryBtn formBtn">
           Modifica
         </button>
       </form>

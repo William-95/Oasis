@@ -7,16 +7,18 @@
   text-align: center;
   font-size: 1.5em;
   color: var(--darkGreen);
-  margin: 10% 0 10% 0;
+  margin: 10% auto;
 }
 
 .containerDog img {
   object-fit: cover;
-  max-height: 50vh;
+  object-position: center;
+  max-height: 30vh;
+  width: 90%;
   border-radius: 15%;
   border: 2px solid var(--primaryColor);
   box-shadow: var(--lightShadow);
-  margin: 10% 15% 10% 15%;
+  margin: 10% auto;
 }
 
 .description {
@@ -30,7 +32,7 @@
     rgba(41, 93, 9, 1) 100%
   );
   box-shadow: var(--lightShadow);
-  margin: 10% 0 10% 0;
+  margin: 10% auto;
 }
 .containerDog img:hover,
 .description:hover {
@@ -45,7 +47,9 @@
     font-size: 1.9em;
   }
   .containerDog img {
-    margin: 8% 26% 8% 26%;
+    margin: 8% auto;
+    width: 90%;
+    max-height: 35vh;
   }
   .description {
     width: 90%;
@@ -57,13 +61,12 @@
 
 /*desktop*/
 @media screen and (min-width: 900px) {
-  .containerDog{
+  .containerDog {
     display: flex;
     flex-direction: column;
   }
-  .containerGroup{
+  .containerGroup {
     flex-direction: row;
-    
   }
   .containerDog h3 {
     font-size: 3em;
@@ -71,17 +74,17 @@
   }
   .containerDog img {
     width: 45%;
-    max-height: 79vh;
+    max-height: 63vh;
 
     display: flex;
     float: left;
-    margin: 5% 0 5% 0;
+    margin: 5% auto;
   }
   .description {
     width: 45%;
     font-size: 1.6em;
     padding: 4%;
     float: right;
-    margin: 5% 0 5% 0;
+    margin: 5% auto;
   }
 }

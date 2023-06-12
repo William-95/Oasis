@@ -7,7 +7,7 @@
 .featureIntro h3 {
   font-size: 1.5em;
   margin: 5%;
-  color:var(--primaryColor)
+  color: var(--primaryColor);
 }
 
 .feature {
@@ -51,8 +51,6 @@
   }
   .feature {
     width: 60%;
-    /* margin-top:2%;
-    margin-bottom: 0%; */
     margin: 0 auto;
   }
   .feature p {

@@ -52,6 +52,7 @@ export default function FindLostDog() {
             size={findDog[0].size}
             img={findDog[0].img}
             microchip={findDog[0].microchip}
+            region={findDog[0].region}
             structure={findDog[0].structure}
             contacts={findDog[0].contacts}
             date_birth={findDog[0].date_birth}

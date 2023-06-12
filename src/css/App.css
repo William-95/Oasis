@@ -1,7 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Alegreya&family=Lora&display=swap');
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: 'Alegreya', serif;
 }
 :root {
   --primaryColor: #af9a7d;
@@ -20,10 +22,10 @@
 }
 
 /* Primary btn */
-.primaryBtn{
+.primaryBtn {
   width: 90%;
   text-decoration: none;
-  margin:4.6%;
+  margin: 4.6%;
   color: var(--mainBlack);
   background: var(--primaryColor);
   padding: 0.4rem 0.9rem;
@@ -40,17 +42,17 @@
 /* end Primary btn */
 
 /* secondaryBtn */
-.secondaryBtn{
+.secondaryBtn {
   width: 35%;
-  
-  margin:2%;
+
+  margin: 2%;
   color: var(--mainBlack);
   background: var(--darkGreen);
   padding: 0.3rem 0.3rem;
   border: 3px solid var(--darkGreen);
   border-radius: 25%;
   transition: var(--mainTransition);
-  
+
   cursor: pointer;
 }
 .secondaryBtn:hover {
@@ -58,8 +60,7 @@
   color: var(--darkGreen);
 }
 
-
-.borderSpacing{
+.borderSpacing {
   border-bottom: 3px solid gray;
   border-radius: 15%;
 }
@@ -67,26 +68,21 @@
 
 /* tablet */
 @media screen and (max-width: 900px) and (min-width: 600px) {
-
-
 }
-
 
 /*desktop*/
 @media screen and (min-width: 900px) {
-/* primary btn */
-  .primaryBtn{
+  /* primary btn */
+  .primaryBtn {
     font-size: 0.8em;
-    margin:4%;
+    margin: 4%;
   }
   /* end primary btn */
 
-
   /* secondary btn */
-  .secondaryBtn{
+  .secondaryBtn {
     font-size: 0.6em;
-    margin:4%;
+    margin: 4%;
   }
   /* end secondary btn */
 }
-

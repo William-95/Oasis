@@ -26,7 +26,7 @@ const newUser=[{...user}]
       <Carousel />
       </div>
 
-      <div className="bg-gradient-to-r from-lime-700 to-yellow-500 mt-20 pb-20">
+      <div className="bg-gradient-to-r from-lime-700 to-yellow-500 mb-20 pb-20">
       <Clinic />
       </div>
 

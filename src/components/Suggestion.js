@@ -10,7 +10,9 @@ export default function Suggestion() {
   return (
     <div>
       <div className="featureIntro">
-        <h3 className='borderSpacing pb-8' style={{color:'#295d09'}}>Suggerimenti per le vacanze</h3>
+        <h3 className="borderSpacing pb-8" style={{ color: "#295d09" }}>
+          Suggerimenti per le vacanze
+        </h3>
       </div>
       <div className="feature">
         <img src={temperature} alt="" />

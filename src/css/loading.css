@@ -1,42 +1,38 @@
 @import "../css/App.css";
 .loading {
-    text-align: center;
-    margin: 10%;
-  }
-  .loaderWrapper {
-    margin: 0 auto;
-    width: 60px;
-    height: 60px;
-  }
-  .loader {
-    box-sizing: border-box;
-    width: 100%;
-    height: 100%;
-    border: 10px solid var(--darkGreen);
-    border-top-color: var(--lightGreen);
-    border-bottom-color: var(--lightGreen);
-    border-radius: 50%;
-    animation: rotate 5s linear infinite;
-  }
-  .loaderInner {
-    border-top-color: var(--lightGreen);
-    border-bottom-color: var(--lightGreen);
-    animation-duration: 2.5s;
-  }
+  text-align: center;
+  margin: 10%;
+}
+.loaderWrapper {
+  margin: 0 auto;
+  width: 60px;
+  height: 60px;
+}
+.loader {
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  border: 10px solid var(--darkGreen);
+  border-top-color: var(--lightGreen);
+  border-bottom-color: var(--lightGreen);
+  border-radius: 50%;
+  animation: rotate 5s linear infinite;
+}
+.loaderInner {
+  border-top-color: var(--lightGreen);
+  border-bottom-color: var(--lightGreen);
+  animation-duration: 2.5s;
+}
 
 /* tablet */
 @media screen and (max-width: 900px) and (min-width: 600px) {
- 
 }
 
 /*desktop*/
 @media screen and (min-width: 900px) {
-   
-    
-    }
+}
 
-
-    /* animation */
+/* animation */
 @keyframes rotate {
   0% {
     transform: scale(1) rotate(360deg);

@@ -4,7 +4,7 @@
   width: 100%;
   text-align: center;
   padding: 4%;
-  align-content:center;;
+  align-content: center;
 }
 .section h3 {
   color: var(--primaryColor);
@@ -24,17 +24,17 @@
   margin-bottom: 6%;
   border: 2px solid var(--primaryColor);
   border-radius: 10%;
-  overflow:hidden;
+  overflow: hidden;
   box-shadow: var(--lightShadow);
 }
 
-.cardCourse:hover{
+.cardCourse:hover {
   box-shadow: var(--darkShadow);
 }
 
 .cardCourse img {
   position: absolute;
-  top:0;
+  top: 0;
   left: 0;
   width: 100%;
 }
@@ -104,7 +104,6 @@
   .container {
     grid-template-columns: repeat(auto-fit, minmax(227.8px, 1fr));
   }
-
 }
 
 /*desktop*/
@@ -116,8 +115,5 @@
   .container {
     padding: 0% 8%;
     grid-template-columns: repeat(auto-fit, minmax(227.8px, 1fr));
-
   }
-
- 
 }

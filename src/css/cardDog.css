@@ -17,7 +17,7 @@
   width: inherit;
   background-size: cover !important;
   background-position: center !important;
-  max-height: 25vh;
+  max-height: 20vh;
   overflow: hidden;
   background: #4b4747;
   border-radius: 10px;
@@ -31,7 +31,7 @@
 }
 .front img {
   width: 100%;
-  height:25vh;
+  height: 20vh;
   object-fit: cover !important;
 }
 
@@ -86,82 +86,6 @@
   transform: rotateY(0deg);
   box-shadow: var(--darkShadow);
 }
-/* .card {
-  position: relative;
-  width: 100%;
-  max-height: 25vh;
-  margin-bottom: 6%;
-  border: 2px solid var(--primaryColor);
-  border-radius: 10%;
-  overflow: hidden;
-  box-shadow: var(--lightShadow);
-  
-}
-
-.card:hover {
-  box-shadow: var(--darkShadow);
- 
-}
-
-.card img {
-  width: 100%;
-  object-fit: cover;
-  transition: all 1s;
-}
-.card:hover img {
- opacity: 0;
- 
-}
-.card:hover img {
-  opacity: 0.5;
-  transform: scale(1.5);
-  transition: all 1s;
-}
-
- .card h4 {
-  position: absolute;
-  left: 0;
-  top: 65px;
-  font-size: 1.8em;
-  width: 100%;
-  text-align: center;
-  color: var(--primaryColor);
-  z-index: 1;
- opacity: 0; 
-  transition: 0.5s ease-in;
-  text-transform: capitalize;
-  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
-} 
- .card:hover h4 {
-  opacity: 1;
-} 
-
- .primaryBtn1 {
-  position: absolute;
-  left: 0;
-  top: 130px;
-  width: 33%;
-  justify-content: center;
-  margin: 0 33.5%;
-  transition: 0.5s ease-in;
-  opacity: 0;
-  z-index: 2;
-  text-decoration: none;
-  text-align: center;
-  color: var(--mainBlack);
-  background: var(--primaryColor);
-  padding: 0.4rem 0.9rem;
-  border: 3px solid var(--primaryColor);
-  border-radius: 25%;
-  cursor: pointer;
-}
-.primaryBtn1:hover {
-  background: transparent;
-  color: var(--primaryColor);
-}
-.card:hover .primaryBtn1 {
-  opacity: 1;
-} */
 
 /* tablet */
 @media screen and (max-width: 900px) and (min-width: 600px) {
@@ -170,10 +94,13 @@
     padding: 7% 10% 7% 10%;
   }
 
-  /* .front,
+  .front,
   .back {
-    max-height: 30vh;
-  } */
+    max-height: 15vh;
+  }
+  .front img {
+    max-height: 15vh;
+  }
 }
 
 /*desktop*/
@@ -182,14 +109,18 @@
     grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
     padding: 7% 10% 7% 10%;
   }
-  /* .card {
-    max-height: 35vh;
-  } */
+
   .front,
   .back {
-    max-height: 35vh;
+    max-height: 30vh;
   }
-  .front img{
-    height: 35vh;
+  .front img {
+    height: 30vh;
+  }
+  .back h4 {
+    margin: 40% 0;
+  }
+  .primaryBtn1 {
+    top: 140px;
   }
 }

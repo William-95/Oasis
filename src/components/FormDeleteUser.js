@@ -1,12 +1,12 @@
-import React,{useContext} from 'react'
+import React, { useContext } from "react";
 import { StateContext } from "../SetContext";
 import DeleteApi from "../api/DeleteApi";
 import "../css/singleDogBtn.css";
 
 export default function FormDeleteUser() {
-    const {deleted, setDeleted } = useContext(StateContext);
+  const { deleted, setDeleted } = useContext(StateContext);
 
-    // deleteUser
+  // deleteUser
   const handleDelete = (event) => {
     event.preventDefault();
     setDeleted(!deleted);
@@ -17,10 +17,8 @@ export default function FormDeleteUser() {
   };
   return (
     <div className="deleteBtn self-center pb-12" onClick={handleDelete}>
-    <button type="button" >
-      Cancella Utente
-    </button>
-    {deleted ? <DeleteApi /> : null}
-  </div>
-  )
+      <button type="button">Cancella Utente</button>
+      {deleted ? <DeleteApi /> : null}
+    </div>
+  );
 }

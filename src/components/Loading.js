@@ -7,7 +7,7 @@ export default function Loading() {
       <h4>Loading...</h4>
       <div className="loaderWrapper">
         <div className="loader">
-            <div className="loader loaderInner"></div>
+          <div className="loader loaderInner"></div>
         </div>
       </div>
     </div>

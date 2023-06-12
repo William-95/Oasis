@@ -16,6 +16,7 @@ export default function FormInsertDog() {
     microchip: "",
     date_entry: "",
     img: "",
+    region:"",
     structure: "",
     contacts: "",
   });
@@ -23,7 +24,6 @@ export default function FormInsertDog() {
   const handleFileChange = (event) => {
     setData((data) => ({ ...data, img: event.target.files[0] }));
   };
-
 
   const handleChange = (event) => {
     const name = event.target.name;
@@ -40,12 +40,16 @@ export default function FormInsertDog() {
     }, 200);
   };
   return (
-  
-    <div className="form-box">
+    <div className="formBox">
       <h3>Inserisci un cane</h3>
       <form onSubmit={handleSubmit}>
-        {send ? <><CreateDogApi dati={data} /><AllDogApi/></> : null}
-        <div className="user-box">
+        {send ? (
+          <>
+            <CreateDogApi dati={data} />
+            <AllDogApi />
+          </>
+        ) : null}
+        <div className="userBox">
           <input
             type="text"
             name="name"
@@ -55,7 +59,7 @@ export default function FormInsertDog() {
           <label>Nome</label>
         </div>
 
-        <div className="user-box">
+        <div className="userBox">
           <input
             type="text"
             name="sex"
@@ -65,7 +69,7 @@ export default function FormInsertDog() {
           <label>Sesso</label>
         </div>
 
-        <div className="user-box">
+        <div className="userBox">
           <input
             type="text"
             name="race"
@@ -75,7 +79,7 @@ export default function FormInsertDog() {
           <label>Razza</label>
         </div>
 
-        <div className="user-box">
+        <div className="userBox">
           <input
             type="text"
             name="size"
@@ -85,7 +89,7 @@ export default function FormInsertDog() {
           <label>Stazza</label>
         </div>
 
-        <div className="user-box date-box">
+        <div className="userBox dateBox">
           <input
             type="date"
             name="date_birth"
@@ -95,7 +99,7 @@ export default function FormInsertDog() {
           <label>Data di nascita</label>
         </div>
 
-        <div className="user-box">
+        <div className="userBox">
           <input
             type="text"
             name="microchip"
@@ -105,7 +109,7 @@ export default function FormInsertDog() {
           <label>Microchip</label>
         </div>
 
-        <div className="user-box date-box">
+        <div className="userBox dateBox">
           <input
             type="date"
             name="date_entry"
@@ -115,7 +119,17 @@ export default function FormInsertDog() {
           <label>Data di entrata</label>
         </div>
 
-        <div className="user-box">
+        <div className="userBox">
+          <input
+            type="text"
+            name="region"
+            onChange={handleChange}
+            value={data.region}
+          />
+          <label>Regione</label>
+        </div>
+
+        <div className="userBox">
           <input
             type="text"
             name="structure"
@@ -125,12 +139,12 @@ export default function FormInsertDog() {
           <label>Struttura</label>
         </div>
 
-        <div className="user-box">
+        <div className="userBox">
           <input type="file" name="img" multiple onChange={handleFileChange} />
           {/* <label>Immagine</label> */}
         </div>
 
-        <div className="user-box">
+        <div className="userBox">
           <input
             type="text"
             name="contacts"
@@ -140,12 +154,10 @@ export default function FormInsertDog() {
           <label>Contatti</label>
         </div>
 
-        <button type="submit" className="secondaryBtn form-btn">
+        <button type="submit" className="secondaryBtn formBtn">
           Inserisci
         </button>
       </form>
     </div>
-
-
   );
 }
