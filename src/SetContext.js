@@ -6,7 +6,7 @@ export const StateContext = React.createContext();
 
 export default function SetContext({ children }) {
   const api = axios.create({
-    baseURL: `https://oasis-db-production.up.railway.app//api`,
+    baseURL: `https://oasis-db-production.up.railway.app/api`,
   });
 
   /*state*/
