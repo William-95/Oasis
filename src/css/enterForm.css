@@ -59,7 +59,7 @@
   transition: 0.5s;
 }
 /* ~ */
-.userBox input:hover  label,
+.userBox input:hover ~ label,
 /* .userBox input:focus ~ label, */
 /* .userBox input:active  label, */
 .userBox input:user-valid  label {
