@@ -22,8 +22,12 @@
 .reverse {
   flex-direction: row-reverse;
 }
+.feature p {
+  width: 50%;
+  font-size: 0.9em; 
+}
 .feature img {
-  width: 100%;
+  width: 20%;
   margin: 8%;
 }
 
