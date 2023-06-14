@@ -50,7 +50,7 @@ export default function Carousel() {
               return (
                 <article className="carouselCard" key={item.id}>
                   <img
-                    src={"http://127.0.0.1:8000/" + item.img || defaultImg}
+                    src={"https://oasis-db-production.up.railway.app/" + item.img || defaultImg}
                     alt=""
                   />
                   <h4 className="carouselTilte">{item.name}</h4>
