@@ -9,9 +9,11 @@ export default function AllDogApi() {
     api
       .get(`/dogs`)
 
-      .then((response) => {
-        setDog(response.data);
-        console.log(response.data);
+      .then((result) => {
+        const data = result.data;
+
+        setDog({data});
+        console.log({data});
       })
 
       .catch((err) => console.log(err));
