@@ -9,11 +9,10 @@ export default function CreateDogApi({ dati }) {
   useEffect(() => {
     if (ref.current !== send) {
       ref.current = send;
-
       api({
         method: "post",
         url: `/dogs`,
-        headers: { "Content-Type": "multipart/form-data" },
+        headers: { "Content-Type": "multipart/form-data"||"application/json" },
         data: dati,
       })
         .then((result) => {
