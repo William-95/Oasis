@@ -25,7 +25,7 @@ export default function UpdateApi({ id_user, dati }) {
             setUser([data]);
             alert("Utente modificato correttamente.");
             console.log(data);
-            history.push(`/home/${newUser[0].id}`);
+            history.push(`/home/${newUser.id}`);
           } else {
             alert(result.data.message);
           }
