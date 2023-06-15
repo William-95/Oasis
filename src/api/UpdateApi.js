@@ -22,7 +22,7 @@ export default function UpdateApi({ id_user, dati }) {
           if (result.status === 200) {
             setSend(false);
             const data = result.data;
-            setUser([data]);
+            setUser(data);
             alert("Utente modificato correttamente.");
             console.log(data);
             history.push(`/home/${data.id}`);
