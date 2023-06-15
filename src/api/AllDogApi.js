@@ -11,6 +11,7 @@ export default function AllDogApi() {
 
       .then((response) => {
         setDog(response.data);
+        console.log(response.data);
       })
 
       .catch((err) => console.log(err));
