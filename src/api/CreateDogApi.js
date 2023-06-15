@@ -12,9 +12,10 @@ export default function CreateDogApi({ dati }) {
       api({
         method: "post",
         url: `/dogs`,
-        headers: { "Content-Type": "multipart/form-data" },
+        headers: { "Content-Type": "application/json" },
         data: dati,
       })
+      // multipart/form-data
         .then((result) => {
           if (result.status === 200) {
             setSend(false);
