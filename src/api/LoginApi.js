@@ -35,8 +35,8 @@ export default function LoginApi({ dati }) {
                 setSend(false);
                 setIsLog(true);
                 setUser(data);
-                let userId = data.id;
-                history.push("/home/" + userId);
+                
+                history.push("/home/" + data.id);
               }
             } else {
               console.log(result.data.message);
