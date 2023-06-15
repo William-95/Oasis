@@ -27,7 +27,7 @@ export default function Filter() {
   useEffect(() => {
     filteredArray();
     // eslint-disable-next-line
-  }, [sex, race, sex, region]);
+  }, [sex, race, size, region]);
 
   return (
     <div className="containerFilter borderSpacing">
