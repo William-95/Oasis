@@ -25,7 +25,7 @@ export default function CreateDogApi({ dati }) {
             alert(result.data.message);
           }
         })
-        .catch((err) => console.log(err));
+        .catch((err) => console.log(err.response.data));
     }
     // eslint-disable-next-line
   }, []);
