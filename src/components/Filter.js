@@ -13,12 +13,16 @@ export default function Filter() {
 
   const filteredArray = () => {
     const filteredData = newDog.filter((item) => {
+      if(item.sex||item.race||item.size||item.region===undefined){
+        return (newDog)
+      }else{
       return (
         item.sex.includes(sex) &&
         item.race.includes(race) &&
         item.size.includes(size) &&
         item.region.includes(region)
       );
+    }
     });
 
     setFilterDog(filteredData);
