@@ -14,7 +14,7 @@ export default function DeleteApi() {
 
       api({
         method: "delete",
-        url: `/users/${user[0].id}`,
+        url: `/users/${user.id}`,
         headers: { "Content-Type": "application/json" },
       })
         .then((result) => {
