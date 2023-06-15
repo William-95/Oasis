@@ -30,7 +30,7 @@ export default function LoginApi({ dati }) {
                 data === "Password errata"
               ) {
                 setSend(false);
-                setUser({ data });
+                setUser( data );
               } else {
                 setSend(false);
                 setIsLog(true);
