@@ -12,7 +12,7 @@ export default function CreateDogApi({ dati }) {
       api({
         method: "post",
         url: `/dogs`,
-        headers: { "Content-Type": "application/json" },
+        headers: { "Content-Type": "multipart/form-data" },
         data: dati,
       })
       // multipart/form-data
