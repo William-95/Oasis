@@ -12,16 +12,15 @@ export default function CreateDogApi({ dati }) {
       api({
         method: "post",
         url: `/dogs`,
-        headers: { "Content-Type": "multipart/form-data"||"application/json" },
+        headers: { "Content-Type": "multipart/form-data" },
         data: dati,
       })
         .then((result) => {
           if (result.status === 200) {
             setSend(false);
-
-            console.log("Canne Inserito Correttamente.");
+            alert("Canne Inserito Correttamente.");
           } else {
-            alert(result.data.message);
+            console.log(result.data.message);
           }
         })
         .catch((err) => console.log(err.response.data));
