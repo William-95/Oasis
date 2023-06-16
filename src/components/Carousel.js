@@ -50,7 +50,7 @@ console.log(newDog);
               return (
                 <article className="carouselCard" key={item.id}>
                   <img
-                    src={ "mysql://root:aMWHp3Mcpgu8C1zGVQ9V@containers-us-west-138.railway.app:6109/railway/storage/"+item.img || defaultImg}
+                    src={ "mysql://root:aMWHp3Mcpgu8C1zGVQ9V@containers-us-west-138.railway.app:6109/railway/"+item.img || defaultImg}
                     alt=""
                   />
                   <h4 className="carouselTilte">{item.name}</h4>
