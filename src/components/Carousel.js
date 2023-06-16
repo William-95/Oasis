@@ -10,7 +10,7 @@ export default function Carousel() {
   const { dog, loading, setLoading } = useContext(StateContext);
   const [deg, setDeg] = useState(0);
   const newDog = dog.slice(0, 9);
-
+console.log(newDog);
   /*Loading*/
   useEffect(() => {
     setLoading(true);
@@ -50,11 +50,11 @@ export default function Carousel() {
               return (
                 <article className="carouselCard" key={item.id}>
                   <img
-                    src={"https://oasis-db-production.up.railway.app/" + item.img || defaultImg}
+                    src={ item.img || defaultImg}
                     alt=""
                   />
                   <h4 className="carouselTilte">{item.name}</h4>
-
+                  {/* "https://oasis-db-production.up.railway.app/" + */}
                   <Link to={`/singledog/${item.id}`} className="primaryBtn2">
                     Altro
                   </Link>
