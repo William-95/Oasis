@@ -50,11 +50,11 @@ console.log(newDog);
               return (
                 <article className="carouselCard" key={item.id}>
                   <img
-                    src={ "mysql://root:aMWHp3Mcpgu8C1zGVQ9V@containers-us-west-138.railway.app:6109/railway/"+item.img || defaultImg}
+                    src={ "https://oasis-db-production.up.railway.app/"+item.img || defaultImg}
                     alt=""
                   />
                   <h4 className="carouselTilte">{item.name}</h4>
-                  {/* "https://oasis-db-production.up.railway.app/" + */}
+                  
                   <Link to={`/singledog/${item.id}`} className="primaryBtn2">
                     Altro
                   </Link>
