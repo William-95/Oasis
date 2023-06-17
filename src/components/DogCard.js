@@ -8,7 +8,7 @@ export default function DogCard({ img, id, name }) {
   return (
     <article className="flip" key={id}>
       <div className="front">
-        <img src={"https://oasis-db-production.up.railway.app/" + img || defaultImg} alt="" />
+        <img src={"https://oasis-db-production.up.railway.app" + img || defaultImg} alt="" />
       </div>
 
       <div className="back">
