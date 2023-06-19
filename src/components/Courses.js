@@ -46,7 +46,7 @@ export default function Course() {
 
               <button className="secondaryBtn">
                 <a href={item.link} target="_blank" rel="noreferrer">
-                  More
+                  Altro
                 </a>
               </button>
               <p>{item.summary}</p>
