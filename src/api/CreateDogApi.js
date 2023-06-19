@@ -6,7 +6,7 @@ export default function CreateDogApi({ dati }) {
   const { api, send, setSend,setLoading,dog,setDog } = useContext(StateContext);
   const ref = useRef();
   const history = useHistory();
-
+const newDog=[...dog];
   /*requestApi*/
   useEffect(() => {
     if (ref.current !== send) {
@@ -23,7 +23,7 @@ export default function CreateDogApi({ dati }) {
            
             alert("Canne Inserito Correttamente.");
             const data = result.data;
-            setDog(dog=>[...dog,data]);
+            setDog(newDog=>[...newDog,data]);
             setLoading(false);
             history.push(`/singledog/${data.id}`);
 
