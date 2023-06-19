@@ -65,14 +65,14 @@
 
 .cardCourse p {
   position: relative;
-  top: -35px;
+  top: -25px;
   height: 80px;
   z-index: 2;
   margin: 8%;
   text-align: center;
   font-size: 0.7em;
   color: var(--mainBlack);
-  opacity: 0;
+  opacity: 1;
   transition: 0.5s ease-in;
 }
 
