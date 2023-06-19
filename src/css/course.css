@@ -38,7 +38,9 @@
   left: 0;
   width: 100%;
 }
-
+.cardCourse img{
+  height: 100%;
+}
 .cardCourse:hover img {
   opacity: 0.5;
   font-size: 1em;
@@ -68,8 +70,7 @@
   margin: 8%;
   text-align: center;
   font-size: 0.7em;
-  color:white;
-  /* color: var(--mainBlack); */
+  color: var(--primaryColor);
   opacity: 0;
   transition: 0.5s ease-in;
 }

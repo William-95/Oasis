@@ -51,6 +51,7 @@
 .carouselCard:hover {
   box-shadow: var(--darkShadow);
 }
+
 .carouselCard:hover img {
   opacity: 0.8;
   transition: all 1s;
@@ -80,19 +81,22 @@
 .primaryBtn2 {
   position: absolute;
   left: 0;
-  top: 30px;
+  top: 55px;
+  font-size: 0.6em;
+  width: 30%;
   /* top: 130px; */
-  width: 33%;
-  justify-content: center;
+  /* width: 35%; */
+  /* justify-content: center; */
   margin: 0 33.5%;
   transition: 0.5s ease-in;
-  opacity: 0;
+  opacity: 1;
   z-index: 2;
   text-decoration: none;
   text-align: center;
   color: var(--mainBlack);
   background: var(--primaryColor);
-  padding: 0.4rem 0.9rem;
+  /* padding: 0.4rem 0.9rem; */
+  padding:2%;
   border: 3px solid var(--primaryColor);
   border-radius: 25%;
   cursor: pointer;
