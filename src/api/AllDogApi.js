@@ -13,7 +13,6 @@ export default function AllDogApi() {
         const data = result.data;
 
         setDog( data );
-        window.location.reload();
       })
 
       .catch((err) => console.log(err));

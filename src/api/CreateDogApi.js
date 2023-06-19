@@ -3,10 +3,10 @@ import { StateContext } from "../SetContext";
 import { useHistory } from "react-router-dom";
 
 export default function CreateDogApi({ dati }) {
-  const { api, send, setSend } = useContext(StateContext);
+  const { api, send, setSend,dog,setDog } = useContext(StateContext);
   const ref = useRef();
   const history = useHistory();
-
+const newDog={...dog}
   /*requestApi*/
   useEffect(() => {
     if (ref.current !== send) {
@@ -22,6 +22,7 @@ export default function CreateDogApi({ dati }) {
             setSend(false);
             alert("Canne Inserito Correttamente.");
             const data = result.data
+            setDog(newDog,data)
             history.push(`/singledog/${data.id}`);
 
           } else {
