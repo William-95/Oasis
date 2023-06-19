@@ -37,9 +37,9 @@ export default function FormInsertDog() {
     event.preventDefault();
     setSend(!send);
     setLoading(true);
+    
     setTimeout(() => {
       setSend(!send);
-      
     }, 200);
   };
   return (
