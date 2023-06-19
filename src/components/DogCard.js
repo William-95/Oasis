@@ -10,7 +10,6 @@ export default function DogCard({ img, id, name }) {
       <div className="front">
         <img src={img || defaultImg} alt="" />
       </div>
-      {/* "https://oasis-db-production.up.railway.app" +  */}
       <div className="back">
         <h4 className="cardTilte">{name}</h4>
 

@@ -53,7 +53,7 @@ console.log(newDog);
                     src={item.img || defaultImg}
                     alt=""
                   />
-                   {/* "https://oasis-db-production.up.railway.app"+ */}
+                   
                   <h4 className="carouselTilte">{item.name}</h4>
                   
                   <Link to={`/singledog/${item.id}`} className="primaryBtn2">

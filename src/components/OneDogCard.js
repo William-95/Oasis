@@ -41,7 +41,6 @@ export default function OneDogCard({
       <h3>Ciao, io sono {name}</h3>
       <div className="containerGroup">
         <img src={ img || defaultImg} alt="" />
-        {/* "https://oasis-db-production.up.railway.app" + */}
         <div className="description">
           <table cellSpacing={10}>
             <tbody>
