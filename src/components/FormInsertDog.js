@@ -3,9 +3,11 @@ import { StateContext } from "../SetContext";
 import CreateDogApi from "../api/CreateDogApi";
 import "../css/enterForm.css";
 import AllDogApi from "../api/AllDogApi";
+import Loading from "../components/Loading";
+
 
 export default function FormInsertDog() {
-  const { send, setSend } = useContext(StateContext);
+  const { send, setSend,loading,setLoading } = useContext(StateContext);
   const [data, setData] = useState({
     id: "",
     name: "",
@@ -34,9 +36,10 @@ export default function FormInsertDog() {
   const handleSubmit = (event) => {
     event.preventDefault();
     setSend(!send);
-
+    setLoading(true);
     setTimeout(() => {
       setSend(!send);
+      setLoading(false);
     }, 200);
   };
   return (
@@ -154,9 +157,14 @@ export default function FormInsertDog() {
           <label>Contatti</label>
         </div>
 
-        <button type="submit" className="secondaryBtn formBtn">
+        {loading ? <Loading/> : (
+          <>
+          <button type="submit" className="secondaryBtn formBtn">
           Inserisci
         </button>
+          </>
+        )}
+        
       </form>
     </div>
   );

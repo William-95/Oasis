@@ -45,14 +45,14 @@ export default function Feature() {
         <img src={love} alt="" />
         <p>
           Dopo aver curato il corpo dei nostri amici, è ora di curare l'animo
-          con una sara e pura dose di affetto.
+          con una sana e pura dose di affetto.
         </p>
       </div>
 
       <div className="feature">
         <img src={toy} alt="" />
         <p>
-          Ultimo ma non meno importante, un pò di divertimento per i nostri
+          Ultimo ma non meno importante, un po' di divertimento per i nostri
           cuccioli e per i nostri volontari, con tante attività svolte nelle
           zone verdi.
         </p>

@@ -1,9 +1,11 @@
 import React, { useContext, useEffect, useRef } from "react";
 import { StateContext } from "../SetContext";
+import { useHistory } from "react-router-dom";
 
 export default function CreateDogApi({ dati }) {
   const { api, send, setSend } = useContext(StateContext);
   const ref = useRef();
+  const history = useHistory();
 
   /*requestApi*/
   useEffect(() => {
@@ -15,11 +17,13 @@ export default function CreateDogApi({ dati }) {
         headers: { "Content-Type": "multipart/form-data" },
         data: dati,
       })
-      // multipart/form-data
         .then((result) => {
           if (result.status === 200) {
             setSend(false);
             alert("Canne Inserito Correttamente.");
+            const data = result.data
+            history.push(`/singledog/${data.id}`);
+
           } else {
             console.log(result.data.message);
           }

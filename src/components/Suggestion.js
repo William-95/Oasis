@@ -17,7 +17,7 @@ export default function Suggestion() {
       <div className="feature">
         <img src={temperature} alt="" />
         <p>
-          In auto il cane deve poter viaggiare comodo, in sicurezza e alle
+          In auto il cane deve poter viaggiare comodo, in sicurezza e alla
           giusta temperatura.
         </p>
       </div>

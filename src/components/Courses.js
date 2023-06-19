@@ -25,7 +25,7 @@ export default function Course() {
       },
       {
         icon: rescure,
-        title: "Soccorso e Protecione Civile",
+        title: "Soccorso e Protezione Civile",
         link:
           "https://www.discoverydogs.it/addestramento-cani-da-soccorso-e-protezione-civile/",
         summary:
