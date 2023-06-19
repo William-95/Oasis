@@ -3,7 +3,7 @@ import { StateContext } from "../SetContext";
 import CreateDogApi from "../api/CreateDogApi";
 import "../css/enterForm.css";
 import AllDogApi from "../api/AllDogApi";
-import Loading from "../components/Loading";
+import Loading from "./Loading";
 
 
 export default function FormInsertDog() {
