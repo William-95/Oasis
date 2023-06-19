@@ -39,7 +39,7 @@ export default function FormInsertDog() {
     setLoading(true);
     setTimeout(() => {
       setSend(!send);
-      setLoading(false);
+      
     }, 200);
   };
   return (
