@@ -61,9 +61,6 @@
 .carouselCard h4 {
   position: absolute;
   left: 0;
-  /* top: 65px; */
-  /* font-size: 1.8em; */
-
   top: 10px;
   font-size: 1.3em;
   width: 100%;
@@ -84,9 +81,6 @@
   top: 55px;
   font-size: 0.6em;
   width: 30%;
-  /* top: 130px; */
-  /* width: 35%; */
-  /* justify-content: center; */
   margin: 0 33.5%;
   transition: 0.5s ease-in;
   opacity: 0;
@@ -95,8 +89,7 @@
   text-align: center;
   color: var(--mainBlack);
   background: var(--primaryColor);
-  /* padding: 0.4rem 0.9rem; */
-  padding:2%;
+  padding: 2%;
   border: 3px solid var(--primaryColor);
   border-radius: 25%;
   cursor: pointer;
@@ -151,8 +144,8 @@
   .carousel {
     transform-origin: center center -450px;
   }
-  .carousel h4{
-    top: 40px; 
+  .carousel h4 {
+    top: 40px;
     font-size: 1.8em;
   }
 
@@ -170,13 +163,12 @@
     font-size: 3em;
     top: 9vh;
   }
-  .primaryBtn2{
+  .primaryBtn2 {
     top: 110px;
-   width: 35%; 
-  justify-content: center;
-  font-size: 0.9em; 
+    width: 35%;
+    justify-content: center;
+    font-size: 0.9em;
   }
-
 
   .carouselCard:nth-of-type(1) {
     transform: translate3d(0, 0, 0px) rotateY(0deg);
@@ -215,8 +207,8 @@
   .carousel {
     transform-origin: center center -450px;
   }
-  .carousel h4{
-    top: 50px; 
+  .carousel h4 {
+    top: 50px;
     font-size: 1.8em;
   }
   .carouselCard {
@@ -235,13 +227,12 @@
     top: -9vh;
     left: 15vh;
   }
-  .primaryBtn2{
+  .primaryBtn2 {
     top: 110px;
-   width: 35%; 
-  justify-content: center;
-  font-size: 0.9em; 
+    width: 35%;
+    justify-content: center;
+    font-size: 0.9em;
   }
-
 
   .carouselCard:nth-of-type(1) {
     transform: translate3d(0, 0, 0px) rotateY(0deg);
