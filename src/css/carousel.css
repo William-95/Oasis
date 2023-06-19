@@ -151,6 +151,10 @@
   .carousel {
     transform-origin: center center -450px;
   }
+  .carousel h4{
+    top: 40px; 
+    font-size: 1.8em;
+  }
 
   .carouselCard {
     margin-top: -200px;
@@ -166,6 +170,14 @@
     font-size: 3em;
     top: 9vh;
   }
+  .primaryBtn2{
+    top: 110px;
+   width: 35%; 
+  justify-content: center;
+  font-size: 0.9em; 
+  }
+
+
   .carouselCard:nth-of-type(1) {
     transform: translate3d(0, 0, 0px) rotateY(0deg);
   }
@@ -203,7 +215,10 @@
   .carousel {
     transform-origin: center center -450px;
   }
-
+  .carousel h4{
+    top: 50px; 
+    font-size: 1.8em;
+  }
   .carouselCard {
     margin-top: -200px;
     margin-left: -150px;
@@ -220,6 +235,13 @@
     top: -9vh;
     left: 15vh;
   }
+  .primaryBtn2{
+    top: 110px;
+   width: 35%; 
+  justify-content: center;
+  font-size: 0.9em; 
+  }
+
 
   .carouselCard:nth-of-type(1) {
     transform: translate3d(0, 0, 0px) rotateY(0deg);
