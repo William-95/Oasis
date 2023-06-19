@@ -72,7 +72,7 @@
   text-align: center;
   font-size: 0.7em;
   color: var(--mainBlack);
-  opacity: 1;
+  opacity: 0;
   transition: 0.5s ease-in;
 }
 
