@@ -82,7 +82,7 @@ export default function OneDogCard({
 
               <tr>
                 <th>
-                  <h5>Data di nascita:</h5>
+                  <h5>Nato/a:</h5>
                 </th>
                 <td>
                   <p>{date_birth}</p>
