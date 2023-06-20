@@ -120,7 +120,6 @@
   /*   */
 .userBox input:hover ~ label,
 .userBox input:focus ~ label,
-.userBox input:active ~ input,
 .userBox input:not(:valid) ~ label
 {
   top: -20px;
