@@ -79,17 +79,11 @@
 }
 
 /* --------- */
-.dateBox input {
-  color: transparent;
-}
 
-.dateBox:hover input {
-  color: #fff;
-}
-.dateBox:not(:valid) input {
+.dateBox input:not(:valid) ~input {
   color: transparent;
 }
-.dateBox:valid input {
+.dateBox input:valid ~input {
   color:#fff;
 }
 .formBtn {
@@ -132,4 +126,11 @@
   font-size: 12px;
 }
 /*  */
+.dateBox input {
+  color: transparent;
+}
+
+.dateBox:hover input {
+  color: #fff;
+}
 }
