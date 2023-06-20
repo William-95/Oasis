@@ -117,7 +117,7 @@
     font-size: 1em;
   }
   /*   */
-  .userBox input:user-valid ~ label,
+.userBox input:user-valid ~ label,
 .userBox input:hover ~ label
 {
   top: -20px;
@@ -126,11 +126,12 @@
   font-size: 12px;
 }
 /*  */
-/* .dateBox input {
+ .dateBox input {
   color: transparent;
-}
+} 
 
-.dateBox:hover input {
+.dateBox:hover input,
+.dateBox input:user-valid ~ input {
   color: #fff;
-} */
+} 
 }
