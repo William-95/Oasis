@@ -75,7 +75,7 @@
 .userBox input:active ~ input{
   background: transparent;
 }
-.userBox input:not(:placeholder-shown)~ label{
+.userBox input:placeholder-shown ~ label{
   top: -20px;
   left: 0;
   color: var(--lightGreen);
