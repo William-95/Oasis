@@ -11,7 +11,7 @@ export default function UpdateDogApi({ id_dog, dati }) {
       ref.current = send;
 
       api({
-        method: "post",
+        method: "put",
         url: `/dogs/${id_dog}`,
         headers: { "Content-Type": "multipart/form-data" },
         data: dati,
