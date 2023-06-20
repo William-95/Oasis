@@ -20,7 +20,7 @@ export default function DeleteApi() {
         .then((result) => {
           if (result.status === 200) {
             setDeleted(false);
-            alert("User delete correctelly.");
+            alert("Utente eliminato correttamente.");
             history.push("/");
           } else {
             alert(result.data.message);
