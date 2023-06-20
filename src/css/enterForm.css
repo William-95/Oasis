@@ -89,6 +89,9 @@
 .dateBox:not(:valid) input {
   color: #fff;
 }
+.dateBox:valid input {
+  color:transparent;
+}
 .formBtn {
   margin-left: 60%;
   margin-bottom: 0;
