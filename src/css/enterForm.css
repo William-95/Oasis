@@ -66,8 +66,7 @@
   color: var(--lightGreen);
   font-size: 12px;
 }
-.userBox input:focus ~ label,
-.userBox input:user-valid ~ label{
+.userBox input:focus ~ label{
   top: -20px;
   left: 0;
   color: var(--lightGreen);
