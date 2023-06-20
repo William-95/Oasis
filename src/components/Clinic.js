@@ -12,7 +12,7 @@ export default function Clinic() {
         title: "CVRS",
         link: "https://www.cvrs.it/",
         summary:
-          "Pronto soccorso veterinario H24 con sede a Roma Sud, con attrezzatura e metodi all'avanguardia.",
+          "Pronto soccorso veterinario con sede a Roma. La struttura offre un servizio H24.",
       },
       {
         icon: clinic02,
@@ -26,7 +26,7 @@ export default function Clinic() {
         title: "MYVET",
         link: "https://www.myvetmilano.it/",
         summary:
-          "Clinica Veterinaria con sede a Milano. La strussura non offre un servizio H24.",
+          "Clinica Veterinaria con sede a Milano. La struttura non offre un servizio H24.",
       },
     ],
   };

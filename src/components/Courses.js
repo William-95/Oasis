@@ -21,7 +21,7 @@ export default function Course() {
         link:
           "https://www.dobredog.it/formazione/specializzazioni/istruttore-tecnico-cinofilo-in-cani-da-assistenza-per-disabili-motori/",
         summary:
-          "Permette di apprendere le conoscenze e le competenze indispensabili per progetto di cura di questo tipo.",
+          "Permette di apprendere le competenze indispensabili per progetto di cura di questo tipo.",
       },
       {
         icon: rescure,
