@@ -129,7 +129,7 @@
   /* .dateBox input {
   color: transparent;
 }  */
-.dateBox input:not(:empty) input{
+.dateBox:empty input{
   color: transparent;
 }
 .dateBox:hover input,
