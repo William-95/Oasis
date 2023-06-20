@@ -131,7 +131,7 @@
 } 
 
 .dateBox:hover input,
-.dateBox input:user-valid ~ input {
+.dateBox input:valid ~ input {
   color: #fff;
 } 
 }
