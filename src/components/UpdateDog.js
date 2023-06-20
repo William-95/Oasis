@@ -40,7 +40,7 @@ export default function UpdateDog() {
 
     setTimeout(() => {
       setSend(!send);
-    }, 300);
+    }, 1000);
   };
   const handleToggle = () => {
     setBtn({ isOpen: !btn.isOpen });
