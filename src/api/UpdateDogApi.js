@@ -19,8 +19,8 @@ export default function UpdateDogApi({ id_dog, dati }) {
         .then((result) => {
           if (result.status === 200) {
             setSend(false);
-            alert("Canne Modificato Correttamente.");
-            // window.location.reload();
+            console.log("Canne Modificato Correttamente.");
+            window.location.reload();
           } else {
             alert(result.data.message);
           }
