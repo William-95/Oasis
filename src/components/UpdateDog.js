@@ -65,6 +65,7 @@ export default function UpdateDog() {
               name="name"
               onChange={handleChange}
               value={data.name}
+              required
             />
             <label>Nome</label>
           </div>
@@ -75,6 +76,7 @@ export default function UpdateDog() {
               name="sex"
               onChange={handleChange}
               value={data.sex}
+              required
             />
             <label>Sesso</label>
           </div>
@@ -85,6 +87,7 @@ export default function UpdateDog() {
               name="race"
               onChange={handleChange}
               value={data.race}
+              required
             />
             <label>Razza</label>
           </div>
@@ -95,6 +98,7 @@ export default function UpdateDog() {
               name="size"
               onChange={handleChange}
               value={data.size}
+              required
             />
             <label>Stazza</label>
           </div>
@@ -105,6 +109,7 @@ export default function UpdateDog() {
               name="date_birth"
               onChange={handleChange}
               value={data.date_birth}
+              required
             />
             <label>Data di nascita</label>
           </div>
@@ -115,6 +120,7 @@ export default function UpdateDog() {
               name="microchip"
               onChange={handleChange}
               value={data.microchip}
+              required
             />
             <label>Microchip</label>
           </div>
@@ -125,6 +131,7 @@ export default function UpdateDog() {
               name="date_entry"
               onChange={handleChange}
               value={data.date_entry}
+              required
             />
             <label>Data di entrata</label>
           </div>
@@ -135,6 +142,7 @@ export default function UpdateDog() {
               name="region"
               onChange={handleChange}
               value={data.region}
+              required
             />
             <label>Regione</label>
           </div>
@@ -145,6 +153,7 @@ export default function UpdateDog() {
               name="structure"
               onChange={handleChange}
               value={data.structure}
+              required
             />
             <label>Struttura</label>
           </div>
@@ -152,6 +161,7 @@ export default function UpdateDog() {
           <div className="userBox">
             <input
               type="file"
+              accept="image/*"
               name="img"
               multiple
               onChange={handleFileChange}
@@ -165,6 +175,7 @@ export default function UpdateDog() {
               name="contacts"
               onChange={handleChange}
               value={data.contacts}
+              required
             />
             <label>Contatti</label>
           </div>

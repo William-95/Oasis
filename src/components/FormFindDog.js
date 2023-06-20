@@ -37,6 +37,7 @@ export default function FormFindDog() {
               name="microchip"
               onChange={HandleChange}
               value={data.microchip}
+              required
             />
             <label>Microchip</label>
           </div>

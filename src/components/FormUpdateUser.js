@@ -44,6 +44,7 @@ export default function FormUpdateUser() {
             name="name"
             onChange={handleChange}
             value={data.name}
+            required
           />
           <label>Nome Utente</label>
         </div>
@@ -53,6 +54,7 @@ export default function FormUpdateUser() {
             name="email"
             onChange={handleChange}
             value={data.email}
+            required
           />
           <label>Nuova Email</label>
         </div>
@@ -63,6 +65,7 @@ export default function FormUpdateUser() {
             name="password"
             onChange={handleChange}
             value={data.password}
+            required
           />
           <label>Nuova Password</label>
         </div>
@@ -73,6 +76,7 @@ export default function FormUpdateUser() {
             name="confirm_password"
             onChange={handleChange}
             value={data.confirm_password}
+            required
           />
           <label>Conferma Password</label>
         </div>
