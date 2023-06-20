@@ -126,9 +126,10 @@
   font-size: 12px;
 }
 /*  */
-  /* .dateBox input {
+  .dateBox input:user-invalid input {
   color: transparent;
-}  */
+} 
+
 
 /* .dateBox:hover input,
 .dateBox input:valid input {
