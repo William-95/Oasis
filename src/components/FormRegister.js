@@ -89,6 +89,7 @@ export default function FormRegister() {
             name="name"
             onChange={handleChange}
             value={data.name}
+            required
           />
           <label>Nome Utente</label>
           {spanName ? <span>Name mancante</span> : null}
@@ -100,6 +101,7 @@ export default function FormRegister() {
             name="email"
             onChange={handleChange}
             value={data.email}
+            required
           />
           <label>Email</label>
           {spanEmail ? <span>Email mancante o esistente</span> : null}
@@ -111,6 +113,7 @@ export default function FormRegister() {
             name="password"
             onChange={handleChange}
             value={data.password}
+            required
           />
           <label>Password</label>
           {spanPassword ? <span>Password mancante</span> : null}
@@ -122,6 +125,7 @@ export default function FormRegister() {
             name="confirm_password"
             onChange={handleChange}
             value={data.confirm_password}
+            required
           />
           <label>Conferma Password</label>
           {spanConfirm ? <span>Password non confermata</span> : null}
