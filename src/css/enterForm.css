@@ -60,7 +60,6 @@
 }
 /* ----- */     
 .userBox input:hover ~ label,
-.userBox input:active~ label,
 .userBox input:user-valid ~ label {
   top: -20px;
   left: 0;
