@@ -5,9 +5,8 @@ import "../css/enterForm.css";
 import AllDogApi from "../api/AllDogApi";
 import Loading from "./Loading";
 
-
 export default function FormInsertDog() {
-  const { send, setSend,loading,setLoading } = useContext(StateContext);
+  const { send, setSend, loading, setLoading } = useContext(StateContext);
   const [data, setData] = useState({
     id: "",
     name: "",
@@ -18,7 +17,7 @@ export default function FormInsertDog() {
     microchip: "",
     date_entry: "",
     img: "",
-    region:"",
+    region: "",
     structure: "",
     contacts: "",
   });
@@ -37,7 +36,7 @@ export default function FormInsertDog() {
     event.preventDefault();
     setSend(!send);
     setLoading(true);
-    
+
     setTimeout(() => {
       setSend(!send);
     }, 200);
@@ -157,14 +156,15 @@ export default function FormInsertDog() {
           <label>Contatti</label>
         </div>
 
-        {loading ? <Loading/> : (
+        {loading ? (
+          <Loading />
+        ) : (
           <>
-          <button type="submit" className="secondaryBtn formBtn">
-          Inserisci
-        </button>
+            <button type="submit" className="secondaryBtn formBtn">
+              Inserisci
+            </button>
           </>
         )}
-        
       </form>
     </div>
   );
