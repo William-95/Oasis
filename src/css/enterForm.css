@@ -85,7 +85,9 @@
 
 .dateBox:hover input {
   color: #fff;
-  
+}
+.dateBox:valid input {
+  color: #fff;
 }
 .formBtn {
   margin-left: 60%;
