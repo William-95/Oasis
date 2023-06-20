@@ -65,7 +65,7 @@ export default function FormLogin() {
             onChange={HandleChange}
             required
           />
-          <label>Email</label>
+          <label for='email'>Email</label>
           {spanEmail ? <span>Email non valida</span> : null}
         </div>
 
@@ -77,7 +77,7 @@ export default function FormLogin() {
             onChange={HandleChange}
             required
           />
-          <label>Password</label>
+          <label for='password'>Password</label>
           {spanPassword ? <span>Password non valida</span> : null}
         </div>
         <button type="submit" className="secondaryBtn formBtn text-base">
