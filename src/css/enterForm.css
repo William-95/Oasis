@@ -58,21 +58,22 @@
   pointer-events: none;
   transition: 0.5s;
 }
-/* ~ */     
+/* ----- */     
 .userBox input:hover ~ label,
 .userBox input:user-valid ~ label {
   top: -20px;
   left: 0;
   color: var(--lightGreen);
-  /* #03e9f4 */
   font-size: 12px;
 }
 .userBox input:focus ~ label{
   top: -20px;
   left: 0;
   color: var(--lightGreen);
-  /* #03e9f4 */
   font-size: 12px;
+}
+.userBox input:active ~ input{
+  background: transparent;
 }
 /* --------- */
 .dateBox input {
@@ -81,6 +82,7 @@
 
 .dateBox:hover input {
   color: #fff;
+  
 }
 .formBtn {
   margin-left: 60%;
