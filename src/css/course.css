@@ -37,10 +37,9 @@
   top: 0;
   left: 0;
   width: 100%;
-}
-.cardCourse img{
   height: 100%;
 }
+
 .cardCourse:hover img {
   opacity: 0.5;
   font-size: 1em;
@@ -108,9 +107,22 @@
   .container {
     grid-template-columns: repeat(auto-fit, minmax(227.8px, 1fr));
   }
+  .cardCourse{
+    height:20vh;
+  }
   .cardCourse h4{
     top:80px;
     font-size: 1.8em;
+  }
+  .cardCourse:hover h4{
+    top:30px;
+    font-size: 1.8em;
+  }
+  .cardCourse p{
+    font-size: 1.2em;
+  }
+  .cardCourse button{
+    top:140px;
   }
 }
 
@@ -124,6 +136,7 @@
     padding: 0% 8%;
     grid-template-columns: repeat(auto-fit, minmax(227.8px, 1fr));
   }
+  
   .cardCourse h4{
     top:80px;
     font-size: 1.9em;
