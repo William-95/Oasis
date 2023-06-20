@@ -87,10 +87,10 @@
   color: #fff;
 }
 .dateBox:not(:valid) input {
-  color: #fff;
+  color: transparent;
 }
 .dateBox:valid input {
-  color:transparent;
+  color:#fff;
 }
 .formBtn {
   margin-left: 60%;
