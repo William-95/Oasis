@@ -86,7 +86,7 @@
 .dateBox:hover input {
   color: #fff;
 }
-.dateBox:valid ~ input {
+.dateBox:not(:valid) input {
   color: #fff;
 }
 .formBtn {
