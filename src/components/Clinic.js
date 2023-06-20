@@ -12,21 +12,21 @@ export default function Clinic() {
         title: "CVRS",
         link: "https://www.cvrs.it/",
         summary:
-          "Pronto soccorso veterinario H24 con sede a Roma Sud, con attrezzatura e metodi all'avanguardia. Il personale sempre disponibile ed attento.",
+          "Pronto soccorso veterinario H24 con sede a Roma Sud, con attrezzatura e metodi all'avanguardia.",
       },
       {
         icon: clinic02,
         title: "Qua La Zampa",
         link: "https://www.clinicaqualazampa.it/",
         summary:
-          "Clinica Veterinaria con sede a Napoli che offre interventi specializzati e trattamenti personalizzati. La struttura non è H24, tuttavia fornisce un numero da poter contattare in caso di emergenza.",
+          "Clinica Veterinaria con sede a Napoli. La struttura non è H24, ma fornisce un numero di emergenza.",
       },
       {
         icon: clinic03,
         title: "MYVET",
         link: "https://www.myvetmilano.it/",
         summary:
-          "Clinica Veterinaria con sede a Milano. Passione, professionalita ed entusiasmo è ciò che li caratterizza. Tuttavia la strussura non offre un servizio H24.",
+          "Clinica Veterinaria con sede a Milano. La strussura non offre un servizio H24.",
       },
     ],
   };
