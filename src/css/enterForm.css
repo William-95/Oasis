@@ -116,7 +116,7 @@
     margin-left: 80%;
     font-size: 1em;
   }
-  /*   */
+  
 .userBox input:user-valid ~ label,
 .userBox input:hover ~ label
 {
@@ -125,14 +125,18 @@
   color: var(--lightGreen);
   font-size: 12px;
 }
-/*  */
-  .dateBox input:user-invalid input {
+
+  .dateBox input
+{
   color: transparent;
 } 
+.dateBox input:valid {
+  color: #fff;
+}
 
+.dateBox:hover input {
+  color: #fff;
+  transition: 0.5s ease-in;
+}
 
-/* .dateBox:hover input,
-.dateBox input:valid input {
-  color:#fff;
-} */
 }
