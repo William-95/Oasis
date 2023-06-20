@@ -129,11 +129,9 @@
   /* .dateBox input {
   color: transparent;
 }  */
-.dateBox input:user-invalid input{
-  color: transparent;
-}
-.dateBox:hover input,
+
+/* .dateBox:hover input,
 .dateBox input:valid input {
   color:#fff;
-}
+} */
 }
