@@ -131,7 +131,6 @@
 }  */
 .dateBox input:not(:empty) input{
   color: transparent;
-
 }
 .dateBox:hover input,
 .dateBox input:valid input {
