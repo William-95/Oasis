@@ -13,7 +13,7 @@ export default function Course() {
         link:
           "https://canecampione.com/corso-istruttore-clicker-training/?gclid=EAIaIQobChMInLeyj8vy_QIVT-3tCh1wnQ-OEAAYASAAEgLWCvD_BwE",
         summary:
-          "Il clicker training è un'esperienza attiva, in cui ipadroni e i cani, collaborano tra loro come in un ballo di coppia.",
+          "È un'esperienza attiva in cui padrone e cane collaborano tra loro come in un ballo di coppia.",
       },
       {
         icon: disability,
@@ -21,7 +21,7 @@ export default function Course() {
         link:
           "https://www.dobredog.it/formazione/specializzazioni/istruttore-tecnico-cinofilo-in-cani-da-assistenza-per-disabili-motori/",
         summary:
-          "Permette di apprendere le conoscenze e le competenze tecnico/pratiche indispensabili per la  coppia uomo-cane in un progetto di cura di questo tipo.",
+          "Permette di apprendere le conoscenze e le competenze indispensabili per progetto di cura di questo tipo.",
       },
       {
         icon: rescure,
@@ -29,7 +29,7 @@ export default function Course() {
         link:
           "https://www.discoverydogs.it/addestramento-cani-da-soccorso-e-protezione-civile/",
         summary:
-          "Metodologia della ricerca in superficie, sulle macerie, sulla cartografia e uso del GPS, primo soccorso e manovre di discesa.",
+          "Metodologia della ricerca in superficie, nelle macerie, manovre di discesa e primo soccorso.",
       },
     ],
   };
