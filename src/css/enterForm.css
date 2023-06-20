@@ -118,9 +118,7 @@
     font-size: 1em;
   }
   /*   */
-.userBox input:hover ~ label,
-.userBox input:focus ~ label,
-.userBox input:not(:valid) ~ label
+.userBox input:hover ~ label
 {
   top: -20px;
   left: 0;
