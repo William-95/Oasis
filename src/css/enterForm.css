@@ -73,7 +73,7 @@
   color: var(--lightGreen);
   font-size: 12px;
 }
-.userBox input::content ~ label
+.userBox input:empty ~ label
 {
   top: -20px;
   left: 0;
