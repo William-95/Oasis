@@ -63,7 +63,7 @@ export default function FormLogin() {
             name="email"
             value={data.email}
             onChange={HandleChange}
-            required
+            required=""
           />
           <label>Email</label>
           {spanEmail ? <span>Email non valida</span> : null}
@@ -75,7 +75,7 @@ export default function FormLogin() {
             name="password"
             value={data.password}
             onChange={HandleChange}
-            required
+            required=""
           />
           <label>Password</label>
           {spanPassword ? <span>Password non valida</span> : null}
