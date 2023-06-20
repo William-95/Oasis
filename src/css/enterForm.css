@@ -135,9 +135,9 @@
   color: #fff;
 }  
 .dateBox input:not(:valid) ~ input {
-  color:transparent;
+  color:#fff;
 } 
 .dateBox input:valid~ input{
-  color: #fff;
+  color:transparent;
 }
 }
