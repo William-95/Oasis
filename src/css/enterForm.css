@@ -59,13 +59,7 @@
   transition: 0.5s;
 }
 /* ----- */     
-.userBox input:hover ~ label,
-.userBox input:user-valid ~ label {
-  top: -20px;
-  left: 0;
-  color: var(--lightGreen);
-  font-size: 12px;
-}
+
 .userBox input:focus ~ label
 {
   top: -20px;
@@ -83,7 +77,13 @@
 .userBox input:active ~ input{
   background: transparent;
 }
-
+.userBox input:hover ~ label,
+.userBox input:user-valid ~ label {
+  top: -20px;
+  left: 0;
+  color: var(--lightGreen);
+  font-size: 12px;
+}
 /* --------- */
 .dateBox input {
   color: transparent;
