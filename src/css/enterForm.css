@@ -135,7 +135,7 @@
   color: #fff;
 }  
 
-.dateBox input:active ~input {
+.dateBox input:focus ~input {
   color:#fff;
 }
 }
