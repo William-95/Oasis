@@ -130,12 +130,8 @@
   color: transparent;
 } 
 
-.dateBox:hover input
- {
-  color: #fff;
-}  
-
-.dateBox input:valid input {
+.dateBox:hover input,
+.dateBox:valid input {
   color:#fff;
 }
 }
