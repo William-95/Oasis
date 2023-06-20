@@ -135,7 +135,7 @@
   color: #fff;
 }  
 
-.dateBox input:focus input {
+.dateBox input:valid input {
   color:#fff;
 }
 }
