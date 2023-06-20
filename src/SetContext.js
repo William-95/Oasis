@@ -53,6 +53,21 @@ export default function SetContext({ children }) {
 
   // end save state log
 
+  // save state dog
+  useEffect(() => {
+    const data = window.localStorage.getItem("DOG");
+
+    if (data !== null) {
+      setDog(data);
+    }
+  }, []);
+
+  useEffect(() => {
+    window.localStorage.setItem("DOG",JSON.stringify(dog));
+  }, [dog]);
+
+  // end save state dog
+
   
   return (
     <>
