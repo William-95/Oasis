@@ -118,6 +118,7 @@
     font-size: 1em;
   }
   /*   */
+  /* .userBox input:user-valid ~ label */
 .userBox input:hover ~ label
 {
   top: -20px;
