@@ -6,7 +6,7 @@ import { StateContext } from "../SetContext";
 import Loading from "../components/Loading";
 
 export default function List() {
-  const { filterDog,loading,setLoading,dog,setFilterDog } = useContext(StateContext);
+  const { filterDog,loading,setLoading} = useContext(StateContext);
   const newDog =[...filterDog];
 
   /*Loading*/
