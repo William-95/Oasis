@@ -39,10 +39,6 @@ export default function Filter() {
 
     setFilterDog(filteredData);
   };
-  useEffect(() => {
-    filteredArray();
-    // eslint-disable-next-line
-  }, []);
 
   useEffect(() => {
     filteredArray();
