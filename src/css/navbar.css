@@ -67,6 +67,7 @@
   font-size: 0.7em;
 }
 
+
 /* tablet */
 @media screen and (max-width: 900px) and (min-width: 600px) {
   .navLogo {

@@ -35,10 +35,10 @@ export default function FormRegister() {
   }, [data]);
 
   useEffect(() => {
-    if (user.data === "Email esistente") {
+    if (user === "Email esistente") {
       setSpanEmail(true);
     }
-    if (user.data === "Utente non creato") {
+    if (user === "Utente non creato") {
       setSpanEmail(true);
     }
   }, [user]);
@@ -54,7 +54,7 @@ export default function FormRegister() {
 
     if (data.name === "") {
       setSend(false);
-      setSpanName(true);
+      setSpanName(true);    
     } else if (data.email === "") {
       setSend(false);
       setSpanEmail(true);
@@ -67,7 +67,7 @@ export default function FormRegister() {
     } else {
       setSend(!send);
     }
-
+    console.log(data);
     setTimeout(() => {
       setSend(!send);
     }, 200);

@@ -19,6 +19,7 @@ export default function RegisterApi({ dati }) {
         dati.confirm_password === ""
       ) {
         setSend(false);
+        setUser('dati mancanti')
       } else {
         api({
           method: "post",

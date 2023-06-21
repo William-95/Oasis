@@ -5,6 +5,9 @@
   box-sizing: border-box;
   font-family: 'Alegreya', serif;
 }
+html{
+  scroll-behavior: smooth;
+}
 :root {
   --primaryColor: #af9a7d;
   --darkGreen: #295d09;
