@@ -14,9 +14,7 @@ export default function Filter() {
   const filteredArray = () => {
     const filteredData = newDog.filter((item) => {
   
-      // if(item.sex||item.race||item.size||item.region===null){
-      //   return newDog
-      // } 
+   
       if(item.sex===undefined){
         return newDog
       }else if(item.race===undefined){
@@ -41,6 +39,10 @@ export default function Filter() {
 
     setFilterDog(filteredData);
   };
+  useEffect(() => {
+    filteredArray();
+    // eslint-disable-next-line
+  }, []);
 
   useEffect(() => {
     filteredArray();

@@ -25,14 +25,14 @@ export default function List() {
   
   
   
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setFilterDog(dog);
-    }, 1000);
+  // useEffect(() => {
+  //   const timer = setTimeout(() => {
+  //     setFilterDog(dog);
+  //   }, 1000);
 
-    return () => clearTimeout(timer);
-    // eslint-disable-next-line
-  }, []);
+  //   return () => clearTimeout(timer);
+  //   // eslint-disable-next-line
+  // }, []);
 
   
   return (
