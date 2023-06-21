@@ -63,6 +63,7 @@ export default function FormLogin() {
             name="email"
             value={data.email}
             onChange={HandleChange}
+            aria-required
           />
           <label for='email'>Email</label>
           {spanEmail ? <span>Email non valida</span> : null}
@@ -74,6 +75,7 @@ export default function FormLogin() {
             name="password"
             value={data.password}
             onChange={HandleChange}
+            aria-required
           />
           <label for='password'>Password</label>
           {spanPassword ? <span>Password non valida</span> : null}
