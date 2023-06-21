@@ -69,20 +69,7 @@ export default function SetContext({ children }) {
   // end save state dog
 
 
-  // save state filtered
-  useEffect(() => {
-    const data = window.localStorage.getItem("FILTERDOG");
-
-    if (data !== null) {
-      setFilterDog(data);
-    }
-  }, []);
-
-  useEffect(() => {
-    window.localStorage.setItem("FILTERDOG",JSON.stringify(filterDog));
-  }, [filterDog]);
-
-  // end save state filtered
+ 
   
   return (
     <>

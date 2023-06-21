@@ -39,11 +39,11 @@ export default function Filter() {
 
     setFilterDog(filteredData);
   };
-
+ 
   useEffect(() => {
     filteredArray();
     // eslint-disable-next-line
-  }, [sex, race, size, region]);
+  }, [dog,sex, race, size, region]);
 
   return (
     <div className="containerFilter borderSpacing">
