@@ -28,13 +28,15 @@ export default function List() {
     const timer = setTimeout(() => {
       setFilterDog(dog);
     }, 1000);
+    if(filterDog===undefined){
+      setFilterDog(newDog);
+    }
     return () => clearTimeout(timer);
     // eslint-disable-next-line
   }, []);
 
 
   
-
   return (
     <div>
       <header
@@ -58,6 +60,7 @@ export default function List() {
                 id={item.id}
                 img={item.img}
               />
+             
             );
           })}
         </div>
