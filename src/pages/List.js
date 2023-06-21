@@ -34,7 +34,6 @@ export default function List() {
     // eslint-disable-next-line
   }, []);
 
-
   
   return (
     <div>
@@ -63,7 +62,7 @@ export default function List() {
             );
           })}
         </div>
-}
+      }
 
       </div>
     </div>

@@ -22,8 +22,7 @@ export default function DogCard({ img, id, name }) {
 }
 
 DogCard.propTypes = {
-  name: PropTypes.string.isRequired,
-  id: PropTypes.number.isRequired,
-  img: PropTypes.string.isRequired,
+  name: PropTypes.string,
+  id: PropTypes.number,
+  img: PropTypes.string,
 };
-// .isRequired
