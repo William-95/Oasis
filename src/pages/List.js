@@ -8,10 +8,11 @@ import Loading from "../components/Loading";
 export default function List() {
   const { filterDog,loading,setLoading,dog,setFilterDog } = useContext(StateContext);
   const newDog =[...filterDog];
+
   /*Loading*/
   useEffect(() => {
     setLoading(true);
-
+   
     const timer = setTimeout(() => {
       setLoading(false);
     }, 1000);
@@ -28,9 +29,7 @@ export default function List() {
     const timer = setTimeout(() => {
       setFilterDog(dog);
     }, 1000);
-    if(filterDog===undefined){
-      setFilterDog(newDog);
-    }
+
     return () => clearTimeout(timer);
     // eslint-disable-next-line
   }, []);

@@ -14,10 +14,21 @@ export default function Filter() {
   const filteredArray = () => {
     const filteredData = newDog.filter((item) => {
   
-      // if(item.sex||item.race||item.size||item.region===undefined){
+      // if(item.sex||item.race||item.size||item.region===null){
       //   return newDog
       // } 
-      // else{
+      if(item.sex===undefined){
+        return newDog
+      }else if(item.race===undefined){
+        return newDog
+      }
+      else if(item.size===undefined){
+        return newDog
+      }
+      else if(item.region===undefined){
+        return newDog
+      }
+      else{
       return (
         item.sex.includes(sex) &&
         item.race.includes(race) &&
@@ -25,7 +36,7 @@ export default function Filter() {
         item.region.includes(region)
       );
     
-    // }
+    }
     });
 
     setFilterDog(filteredData);
