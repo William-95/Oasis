@@ -14,9 +14,9 @@ export default function Filter() {
   const filteredArray = () => {
     const filteredData = newDog.filter((item) => {
   
-      if(item.sex||item.race||item.size||item.region===undefined){
-        return newDog
-      } 
+      // if(item.sex||item.race||item.size||item.region===undefined){
+      //   return newDog
+      // } 
       // else{
       return (
         item.sex.includes(sex) &&
