@@ -7,6 +7,8 @@ import Loading from "./Loading";
 
 export default function FormInsertDog() {
   const { send, setSend, loading, setLoading } = useContext(StateContext);
+  const [spanImg, setSpanImg] = useState(false)
+
   const [data, setData] = useState({
     id: "",
     name: "",
@@ -34,12 +36,17 @@ export default function FormInsertDog() {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    setSend(!send);
-    setLoading(true);
-
-    setTimeout(() => {
+    if(data.img===""){
+setSpanImg(true)
+    }else{
       setSend(!send);
-    }, 200);
+      setLoading(true);
+  
+      setTimeout(() => {
+        setSend(!send);
+      }, 200);
+    }
+
   };
   return (
     <div className="formBox">
@@ -158,6 +165,7 @@ export default function FormInsertDog() {
             multiple
             onChange={handleFileChange}
           />
+           {spanImg ? <span>Immagine mancante</span> : null}
         </div>
 
         <div className="userBox">
