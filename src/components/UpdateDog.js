@@ -9,6 +9,7 @@ export default function UpdateDog() {
   const { send, setSend } = useContext(StateContext);
   const { id_dog } = useParams();
   const [btn, setBtn] = useState({ isOpen: false });
+  const [spanImg, setSpanImg] = useState(false);
   const [data, setData] = useState({
     id: "",
     name: "",
@@ -36,11 +37,16 @@ export default function UpdateDog() {
 
   const handleSubmit = (event) => {
     event.preventDefault();
+    if(data.img===""){
+      setSpanImg(true);
+          }else{
+            setSpanImg(false)
     setSend(!send);
 
     setTimeout(() => {
       setSend(!send);
     }, 1000);
+  }
   };
   const handleToggle = () => {
     setBtn({ isOpen: !btn.isOpen });
@@ -166,7 +172,7 @@ export default function UpdateDog() {
               multiple
               onChange={handleFileChange}
             />
-            {/* <label>Immagine</label> */}
+           {spanImg ? <span>Immagine mancante</span> : null}
           </div>
 
           <div className="userBox">

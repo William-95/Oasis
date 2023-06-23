@@ -37,8 +37,9 @@ export default function FormInsertDog() {
   const handleSubmit = (event) => {
     event.preventDefault();
     if(data.img===""){
-setSpanImg(true)
+setSpanImg(true);
     }else{
+      setSpanImg(false)
       setSend(!send);
       setLoading(true);
   
