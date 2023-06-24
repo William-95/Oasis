@@ -179,7 +179,7 @@
     font-size: 0.9em;
   }
 
-  /* .carouselCard:nth-of-type(1) {
+  .carouselCard:nth-of-type(1) {
     transform: translate3d(0, 0, 0px) rotateY(0deg);
   }
   .carouselCard:nth-of-type(2) {
@@ -202,5 +202,5 @@
   }
   .carouselCard:nth-of-type(8) {
     transform: translate3d(-320px, 0, -130px) rotateY(315deg);
-  } */
+  }
 }
