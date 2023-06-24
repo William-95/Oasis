@@ -6,7 +6,7 @@ import AllDogApi from "../api/AllDogApi";
 import Loading from "./Loading";
 
 export default function FormInsertDog() {
-  const { send, setSend, loading, setLoading,spanChip,setSpanChip } = useContext(StateContext);
+  const { send, setSend, loading, setLoading,spanChip } = useContext(StateContext);
   const [spanImg, setSpanImg] = useState(false)
 
   const [data, setData] = useState({
@@ -40,7 +40,6 @@ export default function FormInsertDog() {
 setSpanImg(true);
     }else{
       setSpanImg(false);
-      setSpanChip(false);
       setSend(!send);
       setLoading(true);
   
