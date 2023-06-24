@@ -3,7 +3,7 @@ import { StateContext } from "../SetContext";
 import { useHistory } from "react-router-dom";
 
 export default function CreateDogApi({ dati }) {
-  const { api, send, setSend,setLoading } = useContext(StateContext);
+  const { api, send, setSend,setLoading,setSpanChip } = useContext(StateContext);
   const ref = useRef();
   const history = useHistory();
 
@@ -26,7 +26,11 @@ export default function CreateDogApi({ dati }) {
             setLoading(false);
             history.push(`/singledog/${data.id}`);
 
-          } else {
+          } else if(result.status===500){
+            setSend(false);
+            setLoading(false);
+            setSpanChip(true);
+          }else{
             console.log(result.data.message);
           }
         })

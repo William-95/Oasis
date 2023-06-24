@@ -6,7 +6,7 @@ import AllDogApi from "../api/AllDogApi";
 import Loading from "./Loading";
 
 export default function FormInsertDog() {
-  const { send, setSend, loading, setLoading } = useContext(StateContext);
+  const { send, setSend, loading, setLoading,spanChip,setSpanChip } = useContext(StateContext);
   const [spanImg, setSpanImg] = useState(false)
 
   const [data, setData] = useState({
@@ -39,7 +39,8 @@ export default function FormInsertDog() {
     if(data.img===""){
 setSpanImg(true);
     }else{
-      setSpanImg(false)
+      setSpanImg(false);
+      setSpanChip(false);
       setSend(!send);
       setLoading(true);
   
@@ -123,6 +124,7 @@ setSpanImg(true);
             required
           />
           <label>Microchip</label>
+          {spanChip ? <span>Microchip non valido o esistente</span> : null}
         </div>
 
         <div className="userBox dateBox">

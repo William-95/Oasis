@@ -20,6 +20,7 @@ export default function SetContext({ children }) {
   const [entryNavBtn, setEntryNavBtn] = useState(true);
   const [send, setSend] = useState(false);
   const [deleted, setDeleted] = useState(false);
+  const [spanChip, setSpanChip] = useState(false);
 
   
   // save state user
@@ -96,6 +97,8 @@ export default function SetContext({ children }) {
           setSend,
           deleted,
           setDeleted,
+          spanChip,
+          setSpanChip,
         }}
       >
         <AllDogApi />
