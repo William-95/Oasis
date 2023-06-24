@@ -26,7 +26,7 @@ export default function CreateDogApi({ dati }) {
             setLoading(false);
             history.push(`/singledog/${data.id}`);
 
-          } else if(result.status===500){
+          } else if(result==='microchip esistente'){
             setSend(false);
             setLoading(false);
             setSpanChip(true);
