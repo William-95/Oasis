@@ -135,11 +135,12 @@
 
 /* tablet */
 @media screen and (max-width: 900px) and (min-width: 600px) {
-  .carouselContainer {
-    margin: 30% 5% 15% 5%;
+  /* .carouselContainer {
+    margin: 40% 10% 15% 10%;
   }
   .wrapper {
     perspective: 675px;
+
   }
   .carousel {
     transform-origin: center center -450px;
@@ -168,9 +169,9 @@
     width: 35%;
     justify-content: center;
     font-size: 0.9em;
-  }
+  } */
 
-  .carouselCard:nth-of-type(1) {
+  /* .carouselCard:nth-of-type(1) {
     transform: translate3d(0, 0, 0px) rotateY(0deg);
   }
   .carouselCard:nth-of-type(2) {
@@ -193,7 +194,7 @@
   }
   .carouselCard:nth-of-type(8) {
     transform: translate3d(-320px, 0, -130px) rotateY(315deg);
-  }
+  } */
 }
 
 /*desktop*/
