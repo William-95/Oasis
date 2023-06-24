@@ -21,7 +21,7 @@ export default function CreateDogApi({ dati }) {
           if (result.status === 200) {
             setSend(false);
            
-            alert("Canne Inserito Correttamente.");
+            console.log("Canne Inserito Correttamente.");
             const data = result.data;
             setLoading(false);
             history.push(`/singledog/${data.id}`);
