@@ -111,7 +111,9 @@
     grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
     padding: 7% 10% 7% 10%;
   }
-
+.flip{
+  max-width: 25%;
+}
   .front,
   .back {
     max-height: 30vh;
