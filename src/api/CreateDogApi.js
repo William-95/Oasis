@@ -26,16 +26,21 @@ export default function CreateDogApi({ dati }) {
             setLoading(false);
             history.push(`/singledog/${data.id}`);
 
-          } else if(result==='microchip esistente'){
-            setSend(false);
-            setLoading(false);
-            setSpanChip(true);
           }else{
             console.log(result.data.message);
           }
         })
-        .catch((err) => console.log(err));
-    }
+        .catch(err => {
+          if (err.response && err.response.status === 500) {
+            console.log("microchip esistente");
+            setSend(false);
+            setLoading(false);
+            setSpanChip(true);
+          } else {
+            console.log(err);
+          }
+    })
+  }
     // eslint-disable-next-line
   }, []);
   return <></>;
