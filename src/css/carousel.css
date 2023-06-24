@@ -135,6 +135,9 @@
 
 /* tablet */
 @media screen and (max-width: 900px) and (min-width: 600px) {
+  .carouselContainer {
+    margin: 30% 0 15% 0;
+  }
   /* .carouselContainer {
     margin: 40% 10% 15% 10%;
   }
