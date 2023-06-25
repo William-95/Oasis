@@ -87,7 +87,7 @@ export default function Filter() {
           <option value="Toscana">Toscana</option>
           <option value="Trentino Alto Adige">Trentino Alto Adige</option>
           <option value="Umbria">Umbria</option>
-          <option value="Val d'Aosta">Val d'Aosta</option>
+          <option value="Valle Aosta">Val d'Aosta</option>
           <option value="Veneto">Veneto</option>
         </select>
       </div>
