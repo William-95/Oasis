@@ -21,7 +21,7 @@ export default function FindDogApi({ dati }) {
             const data = result.data;
             setFindDog(data);
           } else {
-            alert("Il cane non si trova nelle nostre strutture, ci dispiace.");
+            console.log("Il cane non si trova nelle nostre strutture, ci dispiace.");
           }
         })
         .catch((err) => console.log(err));
