@@ -35,10 +35,10 @@ export default function FormRegister() {
   }, [data]);
 
   useEffect(() => {
-    if (user === "Email esistente") {
+    if (user.data === "Email esistente") {
       setSpanEmail(true);
     }
-    if (user === "Utente non creato") {
+    if (user.data === "Utente non creato") {
       setSpanEmail(true);
     }
   }, [user]);
@@ -67,7 +67,7 @@ export default function FormRegister() {
     } else {
       setSend(!send);
     }
-    console.log(data);
+   
     setTimeout(() => {
       setSend(!send);
     }, 200);
@@ -75,8 +75,7 @@ export default function FormRegister() {
     // eslint-disable-next-line
   };
 
-  console.log(user);
-  console.log(send);
+  
   return (
     <div className="formBox" style={{margin:'0 auto 2%',padding:'3%'}}>
       <h3 className="text-xl">Registrati</h3>
