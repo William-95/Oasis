@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useContext } from "react";
 import headerBg from "../img/03.jpg";
 import "../css/header.css";
 import FormFindDog from "../components/FormFindDog";
@@ -6,11 +6,9 @@ import OneDogCard from "../components/OneDogCard";
 import { StateContext } from "../SetContext";
 
 export default function FindLostDog() {
-  const { findDog } = useContext(StateContext);
-  const [find, setFind] = useState(true);
-  if (findDog === "cane non trovato") {
-    setFind(false);
-  } else if (findDog[0] === undefined) {
+  const { findDog,notFind } = useContext(StateContext);
+  
+  if (findDog[0] === undefined) {
     return (
       <div>
         <header
@@ -30,7 +28,8 @@ export default function FindLostDog() {
         </h3> */}
       </div>
     );
-  } else {
+  
+  } else  {
     return (
       <div>
         <header
@@ -45,7 +44,7 @@ export default function FindLostDog() {
         </h4>
 
         <FormFindDog />
-        {find ? (
+        {notFind ? (
           <>
             <div className="bg-gradient-to-r from-lime-700 to-yellow-500 pt-0.5 pb-0.5">
               <OneDogCard

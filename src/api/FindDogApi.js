@@ -2,7 +2,7 @@ import React, { useContext, useEffect, useRef } from "react";
 import { StateContext } from "../SetContext";
 
 export default function FindDogApi({ dati }) {
-  const { api, setFindDog, send, setSend } = useContext(StateContext);
+  const { api, setFindDog, send, setSend ,setNotFind} = useContext(StateContext);
   const ref = useRef();
 
   /*requestApi*/
@@ -19,7 +19,17 @@ export default function FindDogApi({ dati }) {
           if (result.status === 200) {
             setSend(false);
             const data = result.data;
-            setFindDog(data);
+            console.log(data);
+            
+              
+           
+              if(data==="cane non trovato"){
+                setNotFind(false)
+              }else{
+                setFindDog(data);
+                setNotFind(true)
+              }
+            
           } else {
             console.log("Il cane non si trova nelle nostre strutture, ci dispiace.");
           }
