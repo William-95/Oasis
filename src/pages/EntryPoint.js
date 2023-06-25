@@ -17,6 +17,7 @@ export default function EntryPoint() {
     return () => clearTimeout(timer);
     // eslint-disable-next-line
   }, []);
+  
   return (
     <>
       <header
