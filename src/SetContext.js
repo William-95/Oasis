@@ -21,7 +21,7 @@ export default function SetContext({ children }) {
   const [send, setSend] = useState(false);
   const [deleted, setDeleted] = useState(false);
   const [spanChip, setSpanChip] = useState(false);
-  const [notFind, setNotFind] = useState(false);
+  const [notFind, setNotFind] = useState();
 
 
   
