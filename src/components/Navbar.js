@@ -1,4 +1,4 @@
-import React, { useState, useContext,useEffect } from "react";
+import React, { useState, useContext, useEffect } from "react";
 import "../css/navbar.css";
 import classNames from "classnames";
 import logo from "../img/logo.png";
@@ -9,28 +9,28 @@ import { StateContext } from "../SetContext";
 export default function Navbar() {
   const { user, setIsLog } = useContext(StateContext);
   const [state, setState] = useState({ isOpen: false });
-// scolling
-useEffect(() => {
-  let prevPos = window.scrollY;
+  // scolling
+  useEffect(() => {
+    let prevPos = window.scrollY;
 
-  const handleScroll = () => {
-    const currentPos = window.scrollY;
+    const handleScroll = () => {
+      const currentPos = window.scrollY;
 
-    if (prevPos > currentPos) {
-      document.getElementById("navbar").style.top = "0";
-    } else {
-      document.getElementById("navbar").style.top = "-90px";
-    }
-    prevPos = currentPos;
-  };
+      if (prevPos > currentPos) {
+        document.getElementById("navbar").style.top = "0";
+      } else {
+        document.getElementById("navbar").style.top = "-90px";
+      }
+      prevPos = currentPos;
+    };
 
-  window.addEventListener("scroll", handleScroll);
+    window.addEventListener("scroll", handleScroll);
 
-  return () => {
-    window.removeEventListener("scroll", handleScroll);
-  };
-}, []);
-// end scolling
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+  // end scolling
 
   const newUser = [{ ...user }];
 
@@ -39,7 +39,7 @@ useEffect(() => {
   };
 
   return (
-    <nav id='navbar' className="navbar">
+    <nav id="navbar" className="navbar">
       <div className="navCenter">
         <div className="navHeader">
           <Link to={`/home/${newUser[0].id}/`}>

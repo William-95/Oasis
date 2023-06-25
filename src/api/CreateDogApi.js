@@ -3,7 +3,9 @@ import { StateContext } from "../SetContext";
 import { useHistory } from "react-router-dom";
 
 export default function CreateDogApi({ dati }) {
-  const { api, send, setSend,setLoading,setSpanChip } = useContext(StateContext);
+  const { api, send, setSend, setLoading, setSpanChip } = useContext(
+    StateContext
+  );
   const ref = useRef();
   const history = useHistory();
 
@@ -20,17 +22,16 @@ export default function CreateDogApi({ dati }) {
         .then((result) => {
           if (result.status === 200) {
             setSend(false);
-           
+
             console.log("Canne Inserito Correttamente.");
             const data = result.data;
             setLoading(false);
             history.push(`/singledog/${data.id}`);
-
-          }else{
+          } else {
             console.log(result.data.message);
           }
         })
-        .catch(err => {
+        .catch((err) => {
           if (err.response && err.response.status === 500) {
             console.log("microchip esistente");
             setSend(false);
@@ -39,8 +40,8 @@ export default function CreateDogApi({ dati }) {
           } else {
             console.log(err);
           }
-    })
-  }
+        });
+    }
     // eslint-disable-next-line
   }, []);
   return <></>;

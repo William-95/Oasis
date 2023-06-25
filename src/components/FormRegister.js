@@ -54,7 +54,7 @@ export default function FormRegister() {
 
     if (data.name === "") {
       setSend(false);
-      setSpanName(true);    
+      setSpanName(true);
     } else if (data.email === "") {
       setSend(false);
       setSpanEmail(true);
@@ -67,7 +67,7 @@ export default function FormRegister() {
     } else {
       setSend(!send);
     }
-   
+
     setTimeout(() => {
       setSend(!send);
     }, 200);
@@ -75,9 +75,8 @@ export default function FormRegister() {
     // eslint-disable-next-line
   };
 
-  
   return (
-    <div className="formBox" style={{margin:'0 auto 2%',padding:'3%'}}>
+    <div className="formBox" style={{ margin: "0 auto 2%", padding: "3%" }}>
       <h3 className="text-xl">Registrati</h3>
       <form onSubmit={handleSubmit}>
         {send ? <RegisterApi dati={data} /> : null}

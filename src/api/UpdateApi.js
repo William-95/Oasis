@@ -3,10 +3,9 @@ import { StateContext } from "../SetContext";
 import { useHistory } from "react-router-dom";
 
 export default function UpdateApi({ id_user, dati }) {
-  const { api,  setUser, send, setSend } = useContext(StateContext);
+  const { api, setUser, send, setSend } = useContext(StateContext);
   const history = useHistory();
   const ref = useRef();
-  // const newUser = {...user};
   /*requestApi*/
   useEffect(() => {
     if (ref.current !== send) {

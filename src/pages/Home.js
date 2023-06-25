@@ -9,35 +9,35 @@ import Carousel from "../components/Carousel";
 
 export default function Home() {
   const { user } = useContext(StateContext);
-const newUser=[{...user}]
+  const newUser = [{ ...user }];
   return (
     <div>
       <header
         className="headerBg"
         style={{
-          backgroundImage: `url(${headerBg})`
+          backgroundImage: `url(${headerBg})`,
         }}
       >
-        <h2>Benvenuto/a nella tua Home page, {newUser.name || newUser[0].name}</h2>
+        <h2>
+          Benvenuto/a nella tua Home page, {newUser.name || newUser[0].name}
+        </h2>
       </header>
 
-
       <div className="mb-28">
-      <Carousel />
+        <Carousel />
       </div>
 
       <div className="bg-gradient-to-r from-lime-700 to-yellow-500 mb-10 pb-40 ">
-      <Clinic />
+        <Clinic />
       </div>
 
       <div className="mb-10 pb-40">
-      <Course />
+        <Course />
       </div>
 
       <div className="bg-gradient-to-r from-lime-700 to-yellow-500 p-0.5">
-      <Suggestion />
+        <Suggestion />
       </div>
-      
     </div>
   );
 }

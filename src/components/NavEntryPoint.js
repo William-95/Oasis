@@ -28,7 +28,7 @@ export default function NavbarEntryPoint() {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
-// end scolling
+  // end scolling
 
   const handleLogin = () => {
     setEntryNavBtn(true);

@@ -10,7 +10,7 @@ export default function Carousel() {
   const { dog, loading, setLoading } = useContext(StateContext);
   const [deg, setDeg] = useState(0);
   const newDog = dog.slice(0, 9);
-console.log(newDog);
+  console.log(newDog);
   /*Loading*/
   useEffect(() => {
     setLoading(true);
@@ -49,13 +49,10 @@ console.log(newDog);
             {newDog.map((item) => {
               return (
                 <article className="carouselCard" key={item.id}>
-                  <img
-                    src={item.img || defaultImg}
-                    alt=""
-                  />
-                   
+                  <img src={item.img || defaultImg} alt="" />
+
                   <h4 className="carouselTilte">{item.name}</h4>
-                  
+
                   <Link to={`/singledog/${item.id}`} className="primaryBtn2">
                     Altro
                   </Link>

@@ -13,7 +13,7 @@ export default function Profile() {
       <header
         className="headerBg"
         style={{
-          backgroundImage: `url(${headerBg})`
+          backgroundImage: `url(${headerBg})`,
         }}
       >
         <h2>Questa è la tua area riservata, {user.name || user[0].name}</h2>

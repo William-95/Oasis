@@ -6,8 +6,10 @@ import AllDogApi from "../api/AllDogApi";
 import Loading from "./Loading";
 
 export default function FormInsertDog() {
-  const { send, setSend, loading, setLoading,spanChip } = useContext(StateContext);
-  const [spanImg, setSpanImg] = useState(false)
+  const { send, setSend, loading, setLoading, spanChip } = useContext(
+    StateContext
+  );
+  const [spanImg, setSpanImg] = useState(false);
 
   const [data, setData] = useState({
     id: "",
@@ -36,18 +38,17 @@ export default function FormInsertDog() {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    if(data.img===""){
-setSpanImg(true);
-    }else{
+    if (data.img === "") {
+      setSpanImg(true);
+    } else {
       setSpanImg(false);
       setSend(!send);
       setLoading(true);
-  
+
       setTimeout(() => {
         setSend(!send);
       }, 200);
     }
-
   };
   return (
     <div className="formBox">
@@ -167,7 +168,7 @@ setSpanImg(true);
             multiple
             onChange={handleFileChange}
           />
-           {spanImg ? <span>Immagine mancante</span> : null}
+          {spanImg ? <span>Immagine mancante</span> : null}
         </div>
 
         <div className="userBox">

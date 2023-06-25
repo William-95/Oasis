@@ -20,7 +20,7 @@ export default function UpdateDog() {
     microchip: "",
     date_entry: "",
     img: "",
-    region:"",
+    region: "",
     structure: "",
     contacts: "",
   });
@@ -37,16 +37,16 @@ export default function UpdateDog() {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    if(data.img===""){
+    if (data.img === "") {
       setSpanImg(true);
-          }else{
-            setSpanImg(false)
-    setSend(!send);
-
-    setTimeout(() => {
+    } else {
+      setSpanImg(false);
       setSend(!send);
-    }, 1000);
-  }
+
+      setTimeout(() => {
+        setSend(!send);
+      }, 1000);
+    }
   };
   const handleToggle = () => {
     setBtn({ isOpen: !btn.isOpen });
@@ -172,7 +172,7 @@ export default function UpdateDog() {
               multiple
               onChange={handleFileChange}
             />
-           {spanImg ? <span>Immagine mancante</span> : null}
+            {spanImg ? <span>Immagine mancante</span> : null}
           </div>
 
           <div className="userBox">

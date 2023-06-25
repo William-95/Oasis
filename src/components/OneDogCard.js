@@ -40,7 +40,7 @@ export default function OneDogCard({
     <div className="containerDog">
       <h3>Ciao, io sono {name}</h3>
       <div className="containerGroup">
-        <img src={ img || defaultImg} alt="" />
+        <img src={img || defaultImg} alt="" />
         <div className="description">
           <table cellSpacing={10}>
             <tbody>

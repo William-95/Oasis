@@ -23,19 +23,15 @@ export default function SetContext({ children }) {
   const [spanChip, setSpanChip] = useState(false);
   const [notFind, setNotFind] = useState();
 
-
-  
   // save state user
   useEffect(() => {
-    const data =JSON.parse(window.localStorage.getItem("USER"));
+    const data = JSON.parse(window.localStorage.getItem("USER"));
     if (data !== null) {
       setUser(data);
     }
-    
   }, []);
 
   useEffect(() => {
-
     window.localStorage.setItem("USER", JSON.stringify(user));
   }, [user]);
 
@@ -66,14 +62,11 @@ export default function SetContext({ children }) {
   }, []);
 
   useEffect(() => {
-    window.localStorage.setItem("DOG",JSON.stringify(dog));
+    window.localStorage.setItem("DOG", JSON.stringify(dog));
   }, [dog]);
 
   // end save state dog
 
-
- 
-  
   return (
     <>
       <StateContext.Provider
@@ -102,7 +95,7 @@ export default function SetContext({ children }) {
           spanChip,
           setSpanChip,
           notFind,
-         setNotFind
+          setNotFind,
         }}
       >
         <AllDogApi />

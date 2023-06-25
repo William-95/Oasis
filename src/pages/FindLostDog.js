@@ -6,8 +6,8 @@ import OneDogCard from "../components/OneDogCard";
 import { StateContext } from "../SetContext";
 
 export default function FindLostDog() {
-  const { findDog,notFind } = useContext(StateContext);
-  
+  const { findDog, notFind } = useContext(StateContext);
+
   if (findDog[0] === undefined) {
     return (
       <div>
@@ -23,13 +23,9 @@ export default function FindLostDog() {
         </h4>
 
         <FormFindDog />
-        {/* <h3 className="text-center text-red-600 text-xl mb-6">
-          Cane non trovato,inserire microchip valido.
-        </h3> */}
       </div>
     );
-  
-  } else  {
+  } else {
     return (
       <div>
         <header

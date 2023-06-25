@@ -13,37 +13,31 @@ export default function Filter() {
 
   const filteredArray = () => {
     const filteredData = newDog.filter((item) => {
-  
-   
-      if(item.sex===undefined){
-        return newDog
-      }else if(item.race===undefined){
-        return newDog
+      if (item.sex === undefined) {
+        return newDog;
+      } else if (item.race === undefined) {
+        return newDog;
+      } else if (item.size === undefined) {
+        return newDog;
+      } else if (item.region === undefined) {
+        return newDog;
+      } else {
+        return (
+          item.sex.includes(sex) &&
+          item.race.includes(race) &&
+          item.size.includes(size) &&
+          item.region.includes(region)
+        );
       }
-      else if(item.size===undefined){
-        return newDog
-      }
-      else if(item.region===undefined){
-        return newDog
-      }
-      else{
-      return (
-        item.sex.includes(sex) &&
-        item.race.includes(race) &&
-        item.size.includes(size) &&
-        item.region.includes(region)
-      );
-    
-    }
     });
 
     setFilterDog(filteredData);
   };
- 
+
   useEffect(() => {
     filteredArray();
     // eslint-disable-next-line
-  }, [dog,sex, race, size, region]);
+  }, [dog, sex, race, size, region]);
 
   return (
     <div className="containerFilter borderSpacing">

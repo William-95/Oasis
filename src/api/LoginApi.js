@@ -30,12 +30,12 @@ export default function LoginApi({ dati }) {
                 data === "Password errata"
               ) {
                 setSend(false);
-                setUser( data );
+                setUser(data);
               } else {
                 setSend(false);
                 setIsLog(true);
                 setUser(data);
-                
+
                 history.push("/home/" + data.id);
               }
             } else {

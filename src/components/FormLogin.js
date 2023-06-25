@@ -52,7 +52,7 @@ export default function FormLogin() {
   };
 
   return (
-    <div className="formBox" style={{margin:'0 auto 2%',padding:'3%'}}>
+    <div className="formBox" style={{ margin: "0 auto 2%", padding: "3%" }}>
       {send ? <LoginApi dati={data} /> : null}
 
       <h3 className="text-xl">Login</h3>
