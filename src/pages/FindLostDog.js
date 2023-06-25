@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import headerBg from "../img/03.jpg";
 import "../css/header.css";
 import FormFindDog from "../components/FormFindDog";
@@ -7,14 +7,16 @@ import { StateContext } from "../SetContext";
 
 export default function FindLostDog() {
   const { findDog } = useContext(StateContext);
-
-  if (findDog[0] === undefined) {
+  const [find, setFind] = useState(true);
+  if (findDog === "cane non trovato") {
+    setFind(false);
+  } else if (findDog[0] === undefined) {
     return (
       <div>
         <header
           className="headerBg"
           style={{
-            backgroundImage: `url(${headerBg})`
+            backgroundImage: `url(${headerBg})`,
           }}
         ></header>
 
@@ -23,9 +25,9 @@ export default function FindLostDog() {
         </h4>
 
         <FormFindDog />
-        <h3 className="text-center text-red-600 text-xl mb-6">
+        {/* <h3 className="text-center text-red-600 text-xl mb-6">
           Cane non trovato,inserire microchip valido.
-        </h3>
+        </h3> */}
       </div>
     );
   } else {
@@ -34,7 +36,7 @@ export default function FindLostDog() {
         <header
           className="headerBg"
           style={{
-            backgroundImage: `url(${headerBg})`
+            backgroundImage: `url(${headerBg})`,
           }}
         ></header>
 
@@ -43,22 +45,31 @@ export default function FindLostDog() {
         </h4>
 
         <FormFindDog />
-
-        <div className="bg-gradient-to-r from-lime-700 to-yellow-500 pt-0.5 pb-0.5">
-          <OneDogCard
-            name={findDog[0].name}
-            race={findDog[0].race}
-            sex={findDog[0].sex}
-            size={findDog[0].size}
-            img={findDog[0].img}
-            microchip={findDog[0].microchip}
-            region={findDog[0].region}
-            structure={findDog[0].structure}
-            contacts={findDog[0].contacts}
-            date_birth={findDog[0].date_birth}
-            date_entry={findDog[0].date_entry}
-          />
-        </div>
+        {find ? (
+          <>
+            <div className="bg-gradient-to-r from-lime-700 to-yellow-500 pt-0.5 pb-0.5">
+              <OneDogCard
+                name={findDog[0].name}
+                race={findDog[0].race}
+                sex={findDog[0].sex}
+                size={findDog[0].size}
+                img={findDog[0].img}
+                microchip={findDog[0].microchip}
+                region={findDog[0].region}
+                structure={findDog[0].structure}
+                contacts={findDog[0].contacts}
+                date_birth={findDog[0].date_birth}
+                date_entry={findDog[0].date_entry}
+              />
+            </div>
+          </>
+        ) : (
+          <>
+            <h3 className="text-center text-red-600 text-xl mb-6">
+              Cane non trovato,inserire microchip valido.
+            </h3>
+          </>
+        )}
       </div>
     );
   }
