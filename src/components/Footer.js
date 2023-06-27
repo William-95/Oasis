@@ -4,7 +4,7 @@ export default class Footer extends Component {
   render() {
     return (
       <footer>
-        <p>&#169;2022 William Verga | Oasis | All Rights Reserved</p>
+        <p>&#169;2023 William Verga | Oasis | All Rights Reserved</p>
       </footer>
     );
   }
