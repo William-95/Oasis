@@ -21,16 +21,11 @@ export default function FindDogApi({ dati }) {
           if (result.status === 200) {
             setSend(false);
             const results = result.data[0];
-            
-              const data = results.data;
 
-            // if (data === "cane non trovato") {
-            //   setNotFind(false);
-            // } else {
-              
-              setFindDog(data);
-              setNotFind(true);
-            // }
+            const data = results.data;
+
+            setFindDog(data);
+            setNotFind(true);
           } else {
             console.log(
               "Il cane non si trova nelle nostre strutture, ci dispiace."
@@ -38,15 +33,14 @@ export default function FindDogApi({ dati }) {
           }
         })
         .catch((err) => {
-          console.log(err.response.data);   
+          console.log(err.response.data);
           const response = err.response.data;
-          if(response.message==='Cane non presente.'){
-          setSend(false);
-          setNotFind(false);
-         
+          if (response.message === "Cane non presente.") {
+            setSend(false);
+            setNotFind(false);
           } else {
-          console.log(err);
-        }
+            console.log(err);
+          }
         });
     }
     // eslint-disable-next-line

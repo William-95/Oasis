@@ -8,7 +8,7 @@ import { StateContext } from "../SetContext";
 export default function FindLostDog() {
   const { findDog, notFind } = useContext(StateContext);
 
-  if (notFind===undefined) {
+  if (notFind === undefined) {
     return (
       <div>
         <header
@@ -65,7 +65,6 @@ export default function FindLostDog() {
             </h3>
           </>
         )}
-        
       </div>
     );
   }

@@ -23,10 +23,9 @@ export default function CreateDogApi({ dati }) {
           if (result.status === 200) {
             setSend(false);
 
-            // console.log("Canne Inserito Correttamente.");
             const results = result.data[0];
-            
-              const data = results.data;
+
+            const data = results.data;
             setLoading(false);
             history.push(`/singledog/${data.id}`);
           } else {
@@ -34,13 +33,13 @@ export default function CreateDogApi({ dati }) {
           }
         })
         .catch((err) => {
-          console.log(err.response.data);          
-            const response = err.response.data;
-            if(response.message==='Microchip esistente.'){
+          console.log(err.response.data);
+          const response = err.response.data;
+          if (response.message === "Microchip esistente.") {
             setSend(false);
             setLoading(false);
             setSpanChip(true);
-            } else {
+          } else {
             console.log(err);
           }
         });
