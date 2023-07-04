@@ -8,24 +8,24 @@ import { StateContext } from "../SetContext";
 export default function FindLostDog() {
   const { findDog, notFind } = useContext(StateContext);
 
-  // if (findDog[0] === undefined) {
-  //   return (
-  //     <div>
-  //       <header
-  //         className="headerBg"
-  //         style={{
-  //           backgroundImage: `url(${headerBg})`,
-  //         }}
-  //       ></header>
+  if (findDog === undefined) {
+    return (
+      <div>
+        <header
+          className="headerBg"
+          style={{
+            backgroundImage: `url(${headerBg})`,
+          }}
+        ></header>
 
-  //       <h4 className=" borderSpacing text-3xl text-emerald-800 text-center m-14 pb-12 ">
-  //         Hai smarrito il tuo cucciolo? Cercalo nelle nostre strutture!
-  //       </h4>
+        <h4 className=" borderSpacing text-3xl text-emerald-800 text-center m-14 pb-12 ">
+          Hai smarrito il tuo cucciolo? Cercalo nelle nostre strutture!
+        </h4>
 
-  //       <FormFindDog />
-  //     </div>
-  //   );
-  // } else {
+        <FormFindDog />
+      </div>
+    );
+  } else {
     return (
       <div>
         <header
@@ -44,17 +44,17 @@ export default function FindLostDog() {
           <>
             <div className="bg-gradient-to-r from-lime-700 to-yellow-500 pt-0.5 pb-0.5">
               <OneDogCard
-                name={findDog[0].name}
-                race={findDog[0].race}
-                sex={findDog[0].sex}
-                size={findDog[0].size}
-                img={findDog[0].img}
-                microchip={findDog[0].microchip}
-                region={findDog[0].region}
-                structure={findDog[0].structure}
-                contacts={findDog[0].contacts}
-                date_birth={findDog[0].date_birth}
-                date_entry={findDog[0].date_entry}
+                name={findDog.name}
+                race={findDog.race}
+                sex={findDog.sex}
+                size={findDog.size}
+                img={findDog.img}
+                microchip={findDog.microchip}
+                region={findDog.region}
+                structure={findDog.structure}
+                contacts={findDog.contacts}
+                date_birth={findDog.date_birth}
+                date_entry={findDog.date_entry}
               />
             </div>
           </>
@@ -68,4 +68,4 @@ export default function FindLostDog() {
       </div>
     );
   }
-// }
+}
