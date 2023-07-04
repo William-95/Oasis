@@ -23,7 +23,7 @@ export default function DeleteApi() {
             alert("Utente eliminato correttamente.");
             history.push("/");
           } else {
-            alert(result.data.message);
+            console.log(result.data.message);
           }
         })
         .catch((err) => console.log(err));

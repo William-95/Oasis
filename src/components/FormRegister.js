@@ -14,32 +14,15 @@ export default function FormRegister() {
     confirm_password: "",
   });
 
-  
   const [spanName, setSpanName] = useState(false);
   const [spanEmail, setSpanEmail] = useState(false);
   const [spanPassword, setSpanPassword] = useState(false);
   const [spanConfirm, setSpanConfirm] = useState(false);
 
-  // useEffect(() => {
-  //   if (data.name !== "") {
-  //     setSpanName(false);
-  //   }
-  //   if (data.email !== "") {
-  //     setSpanEmail(false);
-  //   }
-  //   if (data.password !== "") {
-  //     setSpanPassword(false);
-  //   }
-  //   if (data.confirm_password !== "") {
-  //     setSpanConfirm(false);
-  //   }
-  // }, [data]);
-
   useEffect(() => {
     if (user === "Email esistente.") {
       setSpanEmail(true);
-    }
-    else if (user === "Password non confermata.") {
+    } else if (user === "Password non confermata.") {
       setSpanConfirm(true);
     }
   }, [user]);

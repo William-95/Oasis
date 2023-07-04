@@ -13,15 +13,6 @@ export default function FormLogin() {
   const [spanEmail, setSpanEmail] = useState(false);
   const [spanPassword, setSpanPassword] = useState(false);
 
-  // useEffect(() => {
-  //   if (data.email !== "") {
-  //     setSpanEmail(false);
-  //   }
-  //   if (data.password !== "") {
-  //     setSpanPassword(false);
-  //   }
-  // }, [data]);
-
   useEffect(() => {
     if (user === "Email non registrata") {
       setSpanEmail(true);

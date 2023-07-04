@@ -23,22 +23,14 @@ export default function LoginApi({ dati }) {
         })
           .then((result) => {
             if (result.status === 200) {
-              
-              const results= result.data[0];
-              const userLog=results.data;
-              // if (
-              //   userLog.message === "Email non registrata" ||
-              //   userLog.message === "Password errata"
-              // ) {
-              //   setSend(false);
-              //   setUser(userLog.message);
-              // } else {
-                setSend(false);
-                setIsLog(true);
-                setUser(userLog);
+              const results = result.data[0];
+              const userLog = results.data;
 
-                history.push("/home/" + userLog.id);
-              
+              setSend(false);
+              setIsLog(true);
+              setUser(userLog);
+
+              history.push("/home/" + userLog.id);
             } else {
               console.log(result.data.message);
             }
@@ -46,8 +38,8 @@ export default function LoginApi({ dati }) {
           .catch((err) => {
             console.log(err.response.data);
             setSend(false);
-            const response=err.response.data;
-           setUser(response.message);
+            const response = err.response.data;
+            setUser(response.message);
           });
       }
     }

@@ -28,21 +28,15 @@ export default function RegisterApi({ dati }) {
           data: dati,
         })
           .then((result) => {
-           
             if (result.status === 200) {
               const results = result.data[0];
-              const userLog=results.data;
+              const userLog = results.data;
 
-              // if (data === "Password non confermata") {
-              //   setSend(false);
-              //   setUser({ data });
-              // } else {
-                setSend(false);
-                setIsLog(true);
-                setUser(userLog);
-               
-                history.push("/home/" + userLog.id);
-              // }
+              setSend(false);
+              setIsLog(true);
+              setUser(userLog);
+
+              history.push("/home/" + userLog.id);
             } else {
               console.log(result.data.message);
             }
@@ -52,8 +46,8 @@ export default function RegisterApi({ dati }) {
             console.log(err.response.data);
             setSend(false);
 
-            const response=err.response.data;
-           setUser(response.message);
+            const response = err.response.data;
+            setUser(response.message);
           });
       }
     }
