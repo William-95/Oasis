@@ -28,7 +28,7 @@ export default function RegisterApi({ dati }) {
           data: dati,
         })
           .then((result) => {
-            console.log(result);
+           
             if (result.status === 200) {
               const data = result.data;
 

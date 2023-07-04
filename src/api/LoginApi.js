@@ -23,26 +23,33 @@ export default function LoginApi({ dati }) {
         })
           .then((result) => {
             if (result.status === 200) {
-              const data = result.data;
-
-              if (
-                data === "Email non registrata" ||
-                data === "Password errata"
-              ) {
-                setSend(false);
-                setUser(data);
-              } else {
+              
+              const results= result.data[0];
+              const userLog=results.data;
+              // if (
+              //   userLog.message === "Email non registrata" ||
+              //   userLog.message === "Password errata"
+              // ) {
+              //   setSend(false);
+              //   setUser(userLog.message);
+              // } else {
                 setSend(false);
                 setIsLog(true);
-                setUser(data);
+                setUser(userLog);
 
-                history.push("/home/" + data.id);
+                history.push("/home/" + userLog.id);
               }
-            } else {
-              console.log(result.data.message);
-            }
+            // } else {
+            //   console.log(result.data.message);
+            // }
           })
-          .catch((err) => console.log(err));
+          .catch((err) => {
+            console.log(err.response.data);
+            setSend(false);
+
+            const response=err.response.data.message;
+           setUser(response);
+          });
       }
     }
     // eslint-disable-next-line

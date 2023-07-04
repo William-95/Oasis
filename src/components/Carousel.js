@@ -10,7 +10,6 @@ export default function Carousel() {
   const { dog, loading, setLoading } = useContext(StateContext);
   const [deg, setDeg] = useState(0);
   const newDog = dog.slice(0, 9);
-  console.log(newDog);
   /*Loading*/
   useEffect(() => {
     setLoading(true);
