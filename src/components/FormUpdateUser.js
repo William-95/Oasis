@@ -1,11 +1,11 @@
-import React, { useState, useContext } from "react";
+import React, { useState, useEffect,useContext } from "react";
 import { StateContext } from "../SetContext";
 import { useParams } from "react-router-dom";
 import UpdateApi from "../api/UpdateApi";
 import "../css/enterForm.css";
 
 export default function FormUpdateUser() {
-  const { send, setSend } = useContext(StateContext);
+  const { send, setSend,user } = useContext(StateContext);
   const { id } = useParams();
   const [data, setData] = useState({
     id: "",
@@ -14,6 +14,19 @@ export default function FormUpdateUser() {
     password: "",
     confirm_password: "",
   });
+  const [spanConfirm, setSpanConfirm] = useState(false);
+  const [spanEmail, setSpanEmail] = useState(false);
+
+  useEffect(() => {
+    if (user === "Email esistente.") {
+      setSpanEmail(true);
+    }
+    else if (user === "Password non confermata.") {
+      setSpanConfirm(true);
+    }
+    
+  }, [user]);
+
   const handleChange = (event) => {
     const name = event.target.name;
     const value = event.target.value;
@@ -23,15 +36,15 @@ export default function FormUpdateUser() {
   const handleSubmit = (event) => {
     event.preventDefault();
 
-    if (data.password === data.confirm_password) {
-      setSend(!send);
+    // if (data.password === data.confirm_password) {
+    //   setSend(!send);
 
       setTimeout(() => {
         setSend(!send);
       }, 200);
-    } else {
-      alert("Password non confermata!");
-    }
+    // } else {
+    //   alert("Password non confermata!");
+    // }
   };
   return (
     <div className="formBox">
@@ -57,6 +70,7 @@ export default function FormUpdateUser() {
             required
           />
           <label>Nuova Email</label>
+          {spanEmail ? <span>Email mancante o esistente</span> : null}
         </div>
 
         <div className="userBox">
@@ -79,6 +93,7 @@ export default function FormUpdateUser() {
             required
           />
           <label>Conferma Password</label>
+          {spanConfirm ? <span>Password non confermata</span> : null}
         </div>
 
         <button type="submit" className="secondaryBtn formBtn">

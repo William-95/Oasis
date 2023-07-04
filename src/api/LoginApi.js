@@ -38,17 +38,16 @@ export default function LoginApi({ dati }) {
                 setUser(userLog);
 
                 history.push("/home/" + userLog.id);
-              }
-            // } else {
-            //   console.log(result.data.message);
-            // }
+              
+            } else {
+              console.log(result.data.message);
+            }
           })
           .catch((err) => {
             console.log(err.response.data);
             setSend(false);
-
-            const response=err.response.data.message;
-           setUser(response);
+            const response=err.response.data;
+           setUser(response.message);
           });
       }
     }

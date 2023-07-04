@@ -30,27 +30,30 @@ export default function RegisterApi({ dati }) {
           .then((result) => {
            
             if (result.status === 200) {
-              const data = result.data;
+              const results = result.data[0];
+              const userLog=results.data;
 
-              if (data === "Password non confermata") {
-                setSend(false);
-                setUser({ data });
-              } else {
+              // if (data === "Password non confermata") {
+              //   setSend(false);
+              //   setUser({ data });
+              // } else {
                 setSend(false);
                 setIsLog(true);
-                setUser(data);
-                let userId = data.id;
-                history.push("/home/" + userId);
-              }
+                setUser(userLog);
+               
+                history.push("/home/" + userLog.id);
+              // }
             } else {
               console.log(result.data.message);
             }
           })
 
-          .catch((error) => {
+          .catch((err) => {
+            console.log(err.response.data);
             setSend(false);
-            setUser({ data: "Email esistente" });
-            console.log(error);
+
+            const response=err.response.data;
+           setUser(response.message);
           });
       }
     }

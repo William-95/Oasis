@@ -20,16 +20,23 @@ export default function UpdateApi({ id_user, dati }) {
         .then((result) => {
           if (result.status === 200) {
             setSend(false);
-            const data = result.data;
-            setUser(data);
+            const results= result.data[0];
+            const userLog=results.data;
+
+            setUser(userLog);
             alert("Utente modificato correttamente.");
-            console.log(data);
-            history.push(`/home/${data.id}`);
+            
+            history.push(`/home/${userLog.id}`);
           } else {
-            alert(result.data.message);
+            console.log(result.data.message);
           }
         })
-        .catch((err) => console.log(err));
+        .catch((err) =>{
+          console.log(err.response.data);
+          setSend(false);
+          const response=err.response.data;
+          setUser(response.message);
+        });
     }
     // eslint-disable-next-line
   }, []);
