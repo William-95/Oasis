@@ -23,8 +23,10 @@ export default function CreateDogApi({ dati }) {
           if (result.status === 200) {
             setSend(false);
 
-            console.log("Canne Inserito Correttamente.");
-            const data = result.data;
+            // console.log("Canne Inserito Correttamente.");
+            const results = result.data[0];
+            
+              const data = results.data;
             setLoading(false);
             history.push(`/singledog/${data.id}`);
           } else {
