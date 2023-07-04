@@ -41,15 +41,9 @@ export default function CreateDogApi({ dati }) {
             setSend(false);
             setLoading(false);
             setSpanChip(true);
-            }
-          // if (err.response && err.response.status === 500) {
-          //   console.log("microchip esistente");
-          //   setSend(false);
-          //   setLoading(false);
-          //   setSpanChip(true);
-          // } else {
-          //   console.log(err);
-          // }
+            } else {
+            console.log(err);
+          }
         });
     }
     // eslint-disable-next-line
