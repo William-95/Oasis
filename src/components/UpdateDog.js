@@ -6,7 +6,7 @@ import "../css/enterForm.css";
 import UpdateDogApi from "../api/UpdateDogApi";
 
 export default function UpdateDog() {
-  const { send, setSend } = useContext(StateContext);
+  const { send, setSend,spanChip } = useContext(StateContext);
   const { id_dog } = useParams();
   const [btn, setBtn] = useState({ isOpen: false });
   const [spanImg, setSpanImg] = useState(false);
@@ -129,6 +129,7 @@ export default function UpdateDog() {
               required
             />
             <label>Microchip</label>
+            {spanChip ? <span>Microchip non valido o esistente</span> : null}
           </div>
 
           <div className="userBox dateBox">

@@ -2,7 +2,7 @@ import React, { useContext, useEffect, useRef } from "react";
 import { StateContext } from "../SetContext";
 
 export default function UpdateDogApi({ id_dog, dati }) {
-  const { api, send, setSend } = useContext(StateContext);
+  const { api, send, setSend ,setSpanChip} = useContext(StateContext);
   const ref = useRef();
 
   /*requestApi*/
@@ -22,10 +22,20 @@ export default function UpdateDogApi({ id_dog, dati }) {
             console.log("Canne Modificato Correttamente.");
             window.location.reload();
           } else {
-            alert(result.data.message);
+            console.log(result.data.message);
           }
         })
-        .catch((err) => console.log(err));
+        .catch((err) =>{
+          console.log(err.response.data);
+          
+            const response = err.response.data;
+            if(response.message==='Microchip esistente.'){
+            setSend(false);
+            setSpanChip(true);
+            } else {
+            console.log(err);
+            }
+        });
     }
     // eslint-disable-next-line
   }, []);
