@@ -27,7 +27,7 @@ export default function FindDogApi({ dati }) {
             // if (data === "cane non trovato") {
             //   setNotFind(false);
             // } else {
-              console.log(data);
+              
               setFindDog(data);
               setNotFind(true);
             // }
@@ -43,6 +43,7 @@ export default function FindDogApi({ dati }) {
           if(response.message==='Cane non presente.'){
           setSend(false);
           setNotFind(false);
+         
           } else {
           console.log(err);
         }
