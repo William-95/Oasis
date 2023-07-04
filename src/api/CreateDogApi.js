@@ -34,14 +34,22 @@ export default function CreateDogApi({ dati }) {
           }
         })
         .catch((err) => {
-          if (err.response && err.response.status === 500) {
-            console.log("microchip esistente");
+          console.log(err.response.data);
+          
+            const response = err.response.data;
+            if(response.message==='Microchip esistente'){
             setSend(false);
             setLoading(false);
             setSpanChip(true);
-          } else {
-            console.log(err);
-          }
+            }
+          // if (err.response && err.response.status === 500) {
+          //   console.log("microchip esistente");
+          //   setSend(false);
+          //   setLoading(false);
+          //   setSpanChip(true);
+          // } else {
+          //   console.log(err);
+          // }
         });
     }
     // eslint-disable-next-line
