@@ -8,24 +8,24 @@ import { StateContext } from "../SetContext";
 export default function FindLostDog() {
   const { findDog, notFind } = useContext(StateContext);
 
-  if (findDog[0] === undefined) {
-    return (
-      <div>
-        <header
-          className="headerBg"
-          style={{
-            backgroundImage: `url(${headerBg})`,
-          }}
-        ></header>
+  // if (findDog[0] === undefined) {
+  //   return (
+  //     <div>
+  //       <header
+  //         className="headerBg"
+  //         style={{
+  //           backgroundImage: `url(${headerBg})`,
+  //         }}
+  //       ></header>
 
-        <h4 className=" borderSpacing text-3xl text-emerald-800 text-center m-14 pb-12 ">
-          Hai smarrito il tuo cucciolo? Cercalo nelle nostre strutture!
-        </h4>
+  //       <h4 className=" borderSpacing text-3xl text-emerald-800 text-center m-14 pb-12 ">
+  //         Hai smarrito il tuo cucciolo? Cercalo nelle nostre strutture!
+  //       </h4>
 
-        <FormFindDog />
-      </div>
-    );
-  } else {
+  //       <FormFindDog />
+  //     </div>
+  //   );
+  // } else {
     return (
       <div>
         <header
@@ -68,4 +68,4 @@ export default function FindLostDog() {
       </div>
     );
   }
-}
+// }
