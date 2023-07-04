@@ -32,9 +32,7 @@ export default function UpdateDogApi({ id_dog, dati }) {
             if(response.message==='Microchip esistente.'){
             setSend(false);
             setSpanChip(true);
-            } else {
-            console.log(err);
-            }
+            } 
         });
     }
     // eslint-disable-next-line
