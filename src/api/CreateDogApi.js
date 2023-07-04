@@ -37,7 +37,7 @@ export default function CreateDogApi({ dati }) {
           console.log(err.response.data);
           
             const response = err.response.data;
-            if(response.message==='Microchip esistente'){
+            if(response.message==='Microchip esistente.'){
             setSend(false);
             setLoading(false);
             setSpanChip(true);
