@@ -37,6 +37,7 @@ export default function FindDogApi({ dati }) {
           }
         })
         .catch((err) => {
+          console.log(err.response.data);   
           const response = err.response.data;
           if(response.message==='Cane non presente.'){
           setSend(false);
