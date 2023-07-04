@@ -20,22 +20,31 @@ export default function FindDogApi({ dati }) {
         .then((result) => {
           if (result.status === 200) {
             setSend(false);
-            const data = result.data;
-            console.log(data);
+            const results = result.data[0];
+            
+              const data = results.data;
 
-            if (data === "cane non trovato") {
-              setNotFind(false);
-            } else {
+            // if (data === "cane non trovato") {
+            //   setNotFind(false);
+            // } else {
               setFindDog(data);
               setNotFind(true);
-            }
+            // }
           } else {
             console.log(
               "Il cane non si trova nelle nostre strutture, ci dispiace."
             );
           }
         })
-        .catch((err) => console.log(err));
+        .catch((err) => {
+          const response = err.response.data;
+          if(response.message==='Cane non presente.'){
+          setSend(false);
+          setNotFind(false);
+          } else {
+          console.log(err);
+        }
+        });
     }
     // eslint-disable-next-line
   }, []);

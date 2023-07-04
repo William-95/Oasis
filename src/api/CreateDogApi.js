@@ -34,8 +34,7 @@ export default function CreateDogApi({ dati }) {
           }
         })
         .catch((err) => {
-          console.log(err.response.data);
-          
+          console.log(err.response.data);          
             const response = err.response.data;
             if(response.message==='Microchip esistente.'){
             setSend(false);
