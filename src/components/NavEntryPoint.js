@@ -3,9 +3,31 @@ import "../css/navbar.css";
 import logo from "../img/logo.png";
 import { Link } from "react-router-dom";
 import { StateContext } from "../SetContext";
+import { MdGTranslate } from "react-icons/md";
+import { useTranslation } from "react-i18next";
+import i18next from "i18next";
 
 export default function NavbarEntryPoint() {
+  const { i18n, t } = useTranslation(["etrypoint"]);
+
   const { setEntryNavBtn } = useContext(StateContext);
+  // const [language,setLanguage]=useState("");
+
+  // translate
+  useEffect(() => {
+    if (localStorage.getItem("i18nextLng")?.lenght > 2) {
+      i18next.changeLanguage("it");
+    }
+    // eslint-disable-next-line
+  }, []);
+  const handleLanguageChange = (e) => {
+    i18n.changeLanguage(e.target.value);
+  };
+  // useEffect(()=>{
+  //   i18n.changeLanguage(language);
+  //   // eslint-disable-next-line
+  // },[language]);
+  // end translate
 
   // scolling
   useEffect(() => {
@@ -48,15 +70,25 @@ export default function NavbarEntryPoint() {
           </Link>
           <div className="logger">
             <button type="button" className="primaryBtn" onClick={handleLogin}>
-              Login
+              {t("Login")}
             </button>
             <button
               type="button"
               className="primaryBtn"
               onClick={handleRegister}
             >
-              Registrati
+              {t("Registrati")}
             </button>
+          </div>
+          <div>
+            <MdGTranslate className="translate" />
+            <select
+              value={localStorage.getItem("i18nextLng")}
+              onChange={handleLanguageChange}
+            >
+              <option value="it">{t("Italiano")}</option>
+              <option value="en">{t("Inglese")}</option>
+            </select>
           </div>
         </div>
       </div>

@@ -3,13 +3,27 @@ import "../css/navbar.css";
 import classNames from "classnames";
 import logo from "../img/logo.png";
 import { FaAlignRight } from "react-icons/fa";
+import { MdGTranslate } from "react-icons/md";
 import { Link } from "react-router-dom";
 import { StateContext } from "../SetContext";
+import { useTranslation } from 'react-i18next';
 
 export default function Navbar() {
+  const { i18n } = useTranslation();
   const { user, setIsLog } = useContext(StateContext);
   const [state, setState] = useState({ isOpen: false });
-  // scolling
+  const [language,setLanguage]=useState("it");
+
+
+  // translate
+useEffect(()=>{
+  i18n.changeLanguage(language);
+  // eslint-disable-next-line
+},[language]);
+// end translate
+
+
+// scolling
   useEffect(() => {
     let prevPos = window.scrollY;
 
@@ -70,6 +84,13 @@ export default function Navbar() {
             <Link to={`/profile/${newUser[0].id}/`}>Profilo</Link>
           </li>
           <li>
+          <MdGTranslate className="translate"/>
+          <select onChange={(e) => setLanguage(e.target.value)}>
+          <option value='it'>Italiano</option>
+          <option value='en'>English</option>
+          </select>
+          </li>
+          <li>           
             <Link
               to="/"
               onClick={() => {

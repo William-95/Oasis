@@ -1,4 +1,4 @@
-import React from "react";
+import {Suspense} from "react";
 import "./css/App.css";
 import { Route, Switch } from "react-router-dom";
 import SetContext from "./SetContext";
@@ -15,10 +15,9 @@ import Footer from "./components/Footer";
 
 function App() {
   return (
-    <>
+    <Suspense fallback={null}>
       <SetContext>
         <NavSwitch />
-
         <Switch>
           <Route exact path="/" component={EntryPoint} />
           <Route path="/home/:id/" component={Home} />
@@ -31,7 +30,7 @@ function App() {
         </Switch>
         <Footer />
       </SetContext>
-    </>
+    </Suspense>
   );
 }
 
