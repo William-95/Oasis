@@ -3,8 +3,10 @@ import "../css/course.css";
 import clicker from "../img/course/clicker1.jpg";
 import disability from "../img/course/disability1.jpg";
 import rescure from "../img/course/rescure1.jpg";
+import { useTranslation } from "react-i18next";
 
 export default function Course() {
+  const{t}=useTranslation(['home']);
   let state = {
     course: [
       {
@@ -12,30 +14,27 @@ export default function Course() {
         title: "Clicker Training",
         link:
           "https://canecampione.com/corso-istruttore-clicker-training/?gclid=EAIaIQobChMInLeyj8vy_QIVT-3tCh1wnQ-OEAAYASAAEgLWCvD_BwE",
-        summary:
-          "È un'esperienza attiva in cui padrone e cane collaborano tra loro come in un ballo di coppia.",
+        summary:`${t('Corso1')}`,
       },
       {
         icon: disability,
-        title: "Assistenti per disabilità",
+        title: `${t("Assistenti per disabilità")}`,
         link:
           "https://www.dobredog.it/formazione/specializzazioni/istruttore-tecnico-cinofilo-in-cani-da-assistenza-per-disabili-motori/",
-        summary:
-          "Permette di apprendere le competenze indispensabili per progetto di cura di questo tipo.",
+        summary:`${t('Corso2')}`,
       },
       {
         icon: rescure,
-        title: "Soccorso e Protezione Civile",
+        title: `${t("Soccorso e Protezione Civile")}`,
         link:
           "https://www.discoverydogs.it/addestramento-cani-da-soccorso-e-protezione-civile/",
-        summary:
-          "Metodologia della ricerca in superficie, nelle macerie, manovre di discesa e primo soccorso.",
+        summary:`${t('Corso3')}`,
       },
     ],
   };
   return (
     <div className="section">
-      <h3 className="borderSpacing pb-8">Corsi Affiliati</h3>
+      <h3 className="borderSpacing pb-8">{t('Corsi Affiliati')}</h3>
 
       <div className="container">
         {state.course.map((item, index) => {
@@ -46,7 +45,7 @@ export default function Course() {
 
               <button className="secondaryBtn">
                 <a href={item.link} target="_blank" rel="noreferrer">
-                  Altro
+                  {t('Altro')}
                 </a>
               </button>
               <p>{item.summary}</p>

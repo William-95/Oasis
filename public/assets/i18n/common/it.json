@@ -1,6 +1,19 @@
 {
     "Login":"Login",
     "Registrati":"Registrati",
+    "Italiano":"Italiano",
+    "Inglese":"Inglese",
+    "Spagnolo":"Spagnolo",
+    "Tedesco":"Tedesco",
+    "Giapponese":"Giapponese",
+
+    "Home":"Home",
+    "Lista":"Lista",
+    "Inserisci Cane":"Inserisci Cane",
+    "Trova Cane":"Trova Cane",
+    "Profilo":"Profilo",
+    "Logout":"Logout",
+    
     "Nome":"Nome",
     "Email":"Email",
     "Password":"Password",

@@ -1,15 +1,25 @@
 {
-    
-        "Login":"Sing In",
-        "Registrati":"Sign Up",
-        "Nome":"Name",
-        "Email":"Email",
-        "Password":"Password",
-        "Conferma Password":"Confirm Password",
-        "Nome mancante":"Name missing",
-        "Email non valida":"Invalid Email",
-        "Password non valida":"Invalid Password",
-        "Password non confermata":"Password not confirmed"
-        
-    
+  "Login": "Sign In",
+  "Registrati": "Sign Up",
+  "Italiano": "Italian",
+  "Inglese": "English",
+  "Spagnolo": "Spanish",
+  "Tedesco": "German",
+  "Giapponese": "Japanese",
+
+  "Home": "Home",
+  "Lista": "List",
+  "Inserisci Cane": "Enter Dog",
+  "Trova Cane": "Find Dog",
+  "Profilo": "Profile",
+  "Logout": "Logout",
+
+  "Nome": "Name",
+  "Email": "Email",
+  "Password": "Password",
+  "Conferma Password": "Confirm Password",
+  "Nome mancante": "Name missing",
+  "Email non valida": "Invalid Email",
+  "Password non valida": "Invalid Password",
+  "Password non confermata": "Password not confirmed"
 }

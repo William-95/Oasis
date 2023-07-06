@@ -6,8 +6,10 @@ import Course from "../components/Courses";
 import Clinic from "../components/Clinic";
 import Suggestion from "../components/Suggestion";
 import Carousel from "../components/Carousel";
+import { useTranslation } from "react-i18next";
 
 export default function Home() {
+  const{t}=useTranslation(['home']);
   const { user } = useContext(StateContext);
   const newUser = [{ ...user }];
   return (
@@ -19,7 +21,7 @@ export default function Home() {
         }}
       >
         <h2>
-          Benvenuto/a nella tua Home page, {newUser.name || newUser[0].name}
+          {t('Benvenuto/a nella tua Home page,')} {newUser.name || newUser[0].name}
         </h2>
       </header>
 

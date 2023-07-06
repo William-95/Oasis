@@ -8,7 +8,7 @@ import { useTranslation } from "react-i18next";
 import i18next from "i18next";
 
 export default function NavbarEntryPoint() {
-  const { i18n, t } = useTranslation(["entrypoint"]);
+  const { i18n, t } = useTranslation(["common"]);
 
   const { setEntryNavBtn } = useContext(StateContext);
 
@@ -22,7 +22,7 @@ export default function NavbarEntryPoint() {
   const handleLanguageChange = (e) => {
     i18n.changeLanguage(e.target.value);
   };
-  
+  // end Translate
   // scolling
   useEffect(() => {
     let prevPos = window.scrollY;

@@ -3,37 +3,36 @@ import "../css/course.css";
 import clinic01 from "../img/clinic/clinic01.jpg";
 import clinic02 from "../img/clinic/clinic02.jpg";
 import clinic03 from "../img/clinic/clinic03.jpg";
+import { useTranslation } from "react-i18next";
 
 export default function Clinic() {
+  const{t}=useTranslation(['home']);
   let state = {
     clinic: [
       {
         icon: clinic01,
         title: "CVRS",
         link: "https://www.cvrs.it/",
-        summary:
-          "Pronto soccorso veterinario con sede a Roma. La struttura offre un servizio H24.",
+        summary:`${t('Clinica1')}`,
       },
       {
         icon: clinic02,
-        title: "Qua La Zampa",
+        title: `${t("Qua La Zampa")}`,
         link: "https://www.clinicaqualazampa.it/",
-        summary:
-          "Clinica Veterinaria con sede a Napoli. La struttura non è H24, ma fornisce un numero di emergenza.",
+        summary:`${t('Clinica2')}`,
       },
       {
         icon: clinic03,
         title: "MYVET",
         link: "https://www.myvetmilano.it/",
-        summary:
-          "Clinica Veterinaria con sede a Milano. La struttura non offre un servizio H24.",
+        summary:`${t('Clinica3')}`,
       },
     ],
   };
   return (
     <div className="section">
       <h3 className="borderSpacing pb-8" style={{ color: "#295d09" }}>
-        Cliniche Affiliate
+        {t('Cliniche Affiliate')}
       </h3>
 
       <div className="container">
@@ -45,7 +44,7 @@ export default function Clinic() {
 
               <button className="secondaryBtn">
                 <a href={item.link} target="_blank" rel="noreferrer">
-                  Altro
+                  {t('Altro')}
                 </a>
               </button>
               <p>{item.summary}</p>

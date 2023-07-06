@@ -5,8 +5,11 @@ import { Link } from "react-router-dom";
 import defaultImg from "../img/defaultImg.jpg";
 import { FaAngleRight, FaAngleLeft } from "react-icons/fa";
 import Loading from "../components/Loading";
+import { useTranslation } from "react-i18next";
 
 export default function Carousel() {
+  const{t}=useTranslation(['home']);
+  
   const { dog, loading, setLoading } = useContext(StateContext);
   const [deg, setDeg] = useState(0);
   const newDog = dog.slice(0, 9);
@@ -53,7 +56,7 @@ export default function Carousel() {
                   <h4 className="carouselTilte">{item.name}</h4>
 
                   <Link to={`/singledog/${item.id}`} className="primaryBtn2">
-                    Altro
+                    {t('Altro')}
                   </Link>
                 </article>
               );
