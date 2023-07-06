@@ -1,0 +1,13 @@
+{
+"Login":"Anmeldung",
+"Registrati":"Anmelden",
+"Nome":"Vorname",
+"Email":"Email",
+"Password":"Passwort",
+"Conferma Password":"Bestätige das Passwort",
+"Nome mancante":"Name fehlt",
+"Email non valida":"Ungültige E-Mail",
+"Password non valida":"Ungültiges Passwort",
+"Password non confermata":"Passwort nicht bestätigt"
+
+}

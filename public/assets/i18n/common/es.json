@@ -1,0 +1,12 @@
+{
+    "Login":"Acceso",
+    "Registrati":"Inscribirse",
+    "Nome":"Nombre",
+    "Email":"Email",
+    "Password":"Contraseña",
+    "Conferma Password":"Confirmar Contraseña",
+    "Nome mancante":"falta el nombre",
+    "Email non valida":"Email inválido",
+    "Password non valida":"Contraseña invalida",
+    "Password non confermata":"Contraseña no confirmada"
+}

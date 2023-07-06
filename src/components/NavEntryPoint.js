@@ -8,10 +8,9 @@ import { useTranslation } from "react-i18next";
 import i18next from "i18next";
 
 export default function NavbarEntryPoint() {
-  const { i18n, t } = useTranslation(["etrypoint"]);
+  const { i18n, t } = useTranslation(["entrypoint"]);
 
   const { setEntryNavBtn } = useContext(StateContext);
-  // const [language,setLanguage]=useState("");
 
   // translate
   useEffect(() => {
@@ -23,12 +22,7 @@ export default function NavbarEntryPoint() {
   const handleLanguageChange = (e) => {
     i18n.changeLanguage(e.target.value);
   };
-  // useEffect(()=>{
-  //   i18n.changeLanguage(language);
-  //   // eslint-disable-next-line
-  // },[language]);
-  // end translate
-
+  
   // scolling
   useEffect(() => {
     let prevPos = window.scrollY;
@@ -88,6 +82,8 @@ export default function NavbarEntryPoint() {
             >
               <option value="it">{t("Italiano")}</option>
               <option value="en">{t("Inglese")}</option>
+              <option value="es">{t("Spagnolo")}</option>
+              <option value="de">{t("Tedesco")}</option>
             </select>
           </div>
         </div>

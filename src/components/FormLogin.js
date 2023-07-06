@@ -2,8 +2,10 @@ import React, { useState, useContext, useEffect } from "react";
 import LoginApi from "../api/LoginApi";
 import { StateContext } from "../SetContext";
 import "../css/enterForm.css";
+import { useTranslation } from "react-i18next";
 
 export default function FormLogin() {
+  const{t}=useTranslation(["common"]);
   const { send, setSend, user } = useContext(StateContext);
   const [data, setData] = useState({
     id: "",
@@ -46,7 +48,7 @@ export default function FormLogin() {
     <div className="formBox" style={{ margin: "0 auto 2%", padding: "3%" }}>
       {send ? <LoginApi dati={data} /> : null}
 
-      <h3 className="text-xl">Login</h3>
+      <h3 className="text-xl">{t("Login")}</h3>
       <form onSubmit={HandleSubmit}>
         <div className="userBox text-lg">
           <input
@@ -56,8 +58,8 @@ export default function FormLogin() {
             onChange={HandleChange}
             required
           />
-          <label>Email</label>
-          {spanEmail ? <span>Email non valida</span> : null}
+          <label>{t("Email")}</label>
+          {spanEmail ? <span>{t('Email non valida')}</span> : null}
         </div>
 
         <div className="userBox text-lg">
@@ -68,11 +70,11 @@ export default function FormLogin() {
             onChange={HandleChange}
             required
           />
-          <label>Password</label>
-          {spanPassword ? <span>Password non valida</span> : null}
+          <label>{t("Password")}</label>
+          {spanPassword ? <span>{t('Password non valida')}</span> : null}
         </div>
         <button type="submit" className="secondaryBtn formBtn text-base">
-          Login
+          {t('Login')}
         </button>
       </form>
     </div>

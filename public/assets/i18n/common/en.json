@@ -1,0 +1,15 @@
+{
+    
+        "Login":"Sing In",
+        "Registrati":"Sign Up",
+        "Nome":"Name",
+        "Email":"Email",
+        "Password":"Password",
+        "Conferma Password":"Confirm Password",
+        "Nome mancante":"Name missing",
+        "Email non valida":"Invalid Email",
+        "Password non valida":"Invalid Password",
+        "Password non confermata":"Password not confirmed"
+        
+    
+}

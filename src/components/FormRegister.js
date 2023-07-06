@@ -2,8 +2,11 @@ import React, { useState, useContext, useEffect } from "react";
 import "../css/enterForm.css";
 import { StateContext } from "../SetContext";
 import RegisterApi from "../api/RegisterApi";
+import { useTranslation } from "react-i18next";
 
 export default function FormRegister() {
+  const{t}=useTranslation(['common']);
+
   const { send, setSend, user } = useContext(StateContext);
 
   const [data, setData] = useState({
@@ -61,7 +64,7 @@ export default function FormRegister() {
 
   return (
     <div className="formBox" style={{ margin: "0 auto 2%", padding: "3%" }}>
-      <h3 className="text-xl">Registrati</h3>
+      <h3 className="text-xl">{t('Registrati')}</h3>
       <form onSubmit={handleSubmit}>
         {send ? <RegisterApi dati={data} /> : null}
 
@@ -73,8 +76,8 @@ export default function FormRegister() {
             value={data.name}
             required
           />
-          <label>Nome Utente</label>
-          {spanName ? <span>Name mancante</span> : null}
+          <label>{t('Nome')}</label>
+          {spanName ? <span>{t('Name mancante')}</span> : null}
         </div>
 
         <div className="userBox text-lg">
@@ -85,8 +88,8 @@ export default function FormRegister() {
             value={data.email}
             required
           />
-          <label>Email</label>
-          {spanEmail ? <span>Email mancante o esistente</span> : null}
+          <label>{t('Email')}</label>
+          {spanEmail ? <span>{t('Email non valida')}</span> : null}
         </div>
 
         <div className="userBox text-lg">
@@ -97,8 +100,8 @@ export default function FormRegister() {
             value={data.password}
             required
           />
-          <label>Password</label>
-          {spanPassword ? <span>Password mancante</span> : null}
+          <label>{t('Password')}</label>
+          {spanPassword ? <span>{t('Password non valida')}</span> : null}
         </div>
 
         <div className="userBox text-lg">
@@ -109,12 +112,12 @@ export default function FormRegister() {
             value={data.confirm_password}
             required
           />
-          <label>Conferma Password</label>
-          {spanConfirm ? <span>Password non confermata</span> : null}
+          <label>{t('Conferma Password')}</label>
+          {spanConfirm ? <span>{t("Password non confermata")}</span> : null}
         </div>
 
         <button type="submit" className="secondaryBtn formBtn text-base">
-          Registrati
+          {t('Registrati')}
         </button>
       </form>
     </div>

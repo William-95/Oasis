@@ -12,10 +12,12 @@ import FindLostDog from "./pages/FindLostDog";
 import Error from "./pages/Error";
 import NavSwitch from "./components/NavSwitch";
 import Footer from "./components/Footer";
-
+import { I18nextProvider } from 'react-i18next';
+import i18n from './i18n';
 function App() {
   return (
     <Suspense fallback={null}>
+      <I18nextProvider i18n={i18n}>
       <SetContext>
         <NavSwitch />
         <Switch>
@@ -30,6 +32,7 @@ function App() {
         </Switch>
         <Footer />
       </SetContext>
+      </I18nextProvider>
     </Suspense>
   );
 }
