@@ -73,7 +73,7 @@ export default function NavbarEntryPoint() {
             >
               {t("Registrati")}
             </button>
-          </div>
+          
           <div>
             <MdGTranslate className="translate" />
             <select
@@ -86,6 +86,7 @@ export default function NavbarEntryPoint() {
               <option value="de">{t("Tedesco")}</option>
             </select>
           </div>
+        </div>
         </div>
       </div>
     </nav>
