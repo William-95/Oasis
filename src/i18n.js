@@ -12,8 +12,8 @@ i18n
       loadPath: "/assets/i18n/{{ns}}/{{lng}}.json",
     },
     fallbacklng: "it",
-    debug: true,
-    ns: ["common", "home", "entrypoint", "profile"],
+    debug: false,
+    ns: ["common","dogform", "entrypoint", "error", "home", "list"],
     interpolation: {
       espaceValue: false,
       formatSeparator: ",",
