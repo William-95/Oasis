@@ -33,6 +33,11 @@
 The application requires a registration or a login to access. Inside you will find a list of dogs, with the possibility of filtering them by sex, race, size and location structure.
 There is also the possibility of searching for your lost dog by inserting the microchip or if you have found one, inserting it on our platform.
 
+<br/>
+<br/>
+- To test the app ==>
+https://oasis-23.netlify.app
+
 <p align=right><a href="#0">back to top</a></p>
 
 ---
@@ -50,12 +55,6 @@ There is also the possibility of searching for your lost dog by inserting the mi
 
 <p align=right><a href="#0">back to top</a></p>
 
-<br/>
-<br/>
-- To test the app ==>
-https://oasis-23.netlify.app
-
-<p align=right><a href="#0">back to top</a></p>
 
 ---
 
