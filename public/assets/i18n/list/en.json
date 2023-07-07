@@ -1,0 +1,36 @@
+{
+    "Sesso":"Sex",
+    "Tutti":"Everyone",
+    "Maschio":"Male",
+    "Femmina":"Female",
+
+    "Dimensione":"Size",
+    "Piccola":"Small",
+    "Media":"Medium",
+    "Grande":"Large",
+
+    "Regione":"Region",
+    "Abruzzo":"Abruzzo",
+    "Basilicata":"Basilicata",
+    "Calabria":"Calabria",
+    "Campania":"Campania",
+    "Emilia Romagna":"Emilia Romagna",
+    "Friuli Venezia Giulia":"Friuli Venezia Giulia",
+    "Lazio":"Lazio",
+    "Liguria":"Liguria",
+    "Lombardia":"Lombardy",
+    "Marche":"Marche",
+    "Molise":"Molise",
+    "Piemonte":"Piedmont",
+    "Puglia":"Puglia",
+    "Sardegna":"Sardinia",
+    "Sicilia":"Sicily",
+    "Toscana":"Tuscany",
+    "Trentino Alto Adige":"Trentino Alto Adige",
+    "Umbria":"Umbria",
+    "Val d'Aosta":"Val d'Aosta",
+    "Veneto":"Veneto",
+
+    "Razza":"Race"
+   
+}

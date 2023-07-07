@@ -1,0 +1,36 @@
+{
+    "Sesso":"Sesso",
+    "Tutti":"Tutti",
+    "Maschio":"Maschio",
+    "Femmina":"Femmina",
+
+    "Dimensione":"Dimensione",
+    "Piccola":"Piccola",
+    "Media":"Media",
+    "Grande":"Grande",
+
+    "Regione":"Regione",
+    "Abruzzo":"Abruzzo",
+    "Basilicata":"Basilicata",
+    "Calabria":"Calabria",
+    "Campania":"Campania",
+    "Emilia Romagna":"Emilia Romagna",
+    "Friuli Venezia Giulia":"Friuli Venezia Giulia",
+    "Lazio":"Lazio",
+    "Liguria":"Liguria",
+    "Lombardia":"Lombardia",
+    "Marche":"Marche",
+    "Molise":"Molise",
+    "Piemonte":"Piemonte",
+    "Puglia":"Puglia",
+    "Sardegna":"Sardegna",
+    "Sicilia":"Sicilia",
+    "Toscana":"Toscana",
+    "Trentino Alto Adige":"Trentino Alto Adige",
+    "Umbria":"Umbria",
+    "Val d'Aosta":"Val d'Aosta",
+    "Veneto":"Veneto",
+
+    "Razza":"Razza"
+   
+}

@@ -21,5 +21,7 @@
   "Nome mancante": "Name missing",
   "Email non valida": "Invalid Email",
   "Password non valida": "Invalid Password",
-  "Password non confermata": "Password not confirmed"
+  "Password non confermata": "Password not confirmed",
+
+  "Altro":"Other"
 }

@@ -1,8 +1,10 @@
 import React, { useContext, useEffect, useState } from "react";
 import { StateContext } from "../SetContext";
 import "../css/filter.css";
+import { useTranslation } from "react-i18next";
 
 export default function Filter() {
+  const{t}=useTranslation(['list']);
   const { dog, setFilterDog } = useContext(StateContext);
   const [sex, setSex] = useState("");
   const [race, setRace] = useState("");
@@ -42,52 +44,52 @@ export default function Filter() {
   return (
     <div className="containerFilter borderSpacing">
       <div className="optionSelect">
-        <h5>Sesso</h5>
+        <h5>{t('Sesso')}</h5>
         <select onChange={(e) => setSex(e.target.value)}>
-          <option value="">Tutti</option>
-          <option value="Maschio">Maschio</option>
-          <option value="Femmina">Femmina</option>
+          <option value="">{t('Tutti')}</option>
+          <option value="Maschio">{t('Maschio')}</option>
+          <option value="Femmina">{t('Femmina')}</option>
         </select>
       </div>
       <div className="optionSelect">
-        <h5>Dimensione</h5>
+        <h5>{t('Dimensione')}</h5>
         <select onChange={(e) => setSize(e.target.value)}>
-          <option value="">Tutti</option>
-          <option value="Piccola">Piccola</option>
-          <option value="Media">Media</option>
-          <option value="Grande">Grande</option>
+          <option value="">{t('Tutti')}</option>
+          <option value="Piccola">{t('Piccola')}</option>
+          <option value="Media">{t('Media')}</option>
+          <option value="Grande">{t('Grande')}</option>
         </select>
       </div>
 
       <div className="optionSelect">
-        <h5>Regione</h5>
+        <h5>{t('Regione')}</h5>
         <select onChange={(e) => setRegion(e.target.value)}>
-          <option value="">Tutti</option>
-          <option value="Abruzzo">Abruzzo</option>
-          <option value="Basilicata">Basilicata</option>
-          <option value="Calabria">Calabria</option>
-          <option value="Campania">Campania</option>
-          <option value="Emilia Romagna">Emilia Romagna</option>
-          <option value="Friuli Venezia Giulia">Friuli Venezia Giulia</option>
-          <option value="Lazio">Lazio</option>
-          <option value="Liguria">Liguria</option>
-          <option value="Lombardia">Lombardia</option>
-          <option value="Marche">Marche</option>
-          <option value="Molise">Molise</option>
-          <option value="Piemonte">Piemonte</option>
-          <option value="Puglia">Puglia</option>
-          <option value="Sardegna">Sardegna</option>
-          <option value="Sicilia">Sicilia</option>
-          <option value="Toscana">Toscana</option>
-          <option value="Trentino Alto Adige">Trentino Alto Adige</option>
-          <option value="Umbria">Umbria</option>
-          <option value="Valle Aosta">Val d'Aosta</option>
-          <option value="Veneto">Veneto</option>
+          <option value="">{t('Tutti')}</option>
+          <option value="Abruzzo">{t('Abruzzo')}</option>
+          <option value="Basilicata">{t('Basilicata')}</option>
+          <option value="Calabria">{t('Calabria')}</option>
+          <option value="Campania">{t('Campania')}</option>
+          <option value="Emilia Romagna">{t('Emilia Romagna')}</option>
+          <option value="Friuli Venezia Giulia">{t('Friuli Venezia Giulia')}</option>
+          <option value="Lazio">{t('Lazio')}</option>
+          <option value="Liguria">{t('Liguria')}</option>
+          <option value="Lombardia">{t('Lombardia')}</option>
+          <option value="Marche">{t('Marche')}</option>
+          <option value="Molise">{t('Molise')}</option>
+          <option value="Piemonte">{t('Piemonte')}</option>
+          <option value="Puglia">{t('Puglia')}</option>
+          <option value="Sardegna">{t('Sardegna')}</option>
+          <option value="Sicilia">{t('Sicilia')}</option>
+          <option value="Toscana">{t('Toscana')}</option>
+          <option value="Trentino Alto Adige">{t('Trentino Alto Adige')}</option>
+          <option value="Umbria">{t('Umbria')}</option>
+          <option value="Valle Aosta">{t("Val d'Aosta")}</option>
+          <option value="Veneto">{t('Veneto')}</option>
         </select>
       </div>
 
       <div className="optionSelect">
-        <h5>Razza</h5>
+        <h5>{t('Razza')}</h5>
         <select onChange={(e) => setRace(e.target.value)}>
           <option value="">Tutti</option>
           <option value="Affenpinscher">Affenpinscher</option>

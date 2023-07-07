@@ -21,5 +21,7 @@
   "Nome mancante": "Name fehlt",
   "Email non valida": "Ungültige E-Mail",
   "Password non valida": "Ungültiges Passwort",
-  "Password non confermata": "Passwort nicht bestätigt"
+  "Password non confermata": "Passwort nicht bestätigt",
+
+  "Altro":"Andere"
 }
