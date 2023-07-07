@@ -86,20 +86,9 @@ export default function Navbar() {
           <li>
             <Link to={`/profile/${newUser[0].id}/`}>{t("Profilo")}</Link>
           </li>
-          <li>
-            <div className="translateBox">
-            <MdGTranslate className="translate" />
-            <select
-              value={localStorage.getItem("i18nextLng")}
-              onChange={handleLanguageChange}
-            >
-              <option value="it">{t("Italiano")}</option>
-              <option value="en">{t("Inglese")}</option>
-              <option value="es">{t("Spagnolo")}</option>
-              <option value="de">{t("Tedesco")}</option>
-            </select>
-            </div>
-          </li>
+          {/* <li>
+            
+          </li> */}
           <li>
             <Link
               to="/"
@@ -112,6 +101,18 @@ export default function Navbar() {
           </li>
         </ul>
       </div>
+      <div className="translateBox1">
+            <MdGTranslate className="translate1" />
+            <select
+              value={localStorage.getItem("i18nextLng")}
+              onChange={handleLanguageChange}
+            >
+              <option value="it">{t("Italiano")}</option>
+              <option value="en">{t("Inglese")}</option>
+              <option value="es">{t("Spagnolo")}</option>
+              <option value="de">{t("Tedesco")}</option>
+            </select>
+            </div>
     </nav>
   );
 }

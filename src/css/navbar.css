@@ -68,6 +68,7 @@
   width: 80%;
   font-size: 0.7em;
 }
+/* translate */
 .translateBox {
   display: flex;
   flex-direction: column;
@@ -80,7 +81,21 @@
   font-size: 1.5em;
   color: var(--primaryColor);
 }
+.translateBox1{
+  position: absolute;
+  top:22.5%;
+  right: 17%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 0.8em;
+}
+.translate1{
+  color:var(--primaryColor);
+  font-size: 1.5em;
+}
 
+/* end translate */
 /* tablet */
 @media screen and (max-width: 900px) and (min-width: 600px) {
   .navLogo {
