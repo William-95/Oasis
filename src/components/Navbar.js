@@ -87,6 +87,7 @@ export default function Navbar() {
             <Link to={`/profile/${newUser[0].id}/`}>{t("Profilo")}</Link>
           </li>
           <li>
+            <div className="translateBox">
             <MdGTranslate className="translate" />
             <select
               value={localStorage.getItem("i18nextLng")}
@@ -97,6 +98,7 @@ export default function Navbar() {
               <option value="es">{t("Spagnolo")}</option>
               <option value="de">{t("Tedesco")}</option>
             </select>
+            </div>
           </li>
           <li>
             <Link

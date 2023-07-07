@@ -74,7 +74,7 @@ export default function NavbarEntryPoint() {
               {t("Registrati")}
             </button>
           
-          <div>
+          <div className="translateBox">
             <MdGTranslate className="translate" />
             <select
               value={localStorage.getItem("i18nextLng")}
