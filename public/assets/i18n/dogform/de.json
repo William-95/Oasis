@@ -1,0 +1,32 @@
+{
+  "Hai trovato un amico a quattro zampe? Aiutalo a trovare una nuova casa inserendolo nel nostro database!": "Haben Sie einen vierbeinigen Freund gefunden? Helfen Sie ihm, ein neues Zuhause zu finden, indem Sie ihn in unsere Datenbank aufnehmen!",
+
+  "Inserisci un cane": "Geben Sie einen Hund ein",
+  "Nome": "Vorname",
+  "Sesso": "Sex",
+  "Razza": "Wettrennen",
+  "Stazza": "Tonnage",
+  "Data di nascita": "Geburtsdatum",
+  "Microchip": "Mikrochip",
+  "Data di entrata": "Zeitpunkt des Inkrafttretens",
+  "Regione": "Region",
+  "Struttura": "Struktur",
+  "Contatti": "Kontakte",
+  "Inserisci": "Einfügung",
+
+  "Immagine mancante": "Bild fehlt",
+  "Microchip non valido o esistente": "Ungültiger oder vorhandener Mikrochip",
+
+  "Hai smarrito il tuo cucciolo? Cercalo nelle nostre strutture!": "Haben Sie Ihren Welpen verloren? Suchen Sie danach in unseren Einrichtungen!",
+  "Cane non trovato,inserire microchip valido.": "Hund nicht gefunden, gültigen Mikrochip einsetzen.",
+  "Cerca nelle nostre strutture": "Durchsuchen Sie unsere Einrichtungen",
+  "Cerca": "Nahe",
+
+  "Ciao, io sono": "Hallo, ich bin",
+  "Nato/a": "Geboren in",
+  "Entrato/a": "Trat ein",
+
+  "Modifica cane": "Hund bearbeiten",
+  "Modifica": "Bearbeiten",
+  "Rimuovi cane": "Hund entfernen"
+}

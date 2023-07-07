@@ -3,6 +3,7 @@ import defaultImg from "../img/defaultImg.jpg";
 import "../css/oneDogCard.css";
 import { StateContext } from "../SetContext";
 import Loading from "../components/Loading";
+import { useTranslation } from "react-i18next";
 
 export default function OneDogCard({
   name,
@@ -18,7 +19,7 @@ export default function OneDogCard({
   date_entry,
 }) {
   const { loading, setLoading } = useContext(StateContext);
-
+  const { t } = useTranslation(["dogform"]);
   /*Loading*/
   useEffect(() => {
     setLoading(true);
@@ -38,7 +39,9 @@ export default function OneDogCard({
   }
   return (
     <div className="containerDog">
-      <h3>Ciao, io sono {name}</h3>
+      <h3>
+        {t("Ciao, io sono")} {name}
+      </h3>
       <div className="containerGroup">
         <img src={img || defaultImg} alt="" />
         <div className="description">
@@ -46,7 +49,7 @@ export default function OneDogCard({
             <tbody>
               <tr>
                 <th>
-                  <h5>Nome:</h5>
+                  <h5>{t("Nome")}:</h5>
                 </th>
                 <td>
                   <p>{name}</p>
@@ -55,7 +58,7 @@ export default function OneDogCard({
 
               <tr>
                 <th>
-                  <h5>Sesso:</h5>
+                  <h5>{t("Sesso")}:</h5>
                 </th>
                 <td>
                   <p>{sex}</p>
@@ -64,7 +67,7 @@ export default function OneDogCard({
 
               <tr>
                 <th>
-                  <h5>Razza:</h5>
+                  <h5>{t("Razza")}:</h5>
                 </th>
                 <td>
                   <p>{race}</p>
@@ -73,7 +76,7 @@ export default function OneDogCard({
 
               <tr>
                 <th>
-                  <h5>Stazza:</h5>
+                  <h5>{t("Stazza")}:</h5>
                 </th>
                 <td>
                   <p>{size}</p>
@@ -82,7 +85,7 @@ export default function OneDogCard({
 
               <tr>
                 <th>
-                  <h5>Nato/a:</h5>
+                  <h5>{t("Nato/a")}:</h5>
                 </th>
                 <td>
                   <p>{date_birth}</p>
@@ -91,7 +94,7 @@ export default function OneDogCard({
 
               <tr>
                 <th>
-                  <h5>Microchip:</h5>
+                  <h5>{t("Microchip")}:</h5>
                 </th>
                 <td>
                   <p>{microchip}</p>
@@ -100,7 +103,7 @@ export default function OneDogCard({
 
               <tr>
                 <th>
-                  <h5>Regione:</h5>
+                  <h5>{t("Regione")}:</h5>
                 </th>
                 <td>
                   <p>{region}</p>
@@ -109,7 +112,7 @@ export default function OneDogCard({
 
               <tr>
                 <th>
-                  <h5>Struttura:</h5>
+                  <h5>{t("Struttura")}:</h5>
                 </th>
                 <td>
                   <p>{structure}</p>
@@ -118,7 +121,7 @@ export default function OneDogCard({
 
               <tr>
                 <th>
-                  <h5>Entrato/a:</h5>
+                  <h5>{t("Entrato/a")}:</h5>
                 </th>
                 <td>
                   <p>{date_entry}</p>
@@ -127,7 +130,7 @@ export default function OneDogCard({
 
               <tr>
                 <th>
-                  <h5>Contatti:</h5>
+                  <h5>{t("Contatti")}:</h5>
                 </th>
                 <td>
                   <p>{contacts}</p>

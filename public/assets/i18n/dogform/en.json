@@ -1,0 +1,32 @@
+{
+  "Hai trovato un amico a quattro zampe? Aiutalo a trovare una nuova casa inserendolo nel nostro database!": "Have you found a four-legged friend? Help him find a new home by adding him to our database!",
+
+  "Inserisci un cane": "Enter a dog",
+  "Nome": "First name",
+  "Sesso": "Sex",
+  "Razza": "Race",
+  "Stazza": "Size",
+  "Data di nascita": "Date of birth",
+  "Microchip": "Microchip",
+  "Data di entrata": "Date of entry",
+  "Regione": "Region",
+  "Struttura": "Structure",
+  "Contatti": "Contacts",
+  "Inserisci": "Insert",
+
+  "Immagine mancante": "Image missing",
+  "Microchip non valido o esistente": "Invalid or existing microchip",
+
+  "Hai smarrito il tuo cucciolo? Cercalo nelle nostre strutture!": "Have you lost your puppy? Look for it in our structures!",
+  "Cane non trovato,inserire microchip valido.": "Dog not found, insert valid microchip.",
+  "Cerca nelle nostre strutture": "Search our structures",
+  "Cerca": "Search",
+
+  "Ciao, io sono": "Hello, I am",
+  "Nato/a": "Born in",
+  "Entrato/a": "Entered",
+
+  "Modifica cane": "Update dog",
+  "Modifica": "Update",
+  "Rimuovi cane": "Remove dog"
+}

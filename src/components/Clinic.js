@@ -6,33 +6,33 @@ import clinic03 from "../img/clinic/clinic03.jpg";
 import { useTranslation } from "react-i18next";
 
 export default function Clinic() {
-  const{t}=useTranslation(['home']);
+  const { t } = useTranslation(["home"]);
   let state = {
     clinic: [
       {
         icon: clinic01,
         title: "CVRS",
         link: "https://www.cvrs.it/",
-        summary:`${t('Clinica1')}`,
+        summary: `${t("Clinica1")}`,
       },
       {
         icon: clinic02,
         title: `${t("Qua La Zampa")}`,
         link: "https://www.clinicaqualazampa.it/",
-        summary:`${t('Clinica2')}`,
+        summary: `${t("Clinica2")}`,
       },
       {
         icon: clinic03,
         title: "MYVET",
         link: "https://www.myvetmilano.it/",
-        summary:`${t('Clinica3')}`,
+        summary: `${t("Clinica3")}`,
       },
     ],
   };
   return (
     <div className="section">
       <h3 className="borderSpacing pb-8" style={{ color: "#295d09" }}>
-        {t('Cliniche Affiliate')}
+        {t("Cliniche Affiliate")}
       </h3>
 
       <div className="container">
@@ -44,7 +44,7 @@ export default function Clinic() {
 
               <button className="secondaryBtn">
                 <a href={item.link} target="_blank" rel="noreferrer">
-                  {t('Altro')}
+                  {t("Altro")}
                 </a>
               </button>
               <p>{item.summary}</p>

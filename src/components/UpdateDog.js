@@ -4,9 +4,11 @@ import { useParams } from "react-router-dom";
 import classNames from "classnames";
 import "../css/enterForm.css";
 import UpdateDogApi from "../api/UpdateDogApi";
+import { useTranslation } from "react-i18next";
 
 export default function UpdateDog() {
-  const { send, setSend,spanChip } = useContext(StateContext);
+  const { t } = useTranslation(["dogform"]);
+  const { send, setSend, spanChip } = useContext(StateContext);
   const { id_dog } = useParams();
   const [btn, setBtn] = useState({ isOpen: false });
   const [spanImg, setSpanImg] = useState(false);
@@ -55,13 +57,13 @@ export default function UpdateDog() {
   return (
     <div>
       <div className="updateBtn">
-        <button onClick={handleToggle}>Modifica cane</button>
+        <button onClick={handleToggle}>{t("Modifica cane")}</button>
       </div>
 
       <div
         className={classNames("formBox no-showForm", { showForm: btn.isOpen })}
       >
-        <h3>Modifica cane</h3>
+        <h3>{t("Modifica cane")}</h3>
         <form onSubmit={handleSubmit}>
           {send ? <UpdateDogApi id_dog={id_dog} dati={data} /> : null}
 
@@ -73,7 +75,7 @@ export default function UpdateDog() {
               value={data.name}
               required
             />
-            <label>Nome</label>
+            <label>{t("Nome")}</label>
           </div>
 
           <div className="userBox">
@@ -84,7 +86,7 @@ export default function UpdateDog() {
               value={data.sex}
               required
             />
-            <label>Sesso</label>
+            <label>{t("Sesso")}</label>
           </div>
 
           <div className="userBox">
@@ -95,7 +97,7 @@ export default function UpdateDog() {
               value={data.race}
               required
             />
-            <label>Razza</label>
+            <label>{t("Razza")}</label>
           </div>
 
           <div className="userBox">
@@ -106,7 +108,7 @@ export default function UpdateDog() {
               value={data.size}
               required
             />
-            <label>Stazza</label>
+            <label>{t("Stazza")}</label>
           </div>
 
           <div className="userBox dateBox">
@@ -117,7 +119,7 @@ export default function UpdateDog() {
               value={data.date_birth}
               required
             />
-            <label>Data di nascita</label>
+            <label>{t("Data di nascita")}</label>
           </div>
 
           <div className="userBox">
@@ -128,8 +130,10 @@ export default function UpdateDog() {
               value={data.microchip}
               required
             />
-            <label>Microchip</label>
-            {spanChip ? <span>Microchip non valido o esistente</span> : null}
+            <label>{t("Microchip")}</label>
+            {spanChip ? (
+              <span>{t("Microchip non valido o esistente")}</span>
+            ) : null}
           </div>
 
           <div className="userBox dateBox">
@@ -140,7 +144,7 @@ export default function UpdateDog() {
               value={data.date_entry}
               required
             />
-            <label>Data di entrata</label>
+            <label>{t("Data di entrata")}</label>
           </div>
 
           <div className="userBox">
@@ -151,7 +155,7 @@ export default function UpdateDog() {
               value={data.region}
               required
             />
-            <label>Regione</label>
+            <label>{t("Regione")}</label>
           </div>
 
           <div className="userBox">
@@ -162,7 +166,7 @@ export default function UpdateDog() {
               value={data.structure}
               required
             />
-            <label>Struttura</label>
+            <label>{t("Struttura")}</label>
           </div>
 
           <div className="userBox">
@@ -173,7 +177,7 @@ export default function UpdateDog() {
               multiple
               onChange={handleFileChange}
             />
-            {spanImg ? <span>Immagine mancante</span> : null}
+            {spanImg ? <span>{t("Immagine mancante")}</span> : null}
           </div>
 
           <div className="userBox">
@@ -184,11 +188,11 @@ export default function UpdateDog() {
               value={data.contacts}
               required
             />
-            <label>Contatti</label>
+            <label>{t("Contatti")}</label>
           </div>
 
           <button type="submit" className="secondaryBtn formBtn">
-            Modifica
+            {t("Modifica")}
           </button>
         </form>
       </div>

@@ -2,8 +2,10 @@ import React, { useState, useContext } from "react";
 import { StateContext } from "../SetContext";
 import "../css/enterForm.css";
 import FindDogApi from "../api/FindDogApi";
+import { useTranslation } from "react-i18next";
 
 export default function FormFindDog() {
+  const { t } = useTranslation(["dogform"]);
   const { send, setSend } = useContext(StateContext);
   const [data, setData] = useState({
     microchip: "",
@@ -29,7 +31,7 @@ export default function FormFindDog() {
       <div className="formBox" style={{ marginBottom: "7%" }}>
         {send ? <FindDogApi dati={data} /> : null}
 
-        <h3>Cerca nelle nostre strutture</h3>
+        <h3>{t("Cerca nelle nostre strutture")}</h3>
         <form onSubmit={HandleSubmit}>
           <div className="userBox">
             <input
@@ -39,11 +41,11 @@ export default function FormFindDog() {
               value={data.microchip}
               required
             />
-            <label>Microchip</label>
+            <label>{t("Microchip")}</label>
           </div>
 
           <button type="submit" className="secondaryBtn formBtn">
-            Cerca
+            {t("Cerca")}
           </button>
         </form>
       </div>

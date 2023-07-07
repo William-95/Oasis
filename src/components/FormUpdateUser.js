@@ -3,8 +3,10 @@ import { StateContext } from "../SetContext";
 import { useParams } from "react-router-dom";
 import UpdateApi from "../api/UpdateApi";
 import "../css/enterForm.css";
+import { useTranslation } from "react-i18next";
 
 export default function FormUpdateUser() {
+  const { t } = useTranslation(["common"]);
   const { send, setSend, user } = useContext(StateContext);
   const { id } = useParams();
   const [data, setData] = useState({
@@ -40,7 +42,7 @@ export default function FormUpdateUser() {
   };
   return (
     <div className="formBox">
-      <h3>Modifica Profilo</h3>
+      <h3>{t("Modifica Profilo")}</h3>
       <form onSubmit={handleSubmit}>
         {send ? <UpdateApi id_user={id} dati={data} /> : null}
         <div className="userBox">
@@ -51,7 +53,7 @@ export default function FormUpdateUser() {
             value={data.name}
             required
           />
-          <label>Nome Utente</label>
+          <label>{t("Nome")}</label>
         </div>
         <div className="userBox">
           <input
@@ -61,8 +63,8 @@ export default function FormUpdateUser() {
             value={data.email}
             required
           />
-          <label>Nuova Email</label>
-          {spanEmail ? <span>Email mancante o esistente</span> : null}
+          <label>{t("Email")}</label>
+          {spanEmail ? <span>{t("Email non valida")}</span> : null}
         </div>
 
         <div className="userBox">
@@ -73,7 +75,7 @@ export default function FormUpdateUser() {
             value={data.password}
             required
           />
-          <label>Nuova Password</label>
+          <label>{t("Password")}</label>
         </div>
 
         <div className="userBox">
@@ -84,12 +86,12 @@ export default function FormUpdateUser() {
             value={data.confirm_password}
             required
           />
-          <label>Conferma Password</label>
-          {spanConfirm ? <span>Password non confermata</span> : null}
+          <label>{t("Conferma Password")}</label>
+          {spanConfirm ? <span>{t("Password non confermata")}</span> : null}
         </div>
 
         <button type="submit" className="secondaryBtn formBtn">
-          Modifica
+          {t("Modifica")}
         </button>
       </form>
     </div>

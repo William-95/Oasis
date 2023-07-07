@@ -2,8 +2,10 @@ import React, { useContext } from "react";
 import { StateContext } from "../SetContext";
 import DeleteApi from "../api/DeleteApi";
 import "../css/singleDogBtn.css";
+import { useTranslation } from "react-i18next";
 
 export default function FormDeleteUser() {
+  const { t } = useTranslation(["common"]);
   const { deleted, setDeleted } = useContext(StateContext);
 
   // deleteUser
@@ -17,7 +19,7 @@ export default function FormDeleteUser() {
   };
   return (
     <div className="deleteBtn self-center pb-12" onClick={handleDelete}>
-      <button type="button">Cancella Utente</button>
+      <button type="button">{t("Cancella Utente")}</button>
       {deleted ? <DeleteApi /> : null}
     </div>
   );

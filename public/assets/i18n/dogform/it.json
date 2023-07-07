@@ -1,0 +1,32 @@
+{
+  "Hai trovato un amico a quattro zampe? Aiutalo a trovare una nuova casa inserendolo nel nostro database!": "Hai trovato un amico a quattro zampe? Aiutalo a trovare una nuova casa inserendolo nel nostro database!",
+
+  "Inserisci un cane": "Inserisci un cane",
+  "Nome": "Nome",
+  "Sesso": "Sesso",
+  "Razza": "Razza",
+  "Stazza": "Stazza",
+  "Data di nascita": "Data di nascita",
+  "Microchip": "Microchip",
+  "Data di entrata": "Data di entrata",
+  "Regione": "Regione",
+  "Struttura": "Struttura",
+  "Contatti": "Contatti",
+  "Inserisci": "Inserisci",
+
+  "Immagine mancante": "Immagine mancante",
+  "Microchip non valido o esistente": "Microchip non valido o esistente",
+
+  "Hai smarrito il tuo cucciolo? Cercalo nelle nostre strutture!": "Hai smarrito il tuo cucciolo? Cercalo nelle nostre strutture!",
+  "Cane non trovato,inserire microchip valido.": "Cane non trovato,inserire microchip valido.",
+  "Cerca nelle nostre strutture": "Cerca nelle nostre strutture",
+  "Cerca": "Cerca",
+
+  "Ciao, io sono": "Ciao, io sono",
+  "Nato/a": "Nato/a",
+  "Entrato/a": "Entrato/a",
+
+  "Modifica cane": "Modifica cane",
+  "Modifica": "Modifica",
+  "Rimuovi cane": "Rimuovi cane"
+}

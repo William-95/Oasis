@@ -7,7 +7,6 @@ import headerBg from "../img/04.jpg";
 import Feature from "../components/Feature";
 import { useTranslation } from "react-i18next";
 
-
 export default function EntryPoint() {
   const { t } = useTranslation(["entrypoint"]);
 
@@ -19,7 +18,7 @@ export default function EntryPoint() {
     return () => clearTimeout(timer);
     // eslint-disable-next-line
   }, []);
-  
+
   return (
     <>
       <header
@@ -28,7 +27,7 @@ export default function EntryPoint() {
           backgroundImage: `url(${headerBg})`,
         }}
       >
-        <h1 className="entryTitle">{t('OASIS')}</h1>
+        <h1 className="entryTitle">{t("OASIS")}</h1>
         {entryNavBtn ? <FormLogin /> : <FormRegister />}
       </header>
 

@@ -1,25 +1,25 @@
 {
-    "Benvenuto nella tua Home page,":"Benvenuto/a nella tua Home page,",
+  "Benvenuto/a nella tua Home page,": "Benvenuto/a nella tua Home page,",
 
-    "Altro":"Altro",
+  "Altro": "Altro",
 
-    "Cliniche Affiliate":"Cliniche Affiliate",
-    "Qua La Zampa":"Qua La Zampa",
-    "Clinica1":"Pronto soccorso veterinario con sede a Roma. La struttura offre un servizio H24.",
-    "Clinica2":"Clinica Veterinaria con sede a Napoli. La struttura non è H24, ma fornisce un numero di emergenza.",
-    "Clinica3":"Clinica Veterinaria con sede a Milano. La struttura non offre un servizio H24.",
+  "Cliniche Affiliate": "Cliniche Affiliate",
+  "Qua La Zampa": "Qua La Zampa",
+  "Clinica1": "Pronto soccorso veterinario con sede a Roma. La struttura offre un servizio H24.",
+  "Clinica2": "Clinica Veterinaria con sede a Napoli. La struttura non è H24, ma fornisce un numero di emergenza.",
+  "Clinica3": "Clinica Veterinaria con sede a Milano. La struttura non offre un servizio H24.",
 
-    "Corsi Affiliati":"Corsi Affiliati",
-    "Assistenti per disabilità":"Assistenti per disabilità",
-    "Soccorso e Protezione Civile":"Soccorso e Protezione Civile",
-    "Corso1":"È un'esperienza attiva in cui padrone e cane collaborano tra loro come in un ballo di coppia.",
-    "Corso2":"Permette di apprendere le competenze indispensabili per progetto di cura di questo tipo.",
-    "Corso3":"Metodologia della ricerca in superficie, nelle macerie, manovre di discesa e primo soccorso.",
+  "Corsi Affiliati": "Corsi Affiliati",
+  "Assistenti per disabilità": "Assistenti per disabilità",
+  "Soccorso e Protezione Civile": "Soccorso e Protezione Civile",
+  "Corso1": "È un'esperienza attiva in cui padrone e cane collaborano tra loro come in un ballo di coppia.",
+  "Corso2": "Permette di apprendere le competenze indispensabili per progetto di cura di questo tipo.",
+  "Corso3": "Metodologia della ricerca in superficie, nelle macerie, manovre di discesa e primo soccorso.",
 
-    "Suggerimenti per le vacanze":"Suggerimenti per le vacanze",
-    "Suggerimento1":"In auto il cane deve poter viaggiare comodo, in sicurezza e alla giusta temperatura.",
-    "Suggerimento2":"Durante il tragitto assicurarsi di fare un pò di soste per dargli da bere, farlo muovere e fare i bisogni.",
-    "Suggerimento3":"Sia che si vada al mare che in montagna avere sempre dietro acqua e assicurarsi di tenerlo all'ombra nelle ore più calde per evitare colpi di calore e ustioni ai cuscinetti.",
-    "Suggerimento4":"Informarsi sempre se nel posto in cui si va c'è particolare rischio di alcune malattie come per esempio la leishmaniosi e usare preventivamente i prodotti adeguati.",
-    "Suggerimento5":"Se si va in montagna controllare sempre al rientro dalla passeggiata che non si siano attaccate zecche o altri parassiti."
+  "Suggerimenti per le vacanze": "Suggerimenti per le vacanze",
+  "Suggerimento1": "In auto il cane deve poter viaggiare comodo, in sicurezza e alla giusta temperatura.",
+  "Suggerimento2": "Durante il tragitto assicurarsi di fare un pò di soste per dargli da bere, farlo muovere e fare i bisogni.",
+  "Suggerimento3": "Sia che si vada al mare che in montagna avere sempre dietro acqua e assicurarsi di tenerlo all'ombra nelle ore più calde per evitare colpi di calore e ustioni ai cuscinetti.",
+  "Suggerimento4": "Informarsi sempre se nel posto in cui si va c'è particolare rischio di alcune malattie come per esempio la leishmaniosi e usare preventivamente i prodotti adeguati.",
+  "Suggerimento5": "Se si va in montagna controllare sempre al rientro dalla passeggiata che non si siano attaccate zecche o altri parassiti."
 }

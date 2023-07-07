@@ -23,5 +23,11 @@
   "Password non valida": "Ungültiges Passwort",
   "Password non confermata": "Passwort nicht bestätigt",
 
-  "Altro":"Andere"
+  "Altro": "Andere",
+
+  "Questa è la tua area riservata,": "Dies ist Ihr reservierter Bereich,",
+  "Questa sezione è dedicata alla modifica dei tuoi dati utente o alla cancellazione dell'account.": "In diesem Abschnitt können Sie Ihre Benutzerdaten ändern oder Ihr Konto löschen.",
+  "Modifica Profilo": "Profil bearbeiten",
+  "Modifica": "Bearbeiten",
+  "Cancella Utente": "Benutzer löschen"
 }

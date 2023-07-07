@@ -1,11 +1,10 @@
 {
- 
-        "OASIS":"OASIS",
-    
-        "Servizi":"Servicios",
-        "Feature1":"En primer lugar, nada más llegar a la instalación, los perros se someten a un completo chequeo para comprobar su estado de salud y, en caso necesario, intervenir con prontitud.",
-        "Feature2":"La alimentación de nuestros amigos recién llegados se realiza de forma paulatina, ya que a menudo y de buena gana llegan en condiciones de severa deshidratación y desnutrición.",
-        "Feature3":"Para garantizar un excelente nivel de limpieza de los perros, se realiza un baño higienizante, evitando así la propagación de parásitos.",
-        "Feature4":"Después de cuidar el cuerpo de nuestros amigos, llega el momento de cuidar su alma con una sana y pura dosis de cariño.",
-        "Feature5":"Por último, pero no menos importante, un poco de diversión para nuestros cachorros y nuestros voluntarios, con muchas actividades en las áreas verdes."
-    }
+  "OASIS": "OASIS",
+
+  "Servizi": "Servicios",
+  "Feature1": "En primer lugar, nada más llegar a la instalación, los perros se someten a un completo chequeo para comprobar su estado de salud y, en caso necesario, intervenir con prontitud.",
+  "Feature2": "La alimentación de nuestros amigos recién llegados se realiza de forma paulatina, ya que a menudo y de buena gana llegan en condiciones de severa deshidratación y desnutrición.",
+  "Feature3": "Para garantizar un excelente nivel de limpieza de los perros, se realiza un baño higienizante, evitando así la propagación de parásitos.",
+  "Feature4": "Después de cuidar el cuerpo de nuestros amigos, llega el momento de cuidar su alma con una sana y pura dosis de cariño.",
+  "Feature5": "Por último, pero no menos importante, un poco de diversión para nuestros cachorros y nuestros voluntarios, con muchas actividades en las áreas verdes."
+}

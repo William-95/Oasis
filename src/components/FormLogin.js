@@ -5,7 +5,7 @@ import "../css/enterForm.css";
 import { useTranslation } from "react-i18next";
 
 export default function FormLogin() {
-  const{t}=useTranslation(["common"]);
+  const { t } = useTranslation(["common"]);
   const { send, setSend, user } = useContext(StateContext);
   const [data, setData] = useState({
     id: "",
@@ -59,7 +59,7 @@ export default function FormLogin() {
             required
           />
           <label>{t("Email")}</label>
-          {spanEmail ? <span>{t('Email non valida')}</span> : null}
+          {spanEmail ? <span>{t("Email non valida")}</span> : null}
         </div>
 
         <div className="userBox text-lg">
@@ -71,10 +71,10 @@ export default function FormLogin() {
             required
           />
           <label>{t("Password")}</label>
-          {spanPassword ? <span>{t('Password non valida')}</span> : null}
+          {spanPassword ? <span>{t("Password non valida")}</span> : null}
         </div>
         <button type="submit" className="secondaryBtn formBtn text-base">
-          {t('Login')}
+          {t("Login")}
         </button>
       </form>
     </div>

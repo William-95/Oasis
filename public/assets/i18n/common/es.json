@@ -23,5 +23,11 @@
   "Password non valida": "Contraseña invalida",
   "Password non confermata": "Contraseña no confirmada",
 
-  "Altro":"Otro"
+  "Altro": "Otro",
+
+  "Questa è la tua area riservata,": "Esta es tu área reservada,",
+  "Questa sezione è dedicata alla modifica dei tuoi dati utente o alla cancellazione dell'account.": "Esta sección está dedicada a cambiar sus datos de usuario o eliminar su cuenta.",
+  "Modifica Profilo": "Editar perfil",
+  "Modifica": "Editar",
+  "Cancella Utente": "Borrar usuario"
 }

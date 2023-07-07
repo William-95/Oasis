@@ -1,25 +1,25 @@
 {
-    "Benvenuto nella tua Home page,":"Bienvenido a su página de inicio,",
+  "Benvenuto/a nella tua Home page,": "Bienvenido a su página de inicio,",
 
-    "Altro":"Otro",
+  "Altro": "Otro",
 
-    "Cliniche Affiliate":"Clínicas Afiliadas",
-    "Qua La Zampa":"Aquí La Zampa",
-    "Clinica1":"Urgencias veterinarias con sede en Roma. La estructura ofrece un servicio de 24 horas.",
-    "Clinica2":"Clínica veterinaria con sede en Nápoles. La estructura no es H24, pero proporciona un número de emergencia.",
-    "Clinica3":"Clínica veterinaria con sede en Milán. La estructura no ofrece un servicio de 24 horas.",
+  "Cliniche Affiliate": "Clínicas Afiliadas",
+  "Qua La Zampa": "Aquí La Zampa",
+  "Clinica1": "Urgencias veterinarias con sede en Roma. La estructura ofrece un servicio de 24 horas.",
+  "Clinica2": "Clínica veterinaria con sede en Nápoles. La estructura no es H24, pero proporciona un número de emergencia.",
+  "Clinica3": "Clínica veterinaria con sede en Milán. La estructura no ofrece un servicio de 24 horas.",
 
-    "Corsi Affiliati":"Cursos de afiliados",
-    "Assistenti per disabilità":"asistentes de discapacidad",
-    "Soccorso e Protezione Civile":"Salvamento y Protección Civil",
-    "Corso1":"Es una experiencia activa en la que el dueño y el perro trabajan juntos como en un baile de pareja.",
-    "Corso2":"Te permite aprender las habilidades imprescindibles para un proyecto de cuidados de este tipo.",
-    "Corso3":"Metodología de búsqueda en superficie, en escombros, maniobras de descenso y primeros auxilios.",
+  "Corsi Affiliati": "Cursos de afiliados",
+  "Assistenti per disabilità": "asistentes de discapacidad",
+  "Soccorso e Protezione Civile": "Salvamento y Protección Civil",
+  "Corso1": "Es una experiencia activa en la que el dueño y el perro trabajan juntos como en un baile de pareja.",
+  "Corso2": "Te permite aprender las habilidades imprescindibles para un proyecto de cuidados de este tipo.",
+  "Corso3": "Metodología de búsqueda en superficie, en escombros, maniobras de descenso y primeros auxilios.",
 
-    "Suggerimenti per le vacanze":"Consejos de vacaciones",
-    "Suggerimento1":"En el coche, el perro debe poder viajar cómodo, seguro y a la temperatura adecuada.",
-    "Suggerimento2":"En el camino, asegúrate de hacer algunas paradas para darle de beber, hacer que se mueva y haga sus necesidades.",
-    "Suggerimento3":"Tanto si vas a la playa como si vas a la montaña, lleva siempre agua contigo y asegúrate de mantenerla a la sombra durante las horas de más calor para evitar golpes de calor y quemaduras de cojinete.",
-    "Suggerimento4":"Infórmate siempre si en el lugar al que vas existe un riesgo particular de ciertas enfermedades como la leishmaniasis y utiliza con antelación los productos adecuados.",
-    "Suggerimento5":"Si vas a la montaña, comprueba siempre al volver del paseo que no te hayan atacado garrapatas u otros parásitos."
+  "Suggerimenti per le vacanze": "Consejos de vacaciones",
+  "Suggerimento1": "En el coche, el perro debe poder viajar cómodo, seguro y a la temperatura adecuada.",
+  "Suggerimento2": "En el camino, asegúrate de hacer algunas paradas para darle de beber, hacer que se mueva y haga sus necesidades.",
+  "Suggerimento3": "Tanto si vas a la playa como si vas a la montaña, lleva siempre agua contigo y asegúrate de mantenerla a la sombra durante las horas de más calor para evitar golpes de calor y quemaduras de cojinete.",
+  "Suggerimento4": "Infórmate siempre si en el lugar al que vas existe un riesgo particular de ciertas enfermedades como la leishmaniasis y utiliza con antelación los productos adecuados.",
+  "Suggerimento5": "Si vas a la montaña, comprueba siempre al volver del paseo que no te hayan atacado garrapatas u otros parásitos."
 }

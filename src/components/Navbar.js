@@ -6,11 +6,11 @@ import { FaAlignRight } from "react-icons/fa";
 import { MdGTranslate } from "react-icons/md";
 import { Link } from "react-router-dom";
 import { StateContext } from "../SetContext";
-import { useTranslation } from 'react-i18next';
+import { useTranslation } from "react-i18next";
 import i18next from "i18next";
 
 export default function Navbar() {
-  const { i18n,t } = useTranslation(['common']);
+  const { i18n, t } = useTranslation(["common"]);
   const { user, setIsLog } = useContext(StateContext);
   const [state, setState] = useState({ isOpen: false });
 
@@ -26,7 +26,7 @@ export default function Navbar() {
   };
   // end Translate
 
-// scolling
+  // scolling
   useEffect(() => {
     let prevPos = window.scrollY;
 
@@ -72,22 +72,21 @@ export default function Navbar() {
           onClick={handleToggle}
         >
           <li>
-            <Link to={`/home/${newUser[0].id}/`}>{t('Home')}</Link>
+            <Link to={`/home/${newUser[0].id}/`}>{t("Home")}</Link>
           </li>
           <li>
-            <Link to="/list/">{t('Lista')}</Link>
+            <Link to="/list/">{t("Lista")}</Link>
           </li>
           <li>
-            <Link to="/insertdog/">{t('Inserisci Cane')}</Link>
+            <Link to="/insertdog/">{t("Inserisci Cane")}</Link>
           </li>
           <li>
-            <Link to="/findlostdog/">{t('Trova Cane')}</Link>
+            <Link to="/findlostdog/">{t("Trova Cane")}</Link>
           </li>
           <li>
-            <Link to={`/profile/${newUser[0].id}/`}>{t('Profilo')}</Link>
+            <Link to={`/profile/${newUser[0].id}/`}>{t("Profilo")}</Link>
           </li>
           <li>
-       
             <MdGTranslate className="translate" />
             <select
               value={localStorage.getItem("i18nextLng")}
@@ -98,16 +97,15 @@ export default function Navbar() {
               <option value="es">{t("Spagnolo")}</option>
               <option value="de">{t("Tedesco")}</option>
             </select>
-         
           </li>
-          <li>           
+          <li>
             <Link
               to="/"
               onClick={() => {
                 setIsLog(false);
               }}
             >
-             {t('Logout')}
+              {t("Logout")}
             </Link>
           </li>
         </ul>
@@ -115,4 +113,3 @@ export default function Navbar() {
     </nav>
   );
 }
-

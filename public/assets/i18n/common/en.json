@@ -23,5 +23,11 @@
   "Password non valida": "Invalid Password",
   "Password non confermata": "Password not confirmed",
 
-  "Altro":"Other"
+  "Altro": "Other",
+
+  "Questa è la tua area riservata,": "This is your reserved area,",
+  "Questa sezione è dedicata alla modifica dei tuoi dati utente o alla cancellazione dell'account.": "This section is dedicated to changing your user data or deleting your account.",
+  "Modifica Profilo": "Update Profile",
+  "Modifica": "Update",
+  "Cancella Utente": "Delete User"
 }

@@ -1,25 +1,25 @@
 {
-    "Benvenuto nella tua Home page,":"Welcome to your home page,",
+  "Benvenuto/a nella tua Home page,": "Welcome to your home page,",
 
-    "Altro":"Other",
+  "Altro": "Other",
 
-    "Cliniche Affiliate":"Affiliated Clinics",
-    "Qua La Zampa":"Paw Here",
-    "Clinica1":"Veterinary emergency room based in Rome. The structure offers a 24-hour service.",
-    "Clinica2":"Veterinary Clinic based in Naples. The structure is not H24, but provides an emergency number.",
-    "Clinica3":"Veterinary Clinic based in Milan. The structure does not offer a 24-hour service.",
+  "Cliniche Affiliate": "Affiliated Clinics",
+  "Qua La Zampa": "Paw Here",
+  "Clinica1": "Veterinary emergency room based in Rome. The structure offers a 24-hour service.",
+  "Clinica2": "Veterinary Clinic based in Naples. The structure is not H24, but provides an emergency number.",
+  "Clinica3": "Veterinary Clinic based in Milan. The structure does not offer a 24-hour service.",
 
-    "Corsi Affiliati":"Affiliate Courses",
-    "Assistenti per disabilità":"Disability Assistants",
-    "Soccorso e Protezione Civile":"Rescue and Civil Protection",
-    "Corso1":"It's an active experience in which owner and dog work together like in a couple dance.",
-    "Corso2":"It allows you to learn the essential skills for a care project of this type.",
-    "Corso3":"Search methodology on the surface, in the rubble, descent maneuvers and first aid.",
+  "Corsi Affiliati": "Affiliate Courses",
+  "Assistenti per disabilità": "Disability Assistants",
+  "Soccorso e Protezione Civile": "Rescue and Civil Protection",
+  "Corso1": "It's an active experience in which owner and dog work together like in a couple dance.",
+  "Corso2": "It allows you to learn the essential skills for a care project of this type.",
+  "Corso3": "Search methodology on the surface, in the rubble, descent maneuvers and first aid.",
 
-    "Suggerimenti per le vacanze":"Vacation tips",
-    "Suggerimento1":"In the car, the dog must be able to travel comfortably, safely and at the right temperature.",
-    "Suggerimento2":"On the way, be sure to make some stops to give him a drink, make him move and do his business.",
-    "Suggerimento3":"Whether you go to the beach or to the mountains, always have water with you and make sure you keep it in the shade during the hottest hours to avoid heat strokes and bearing burns.",
-    "Suggerimento4":"Always find out if in the place where you go there is a particular risk of certain diseases such as leishmaniasis and use the appropriate products in advance.",
-    "Suggerimento5":"If you go to the mountains, always check when you return from the walk that no ticks or other parasites have attacked."
+  "Suggerimenti per le vacanze": "Vacation tips",
+  "Suggerimento1": "In the car, the dog must be able to travel comfortably, safely and at the right temperature.",
+  "Suggerimento2": "On the way, be sure to make some stops to give him a drink, make him move and do his business.",
+  "Suggerimento3": "Whether you go to the beach or to the mountains, always have water with you and make sure you keep it in the shade during the hottest hours to avoid heat strokes and bearing burns.",
+  "Suggerimento4": "Always find out if in the place where you go there is a particular risk of certain diseases such as leishmaniasis and use the appropriate products in advance.",
+  "Suggerimento5": "If you go to the mountains, always check when you return from the walk that no ticks or other parasites have attacked."
 }

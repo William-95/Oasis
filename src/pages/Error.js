@@ -2,8 +2,10 @@ import React from "react";
 import headerBg from "../img/03.jpg";
 import error from "../img/error.png";
 import "../css/error.css";
+import { useTranslation } from "react-i18next";
 
 export default function Error() {
+  const { t } = useTranslation(["error"]);
   return (
     <div>
       <header
@@ -15,11 +17,11 @@ export default function Error() {
 
       <div className="error">
         <img src={error} className="errorImg" alt="" />
-        <h4>Abbiamo riscontrato un errore, prova:</h4>
+        <h4>{t("Abbiamo riscontrato un errore, prova:")}</h4>
         <ol>
-          <li>Controlla la tua connessione</li>
-          <li>Controlla di aver inserito correttamente i tuoi dati</li>
-          <li>Ricarica la pagina</li>
+          <li>{t("Controlla la tua connessione")}</li>
+          <li>{t("Controlla di aver inserito correttamente i tuoi dati")}</li>
+          <li>{t("Ricarica la pagina")}</li>
         </ol>
       </div>
     </div>

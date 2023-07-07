@@ -4,8 +4,11 @@ import CreateDogApi from "../api/CreateDogApi";
 import "../css/enterForm.css";
 import AllDogApi from "../api/AllDogApi";
 import Loading from "./Loading";
+import { useTranslation } from "react-i18next";
 
 export default function FormInsertDog() {
+  const { t } = useTranslation(["dogform"]);
+
   const { send, setSend, loading, setLoading, spanChip } = useContext(
     StateContext
   );
@@ -52,7 +55,7 @@ export default function FormInsertDog() {
   };
   return (
     <div className="formBox">
-      <h3>Inserisci un cane</h3>
+      <h3>{t("Inserisci un cane")}</h3>
       <form onSubmit={handleSubmit}>
         {send ? (
           <>
@@ -68,7 +71,7 @@ export default function FormInsertDog() {
             value={data.name}
             required
           />
-          <label>Nome</label>
+          <label>{t("Nome")}</label>
         </div>
 
         <div className="userBox">
@@ -79,7 +82,7 @@ export default function FormInsertDog() {
             value={data.sex}
             required
           />
-          <label>Sesso</label>
+          <label>{t("Sesso")}</label>
         </div>
 
         <div className="userBox">
@@ -90,7 +93,7 @@ export default function FormInsertDog() {
             value={data.race}
             required
           />
-          <label>Razza</label>
+          <label>{t("Razza")}</label>
         </div>
 
         <div className="userBox">
@@ -101,7 +104,7 @@ export default function FormInsertDog() {
             value={data.size}
             required
           />
-          <label>Stazza</label>
+          <label>{t("Stazza")}</label>
         </div>
 
         <div className="userBox dateBox">
@@ -112,7 +115,7 @@ export default function FormInsertDog() {
             value={data.date_birth}
             required
           />
-          <label>Data di nascita</label>
+          <label>{t("Data di nascita")}</label>
         </div>
 
         <div className="userBox">
@@ -123,8 +126,10 @@ export default function FormInsertDog() {
             value={data.microchip}
             required
           />
-          <label>Microchip</label>
-          {spanChip ? <span>Microchip non valido o esistente</span> : null}
+          <label>{t("Microchip")}</label>
+          {spanChip ? (
+            <span>{t("Microchip non valido o esistente")}</span>
+          ) : null}
         </div>
 
         <div className="userBox dateBox">
@@ -135,7 +140,7 @@ export default function FormInsertDog() {
             value={data.date_entry}
             required
           />
-          <label>Data di entrata</label>
+          <label>{t("Data di entrata")}</label>
         </div>
 
         <div className="userBox">
@@ -146,7 +151,7 @@ export default function FormInsertDog() {
             value={data.region}
             required
           />
-          <label>Regione</label>
+          <label>{t("Regione")}</label>
         </div>
 
         <div className="userBox">
@@ -157,7 +162,7 @@ export default function FormInsertDog() {
             value={data.structure}
             required
           />
-          <label>Struttura</label>
+          <label>{t("Struttura")}</label>
         </div>
 
         <div className="userBox">
@@ -168,7 +173,7 @@ export default function FormInsertDog() {
             multiple
             onChange={handleFileChange}
           />
-          {spanImg ? <span>Immagine mancante</span> : null}
+          {spanImg ? <span>{t("Immagine mancante")}</span> : null}
         </div>
 
         <div className="userBox">
@@ -179,7 +184,7 @@ export default function FormInsertDog() {
             value={data.contacts}
             required
           />
-          <label>Contatti</label>
+          <label>{t("Contatti")}</label>
         </div>
 
         {loading ? (
@@ -187,7 +192,7 @@ export default function FormInsertDog() {
         ) : (
           <>
             <button type="submit" className="secondaryBtn formBtn">
-              Inserisci
+              {t("Inserisci")}
             </button>
           </>
         )}

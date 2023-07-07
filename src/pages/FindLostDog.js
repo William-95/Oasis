@@ -4,8 +4,10 @@ import "../css/header.css";
 import FormFindDog from "../components/FormFindDog";
 import OneDogCard from "../components/OneDogCard";
 import { StateContext } from "../SetContext";
+import { useTranslation } from "react-i18next";
 
 export default function FindLostDog() {
+  const { t } = useTranslation(["dogform"]);
   const { findDog, notFind } = useContext(StateContext);
 
   if (notFind === undefined) {
@@ -19,7 +21,7 @@ export default function FindLostDog() {
         ></header>
 
         <h4 className=" borderSpacing text-3xl text-emerald-800 text-center m-14 pb-12 ">
-          Hai smarrito il tuo cucciolo? Cercalo nelle nostre strutture!
+          {t("Hai smarrito il tuo cucciolo? Cercalo nelle nostre strutture!")}
         </h4>
 
         <FormFindDog />
@@ -36,7 +38,7 @@ export default function FindLostDog() {
         ></header>
 
         <h4 className=" borderSpacing text-3xl text-emerald-800 text-center m-14 pb-12">
-          Hai smarrito il tuo cucciolo? Cercalo nelle nostre strutture!
+          {t("Hai smarrito il tuo cucciolo? Cercalo nelle nostre strutture!")}
         </h4>
 
         <FormFindDog />
@@ -61,7 +63,7 @@ export default function FindLostDog() {
         ) : (
           <>
             <h3 className="text-center text-red-600 text-xl mb-6">
-              Cane non trovato,inserire microchip valido.
+              {t("Cane non trovato,inserire microchip valido.")}
             </h3>
           </>
         )}

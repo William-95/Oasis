@@ -2,8 +2,11 @@ import React from "react";
 import headerBg from "../img/03.jpg";
 import "../css/header.css";
 import FormInsertDog from "../components/FormInsertDog";
+import { useTranslation } from "react-i18next";
 
 export default function InsertDog() {
+  const { t } = useTranslation(["dogform"]);
+
   return (
     <div>
       <header
@@ -14,8 +17,9 @@ export default function InsertDog() {
       ></header>
 
       <h4 className=" borderSpacing text-3xl text-emerald-800 text-center m-14 pb-12 ">
-        Hai trovato un amico a quattro zampe? Aiutalo a trovare una nuova casa
-        inserendolo nel nostro database!
+        {t(
+          "Hai trovato un amico a quattro zampe? Aiutalo a trovare una nuova casa inserendolo nel nostro database!"
+        )}
       </h4>
 
       <div className="bg-gradient-to-r from-lime-700 to-yellow-500 pt-0.5 pb-0.5">
